@@ -57,7 +57,7 @@ npm install
 npm run dev
 ```
 
-Opens the app at `http://localhost:5173` with hot module replacement (HMR).
+Opens the live app at [https://carepulse-gamma-murex.vercel.app/](https://carepulse-gamma-murex.vercel.app/) (or locally at `http://localhost:5173`) with hot module replacement (HMR).
 
 ### Production Build
 

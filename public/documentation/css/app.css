@@ -678,6 +678,32 @@ body {
   align-items: center;
   text-align: center;
   transition: transform 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  width: 100%;
+}
+
+.concept-item:hover,
+.concept-item:focus {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+.concept-item:hover .window-mockup-card {
+  transform: translateY(-8px);
+  border-color: rgba(34, 197, 94, 0.4);
+  box-shadow: 0 24px 48px -14px rgba(34, 197, 94, 0.18), 0 0 0 1px rgba(34, 197, 94, 0.25);
+}
+
+.concept-item:hover .window-viewport img {
+  transform: scale(1.025);
+}
+
+.concept-item:hover .viewport-hover-badge {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .window-mockup-card {

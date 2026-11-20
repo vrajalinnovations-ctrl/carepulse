@@ -93,4 +93,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // 6. Specialized Dashboard Cards Redirection
+  document.querySelectorAll('.concept-item[data-route]').forEach(card => {
+    card.addEventListener('click', (e) => {
+      const route = card.getAttribute('data-route') || '/';
+      // If opened via local file protocol (file://), open the live Vercel deployment URL
+      if (window.location.protocol === 'file:') {
+        e.preventDefault();
+        window.open('https://carepulse-gamma-murex.vercel.app' + (route === '/' ? '' : route), '_blank');
+      }
+    });
+  });
 });

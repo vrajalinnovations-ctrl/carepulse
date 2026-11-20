@@ -539,9 +539,11 @@ pnpm install</pre>
           <pre class="doc-code-pre" id="code-dev-server">npm run dev</pre>
         </div>
         <p class="doc-paragraph">
-          Your terminal will display the local development URL, typically:
+          Access the live deployment or view the application in your browser:
           <br>
-          <code style="background: rgba(16, 185, 129, 0.1); color: #059669; padding: 4px 8px; border-radius: 6px; font-weight: 600;">Server active: Open http://localhost:5173 in your web browser.</code>
+          <a href="https://carepulse-gamma-murex.vercel.app/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(16, 185, 129, 0.12); color: #059669; padding: 6px 14px; border-radius: 8px; font-weight: 600; text-decoration: none; margin-top: 6px;">
+            <i class="bi bi-box-arrow-up-right"></i> Live Application: https://carepulse-gamma-murex.vercel.app/
+          </a>
         </p>
       </section>
 
@@ -627,12 +629,12 @@ const ClinicalThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <button
+    &lt;button
       onClick={() => toggleTheme('circle-blur', 'top-right')}
       className="px-4 py-2 rounded-xl border border-slate-200 dark:border-white/10"
-    >
+    &gt;
       Current Mode: {theme === 'dark' ? 'Dark' : 'Light'}
-    </button>
+    &lt;/button&gt;
   );
 };</pre>
         </div>
@@ -868,16 +870,16 @@ import Card from '../components/ui/Card';
 
 export const SurgeriesPage = () => {
   return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-bold text-slate-900 dark:text-white">
+    &lt;div className="space-y-6"&gt;
+      &lt;h1 className="text-2xl font-bold text-slate-900 dark:text-white"&gt;
         Surgical Theater Operations
-      </h1>
-      <Card className="p-6">
-        <p className="text-slate-600 dark:text-slate-400">
+      &lt;/h1&gt;
+      &lt;Card className="p-6"&gt;
+        &lt;p className="text-slate-600 dark:text-slate-400"&gt;
           Live operating room schedule, anesthesia pre-ops, and surgeon rosters.
-        </p>
-      </Card>
-    </div>
+        &lt;/p&gt;
+      &lt;/Card&gt;
+    &lt;/div&gt;
   );
 };
 
