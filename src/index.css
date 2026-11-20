@@ -133,3 +133,22 @@
     color: #ffffff;
   }
 }
+
+/* Magic UI Animated Theme Toggler - View Transitions & Smooth Blurred Circle */
+@property --mask-size {
+  syntax: '<length-percentage>';
+  inherits: true;
+  initial-value: 0px;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+[data-magicui-theme-vt="active"]::view-transition-new(root) {
+  clip-path: var(--magicui-theme-vt-clip-from, none);
+}
+
+

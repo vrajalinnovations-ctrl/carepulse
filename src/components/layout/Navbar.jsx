@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import logoSm from '../../assets/logo/logo-sm.png';
 import { useTheme } from '../../context/theme-context';
 import { cx, FONT_MONO } from './Uihelpers';
+import AnimatedThemeToggler from '@/components/ui/animated-theme-toggler';
 
 
 const Navbar = ({
@@ -279,20 +280,26 @@ const Navbar = ({
                     {isFullscreen ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
                 </button>
 
-                {/* Theme mode toggle */}
-                <button
-                    type="button"
+                {/* Theme mode toggle (Magic UI Animated Theme Toggler) */}
+                <AnimatedThemeToggler
                     aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
-                    onClick={toggleTheme}
+                    theme={isDark ? 'dark' : 'light'}
+                    blur={90}
+                    duration={1400}
+                    onThemeChange={(newTheme) => {
+                        if (themeCtx?.setTheme) {
+                            themeCtx.setTheme(newTheme);
+                        } else if (toggleTheme) {
+                            toggleTheme();
+                        }
+                    }}
                     className={cx(
                         'hidden md:flex w-9 h-9 rounded-xl items-center justify-center transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 cursor-pointer',
                         isDark
                             ? 'text-white/60 hover:text-white hover:bg-white/10 border border-white/10 hover:border-white/20 backdrop-blur-md'
                             : 'text-slate-600 hover:text-slate-900 bg-white/80 hover:bg-white border border-slate-200 shadow-sm'
                     )}
-                >
-                    {isDark ? <Sun size={16} /> : <Moon size={16} />}
-                </button>
+                />
 
                 {/* Messages / Mail Dropdown */}
                 <div className="relative hidden md:block" ref={messagesRef}>
