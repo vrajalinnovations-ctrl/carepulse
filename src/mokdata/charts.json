@@ -1,0 +1,40 @@
+{
+  "admissionTrends": [
+    { "label": "Jan", "value": 840 },
+    { "label": "Feb", "value": 920 },
+    { "label": "Mar", "value": 1040 },
+    { "label": "Apr", "value": 980 },
+    { "label": "May", "value": 1150 },
+    { "label": "Jun", "value": 1240 },
+    { "label": "Jul", "value": 1180 },
+    { "label": "Aug", "value": 1320 },
+    { "label": "Sep", "value": 1290 },
+    { "label": "Oct", "value": 1410 },
+    { "label": "Nov", "value": 1380 },
+    { "label": "Dec", "value": 1482 }
+  ],
+  "departmentCapacity": [
+    { "label": "Mon", "current": 142, "previous": 120 },
+    { "label": "Tue", "current": 185, "previous": 155 },
+    { "label": "Wed", "current": 198, "previous": 160 },
+    { "label": "Thu", "current": 172, "previous": 150 },
+    { "label": "Fri", "current": 210, "previous": 175 },
+    { "label": "Sat", "current": 135, "previous": 130 },
+    { "label": "Sun", "current": 110, "previous": 105 }
+  ],
+  "bedDistribution": [
+    { "name": "Cardiology", "value": 340, "color": "#22c55e" },
+    { "name": "Neurology", "value": 280, "color": "#06b6d4" },
+    { "name": "Emergency & Trauma", "value": 240, "color": "#f59e0b" },
+    { "name": "Pediatrics", "value": 190, "color": "#8b5cf6" },
+    { "name": "Oncology", "value": 150, "color": "#ec4899" },
+    { "name": "General Medicine", "value": 220, "color": "#3b82f6" }
+  ],
+  "qualityMetrics": [
+    { "label": "Patient Safety", "value": 96 },
+    { "label": "Infection Control", "value": 92 },
+    { "label": "Bed Turnover", "value": 78 },
+    { "label": "Medication Safety", "value": 98 },
+    { "label": "Nurse Ratio", "value": 86 }
+  ]
+}

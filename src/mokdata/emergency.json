@@ -1,0 +1,129 @@
+{
+  "triageFilters": [
+    "All Acuity",
+    "Level 1 · Resus",
+    "Level 2 · Emergent",
+    "Available Bays"
+  ],
+  "traumaBays": [
+    {
+      "code": "TRAUMA-01",
+      "name": "Resuscitation Bay 01",
+      "status": "Occupied",
+      "patient": "Marcus Sterling",
+      "id": "ER-4091",
+      "ageGender": "58y / Male",
+      "complaint": "Acute STEMI · Cardiogenic Shock",
+      "acuity": "Level 1 · Resus",
+      "acuityColor": "danger",
+      "leadDoctor": "Dr. Arthur Pendelton",
+      "vitals": { "hr": 112, "bp": "142/92", "spo2": "91%", "gcs": "14/15" },
+      "team": "Trauma Team Alpha (6 Clinicians)",
+      "admittedAt": "18 mins ago"
+    },
+    {
+      "code": "TRAUMA-02",
+      "name": "Resuscitation Bay 02",
+      "status": "Occupied",
+      "patient": "Chloe Decker",
+      "id": "ER-4094",
+      "ageGender": "32y / Female",
+      "complaint": "High-Velocity MVA · Multiple Fractures",
+      "acuity": "Level 1 · Resus",
+      "acuityColor": "danger",
+      "leadDoctor": "Dr. James Wilson",
+      "vitals": { "hr": 126, "bp": "98/62", "spo2": "94%", "gcs": "13/15" },
+      "team": "Trauma Team Beta (8 Clinicians)",
+      "admittedAt": "32 mins ago"
+    },
+    {
+      "code": "TRAUMA-03",
+      "name": "Resuscitation Bay 03",
+      "status": "Available",
+      "patient": null,
+      "id": null,
+      "ageGender": null,
+      "complaint": "Cleaned & Stocked · Ready for Inbound",
+      "acuity": "Ready",
+      "acuityColor": "success",
+      "leadDoctor": "On-Call Trauma Lead",
+      "vitals": null,
+      "team": "Assigned to Inbound Medic-04",
+      "admittedAt": null
+    },
+    {
+      "code": "TRAUMA-04",
+      "name": "Critical Bay 04",
+      "status": "Occupied",
+      "patient": "Harrison Wells",
+      "id": "ER-4102",
+      "ageGender": "64y / Male",
+      "complaint": "Acute Intracranial Hemorrhage",
+      "acuity": "Level 2 · Emergent",
+      "acuityColor": "danger",
+      "leadDoctor": "Dr. Elena Rostova",
+      "vitals": { "hr": 88, "bp": "178/104", "spo2": "97%", "gcs": "11/15" },
+      "team": "Neuro-Critical Team (5 Clinicians)",
+      "admittedAt": "45 mins ago"
+    },
+    {
+      "code": "TRAUMA-05",
+      "name": "Rapid Resuscitation Bay 05",
+      "status": "Occupied",
+      "patient": "Lucas Vance",
+      "id": "ER-4108",
+      "ageGender": "19y / Male",
+      "complaint": "Severe Anaphylactic Shock",
+      "acuity": "Level 2 · Emergent",
+      "acuityColor": "warning",
+      "leadDoctor": "Dr. Emily Watson",
+      "vitals": { "hr": 104, "bp": "102/68", "spo2": "96%", "gcs": "15/15" },
+      "team": "Emergency Resus Team (4 Clinicians)",
+      "admittedAt": "1 hr ago"
+    },
+    {
+      "code": "TRAUMA-06",
+      "name": "Resuscitation Bay 06",
+      "status": "Available",
+      "patient": null,
+      "id": null,
+      "ageGender": null,
+      "complaint": "Sanitized · Adult / Pediatric Convertible",
+      "acuity": "Ready",
+      "acuityColor": "success",
+      "leadDoctor": "On-Call Trauma Lead",
+      "vitals": null,
+      "team": "Reserve Standby",
+      "admittedAt": null
+    }
+  ],
+  "inboundAmbulances": [
+    {
+      "unit": "Medic-04 (Advanced ALS)",
+      "eta": "4 mins",
+      "etaUrgent": true,
+      "patientSnippet": "62y M · Crushing Substernal Chest Pain · 12-Lead STEMI Confirmed",
+      "vitals": "BP 150/96 · HR 118 · SpO2 93%",
+      "assignedBay": "Trauma Bay 03",
+      "paramedicContact": "Medic Lead Ramos (Channel 4)"
+    },
+    {
+      "unit": "Air Evac 1 (Flight Helicopter)",
+      "eta": "11 mins",
+      "etaUrgent": true,
+      "patientSnippet": "28y F · Fall from Height (25ft) · Closed Head Injury w/ Hypotension",
+      "vitals": "BP 88/54 · HR 132 · SpO2 90% Intubated",
+      "assignedBay": "Helipad Trauma Receiving 1",
+      "paramedicContact": "Flight Nurse Miller"
+    },
+    {
+      "unit": "Rescue-12 (Basic BLS)",
+      "eta": "18 mins",
+      "etaUrgent": false,
+      "patientSnippet": "45y M · Orthopedic Fracture Dislocation · Stable Telemetry",
+      "vitals": "BP 128/80 · HR 84 · SpO2 99%",
+      "assignedBay": "Acute Triage Bay 7",
+      "paramedicContact": "EMT Davis"
+    }
+  ]
+}

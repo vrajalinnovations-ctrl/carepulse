@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="./images/logo-sm.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarePulse — Modern React.js 19 Hospital &amp; Clinical Admin Dashboard</title>
+
+  <meta name="description"
+    content="CarePulse — Modern Hospital Operations, Patient Care, Bedside Telemetry & Clinical Command Center React 19 Template. Built with Tailwind CSS v4, Vite 8, and Frosted Glassmorphism.">
+  <meta name="theme-color" content="#10b981">
+
+  <!-- Google Fonts: Plus Jakarta Sans & IBM Plex Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="./css/bootstrap-icons.min.css" type="text/css">
+
+  <!-- Custom Documentation Stylesheet -->
+  <link rel="stylesheet" href="./css/app.css" type="text/css">
+</head>
+
+<body>
+
+  <!-- Ambient Multi-Orb Lighting System -->
+  <div class="ambient-glow-wrapper">
+    <div class="ambient-orb-top"></div>
+    <div class="ambient-orb-hero"></div>
+    <div class="ambient-orb-bottom"></div>
+    <div class="ambient-mesh"></div>
+  </div>
+
+  <!-- Top Navbar (Exact Reference Layout) -->
+  <header class="top-nav-header">
+    <div class="top-nav-container">
+      <!-- Left: Brand Logo & Title -->
+      <a href="#" class="brand-box">
+        <div class="brand-icon-wrap" style="background: transparent; border: none; box-shadow: none;">
+          <img src="./images/logo-sm.png" alt="CarePulse Logo" class="brand-icon"
+            style="width: 32px; height: 32px; object-fit: contain;">
+        </div>
+        <span class="brand-text">CarePulse</span>
+      </a>
+
+      <!-- Center: Navigation Menu with Active Indicator -->
+      <nav class="nav-menu-center">
+        <a href="#screens" class="nav-menu-link active">Dashboards</a>
+        <a href="#prebuilt-apps" class="nav-menu-link">Apps</a>
+        <a href="#core-features" class="nav-menu-link">Features</a>
+        <a href="./document.html" class="nav-menu-link">Documents</a>
+      </nav>
+
+      <!-- Right: Version Badge & Live Action Button -->
+      <div class="nav-right-actions">
+        <span class="version-tag">v1.0 PRO</span>
+        <a href="/" target="_blank" class="btn-live-preview">
+          <span>Live Preview</span>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Toggle Navigation Menu">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <a href="#screens">Dashboards</a>
+    <a href="#prebuilt-apps">Apps</a>
+    <a href="#core-features">Features</a>
+    <a href="./document.html">Documents</a>
+  </div>
+
+  <!-- Hero Section (Exact Reference Layout) -->
+  <section class="landing-hero-section">
+    <!-- Centered Top Pill Badge -->
+    <div class="hero-top-badge">
+      <span class="badge-crown-icon">👑</span>
+      <span>Elite Hospital Operations &amp; Clinical Dashboard</span>
+    </div>
+
+    <!-- Two-Tier Main Headline -->
+    <h1 class="hero-main-heading">
+      <span class="heading-tier1">Modern React.js 19</span>
+      <span class="heading-tier2">Hospital &amp; Clinical Admin Dashboard</span>
+    </h1>
+
+    <!-- Centered Lead Description -->
+    <p class="hero-lead-paragraph">
+      A high-performance Hospital &amp; Clinical operations dashboard built with React 19, Tailwind CSS v4, Vite 8,
+      Lucide Icons, and Recharts. Manage inpatient encounters, emergency triage, ICU bed telemetry, doctor schedules,
+      pharmacy inventory, and lab diagnostics with 32+ production-ready pages.
+    </p>
+
+    <!-- Centered CTA Buttons Group -->
+    <div class="hero-cta-buttons">
+      <a href="#screens" class="btn-hero-primary">
+        <span>Explore Live Demos</span>
+        <span class="cta-arrow-circle"><i class="bi bi-arrow-down"></i></span>
+      </a>
+      <a href="./document.html" class="btn-hero-secondary">
+        <i class="bi bi-journal-code"></i>
+        <span>Read Documents</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Main Documentation Container Below Hero -->
+  <main class="docs-main-container">
+
+    <!-- Quick Stats Highlights Strip -->
+    <div class="quick-stats-strip">
+      <div class="stat-pill"><i class="bi bi-check-circle-fill"></i> React 19.2</div>
+      <div class="stat-pill"><i class="bi bi-check-circle-fill"></i> Tailwind CSS 4</div>
+      <div class="stat-pill"><i class="bi bi-check-circle-fill"></i> Vite 8 Bundler</div>
+      <div class="stat-pill"><i class="bi bi-check-circle-fill"></i> 12 Core Screen Views</div>
+      <div class="stat-pill"><i class="bi bi-check-circle-fill"></i> IBM Plex Sans &amp; Jakarta</div>
+      <div class="stat-pill"><i class="bi bi-check-circle-fill"></i> Full Bi-Directional RTL/LTR</div>
+      <div class="stat-pill"><i class="bi bi-check-circle-fill"></i> Frosted Glass Card Architecture</div>
+    </div>
+
+    <!-- 1. Screen Showcase Section -->
+    <section id="screens" class="doc-section showcase-section">
+      <!-- Centered Showcase Header (Matching Reference Image Structure) -->
+      <div class="showcase-hero-header">
+        <h2 class="showcase-hero-title">Specialized 4 Clinical Dashboard Concepts</h2>
+        <p class="showcase-hero-subtitle">
+          Explore 4 distinct, data-driven hospital dashboard architectures designed for rapid trauma triage, continuous
+          bedside telemetry, and maximum clinical clarity.
+        </p>
+      </div>
+
+      <!-- 2x2 Specialized Dashboard Concepts Grid (Matching Reference Image) -->
+      <div class="dashboard-concepts-grid">
+        <!-- 1. Clinical Command Center Dashboard -->
+        <div class="concept-item">
+          <div class="window-mockup-card">
+            <div class="window-bar">
+              <div class="window-dots">
+                <span class="window-dot dot-red"></span>
+                <span class="window-dot dot-yellow"></span>
+                <span class="window-dot dot-green"></span>
+              </div>
+            </div>
+            <a href="/" target="_blank" class="window-viewport" title="Clinical Command Center Dashboard">
+              <img src="./images/screenshot/1.png" alt="Clinical Command Center Dashboard" loading="lazy">
+              <span class="viewport-hover-badge"><i class="bi bi-box-arrow-up-right"></i> Open Live Dashboard</span>
+            </a>
+          </div>
+          <h3 class="concept-title">Clinical Command Center Dashboard</h3>
+        </div>
+
+        <!-- 2. Emergency & Trauma Triage Dashboard -->
+        <div class="concept-item">
+          <div class="window-mockup-card">
+            <div class="window-bar">
+              <div class="window-dots">
+                <span class="window-dot dot-red"></span>
+                <span class="window-dot dot-yellow"></span>
+                <span class="window-dot dot-green"></span>
+              </div>
+            </div>
+            <a href="/emergency" target="_blank" class="window-viewport" title="Emergency & Trauma Triage Dashboard">
+              <img src="./images/screenshot/2.png" alt="Emergency & Trauma Triage Dashboard" loading="lazy">
+              <span class="viewport-hover-badge"><i class="bi bi-box-arrow-up-right"></i> Open Live Dashboard</span>
+            </a>
+          </div>
+          <h3 class="concept-title">Emergency & Trauma Triage Dashboard</h3>
+        </div>
+
+        <!-- 3. Bedside Vitals & Telemetry Dashboard -->
+        <div class="concept-item">
+          <div class="window-mockup-card">
+            <div class="window-bar">
+              <div class="window-dots">
+                <span class="window-dot dot-red"></span>
+                <span class="window-dot dot-yellow"></span>
+                <span class="window-dot dot-green"></span>
+              </div>
+            </div>
+            <a href="/vitals" target="_blank" class="window-viewport" title="Bedside Vitals & Telemetry Dashboard">
+              <img src="./images/screenshot/3.png" alt="Bedside Vitals & Telemetry Dashboard" loading="lazy">
+              <span class="viewport-hover-badge"><i class="bi bi-box-arrow-up-right"></i> Open Live Dashboard</span>
+            </a>
+          </div>
+          <h3 class="concept-title">Bedside Vitals & Telemetry Dashboard</h3>
+        </div>
+
+        <!-- 4. Inpatient Wards & Bed Census Dashboard -->
+        <div class="concept-item">
+          <div class="window-mockup-card">
+            <div class="window-bar">
+              <div class="window-dots">
+                <span class="window-dot dot-red"></span>
+                <span class="window-dot dot-yellow"></span>
+                <span class="window-dot dot-green"></span>
+              </div>
+            </div>
+            <a href="/wards" target="_blank" class="window-viewport" title="Inpatient Wards & Bed Census Dashboard">
+              <img src="./images/screenshot/4.png" alt="Inpatient Wards & Bed Census Dashboard" loading="lazy">
+              <span class="viewport-hover-badge"><i class="bi bi-box-arrow-up-right"></i> Open Live Dashboard</span>
+            </a>
+          </div>
+          <h3 class="concept-title">Inpatient Wards & Bed Census Dashboard</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Real-Time Theme Engine Section -->
+    <section id="theme-engine" class="doc-section theme-engine-section">
+      <!-- Section Header -->
+      <div class="theme-engine-header">
+        <div class="theme-eyebrow-badge">
+          <i class="bi bi-palette2"></i>
+          <span>Real-Time Personalization</span>
+        </div>
+        <h2 class="theme-engine-title">High-Performance <span class="theme-gradient-text">Live Style &amp; Theme
+            Engine</span></h2>
+        <p class="theme-engine-subtitle">
+          Instant runtime customization featuring 8 dynamic accent colors, bi-directional LTR/RTL layout switching, and
+          flexible navbar behaviors.
+        </p>
+      </div>
+
+      <!-- Subheader -->
+      <div class="theme-showcase-subhead">
+        <h3 class="theme-subhead-title">
+          <i class="bi bi-palette text-success"></i>
+          <span>8 Dynamic Primary Accent Colors</span>
+        </h3>
+        <p class="theme-subhead-desc">
+          Choose between 8 pre-configured HSL-balanced color themes with instant live runtime preview.
+        </p>
+      </div>
+
+      <!-- 8 Screenshot Cards Grid (Add or replace screenshots later) -->
+      <div class="theme-screens-grid">
+        <!-- 1. Emerald (Default) -->
+        <div class="theme-screen-card" style="--theme-accent: #22c55e; --theme-glow: rgba(34, 197, 94, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/5.png" alt="Emerald Theme Screenshot" class="theme-screen-img"
+                loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet"></span>
+            <span class="theme-card-title">Emerald (Default)</span>
+          </div>
+        </div>
+
+        <!-- 2. Ocean Blue -->
+        <div class="theme-screen-card" style="--theme-accent: #3b82f6; --theme-glow: rgba(59, 130, 246, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/2.png" alt="Ocean Blue Theme Screenshot" class="theme-screen-img"
+                loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet"></span>
+            <span class="theme-card-title">Ocean Blue</span>
+          </div>
+        </div>
+
+        <!-- 3. Royal Purple -->
+        <div class="theme-screen-card" style="--theme-accent: #7c3aed; --theme-glow: rgba(124, 58, 237, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/6.png" alt="Royal Purple Theme Screenshot" class="theme-screen-img"
+                loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet"></span>
+            <span class="theme-card-title">Royal Purple</span>
+          </div>
+        </div>
+
+        <!-- 4. Ruby Red -->
+        <div class="theme-screen-card" style="--theme-accent: #ef4444; --theme-glow: rgba(239, 68, 68, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/7.png" alt="Ruby Red Theme Screenshot" class="theme-screen-img"
+                loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet"></span>
+            <span class="theme-card-title">Ruby Red</span>
+          </div>
+        </div>
+
+        <!-- 5. Amber -->
+        <div class="theme-screen-card" style="--theme-accent: #f59e0b; --theme-glow: rgba(245, 158, 11, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/8.png" alt="Amber Theme Screenshot" class="theme-screen-img" loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet"></span>
+            <span class="theme-card-title">Amber</span>
+          </div>
+        </div>
+
+
+
+        <!-- 6. Teal -->
+        <div class="theme-screen-card" style="--theme-accent: #14b8a6; --theme-glow: rgba(99, 102, 241, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/3.png" alt="Indigo Theme Screenshot" class="theme-screen-img"
+                loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet"></span>
+            <span class="theme-card-title">Teal</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Theme & Bi-Directional Modes Section -->
+    <section id="modes" class="doc-section theme-engine-section">
+      <!-- Section Header -->
+      <div class="theme-engine-header">
+        <div class="theme-eyebrow-badge">
+          <i class="bi bi-layout-split"></i>
+          <span>Theme &amp; Layout Flexibility</span>
+        </div>
+        <h2 class="theme-engine-title">Theme &amp; Bi-Directional Modes <span class="theme-gradient-text">(Light, Dark,
+            RTL, LTR)</span></h2>
+        <p class="theme-engine-subtitle">
+          Full support for high-contrast Light and Dark palettes alongside native Bi-Directional LTR and RTL layout
+          orientations for international clinical environments.
+        </p>
+      </div>
+
+      <!-- 4 Modes Screenshot Cards Grid (Add or replace screenshots later) -->
+      <div class="theme-screens-grid">
+        <!-- 1. Light Mode -->
+        <div class="theme-screen-card" style="--theme-accent: #10b981; --theme-glow: rgba(16, 185, 129, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/10.png" alt="Light Mode Screenshot" class="theme-screen-img" loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet" style="background-color: #10b981; box-shadow: 0 0 8px #10b981;"></span>
+            <span class="theme-card-title">Light Mode</span>
+          </div>
+        </div>
+
+        <!-- 2. Dark Mode -->
+        <div class="theme-screen-card" style="--theme-accent: #6366f1; --theme-glow: rgba(99, 102, 241, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/2.png" alt="Dark Mode Screenshot" class="theme-screen-img" loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet" style="background-color: #6366f1; box-shadow: 0 0 8px #6366f1;"></span>
+            <span class="theme-card-title">Dark Mode</span>
+          </div>
+        </div>
+
+        <!-- 3. RTL Mode -->
+        <div class="theme-screen-card" style="--theme-accent: #06b6d4; --theme-glow: rgba(6, 182, 212, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/3.png" alt="RTL Mode Screenshot" class="theme-screen-img" loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet" style="background-color: #06b6d4; box-shadow: 0 0 8px #06b6d4;"></span>
+            <span class="theme-card-title">RTL Mode</span>
+          </div>
+        </div>
+
+        <!-- 4. LTR Mode -->
+        <div class="theme-screen-card" style="--theme-accent: #3b82f6; --theme-glow: rgba(59, 130, 246, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/11.png" alt="LTR Mode Screenshot" class="theme-screen-img" loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet" style="background-color: #3b82f6; box-shadow: 0 0 8px #3b82f6;"></span>
+            <span class="theme-card-title">LTR Mode</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navbar Behavior (Sticky & Scroll) Section -->
+    <section id="navbar-behavior" class="doc-section theme-engine-section">
+      <!-- Section Header -->
+      <div class="theme-engine-header">
+        <div class="theme-eyebrow-badge">
+          <i class="bi bi-window-dock"></i>
+          <span>Navigation Architecture</span>
+        </div>
+        <h2 class="theme-engine-title">Navbar Behavior <span class="theme-gradient-text">(Sticky &amp; Scroll)</span>
+        </h2>
+        <p class="theme-engine-subtitle">
+          Configurable top navigation bar behaviors optimized for seamless patient charting, quick workflow access, and
+          clinical viewport focus.
+        </p>
+      </div>
+
+      <!-- 2 Big Cards Grid (Sticky & Scroll) -->
+      <div class="navbar-behavior-grid">
+        <!-- 1. Sticky Card -->
+        <div class="big-screen-card" style="--theme-accent: #10b981; --theme-glow: rgba(16, 185, 129, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/1.png" alt="Sticky Navbar Screenshot" class="theme-screen-img"
+                loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet" style="background-color: #10b981; box-shadow: 0 0 8px #10b981;"></span>
+            <span class="theme-card-title">Sticky Navbar</span>
+          </div>
+        </div>
+
+        <!-- 2. Scroll Card -->
+        <div class="big-screen-card" style="--theme-accent: #3b82f6; --theme-glow: rgba(59, 130, 246, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/12.png" alt="Scroll Navbar Screenshot" class="theme-screen-img"
+                loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet" style="background-color: #3b82f6; box-shadow: 0 0 8px #3b82f6;"></span>
+            <span class="theme-card-title">Scroll Navbar</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advanced 6 Pre-Built Apps Section -->
+    <section id="prebuilt-apps" class="doc-section theme-engine-section">
+      <!-- Section Header -->
+      <div class="theme-engine-header">
+        <div class="theme-eyebrow-badge">
+          <i class="bi bi-grid-fill"></i>
+          <span>Turnkey Clinical Applications</span>
+        </div>
+        <h2 class="theme-engine-title">Advanced 6 <span class="theme-gradient-text">Pre-Built Apps</span></h2>
+        <p class="theme-engine-subtitle">
+          Ready-to-use clinical operation modules designed for multi-specialty hospitals, outpatient clinics, and
+          centralized biomedical departments.
+        </p>
+      </div>
+
+      <!-- 6 Pre-Built Apps Grid (Add or replace screenshots later) -->
+      <div class="apps-screens-grid">
+        <!-- 1. Physicians & Medical Staff Directory -->
+        <div class="theme-screen-card" style="--theme-accent: #10b981; --theme-glow: rgba(16, 185, 129, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/13.png" alt="Physicians & Medical Staff Directory Screenshot"
+                class="theme-screen-img" loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet" style="background-color: #10b981; box-shadow: 0 0 8px #10b981;"></span>
+            <span class="theme-card-title">Physicians & Medical Staff Directory</span>
+          </div>
+        </div>
+
+        <!-- 2. Wards & Bed Capacity Management -->
+        <div class="theme-screen-card" style="--theme-accent: #3b82f6; --theme-glow: rgba(59, 130, 246, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/14.png" alt="Patients Directory Screenshot" class="theme-screen-img"
+                loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet" style="background-color: #3b82f6; box-shadow: 0 0 8px #3b82f6;"></span>
+            <span class="theme-card-title">Wards & Bed Capacity Management</span>
+          </div>
+        </div>
+
+        <!-- 3. Laboratory Diagnostics & Pathology -->
+        <div class="theme-screen-card" style="--theme-accent: #f59e0b; --theme-glow: rgba(245, 158, 11, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/15.png" alt="Central Pharmacy Screenshot" class="theme-screen-img"
+                loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet" style="background-color: #f59e0b; box-shadow: 0 0 8px #f59e0b;"></span>
+            <span class="theme-card-title">Laboratory Diagnostics & Pathology</span>
+          </div>
+        </div>
+
+        <!-- 4. Hospital Pharmacy & Dispensary -->
+        <div class="theme-screen-card" style="--theme-accent: #7c3aed; --theme-glow: rgba(124, 58, 237, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/16.png" alt="Hospital Pharmacy & Dispensary Screenshot"
+                class="theme-screen-img" loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet" style="background-color: #7c3aed; box-shadow: 0 0 8px #7c3aed;"></span>
+            <span class="theme-card-title">Laboratory &amp; Diagnostics</span>
+          </div>
+        </div>
+
+        <!-- 5. Emergency Trauma Queue -->
+        <div class="theme-screen-card" style="--theme-accent: #ef4444; --theme-glow: rgba(239, 68, 68, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/17.png" alt="Emergency Triage Screenshot" class="theme-screen-img"
+                loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet" style="background-color: #ef4444; box-shadow: 0 0 8px #ef4444;"></span>
+            <span class="theme-card-title">Emergency Trauma Queue</span>
+          </div>
+        </div>
+
+        <!-- 6. Hospital Facility & Network Settings -->
+        <div class="theme-screen-card" style="--theme-accent: #06b6d4; --theme-glow: rgba(6, 182, 212, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/18.png" alt="Staff Management Screenshot" class="theme-screen-img"
+                loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet" style="background-color: #06b6d4; box-shadow: 0 0 8px #06b6d4;"></span>
+            <span class="theme-card-title">Hospital Staff &amp; Physicians</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Authentication Suite & System Error Pages Section -->
+    <section id="auth-suite" class="doc-section theme-engine-section">
+      <!-- Section Header -->
+      <div class="theme-engine-header">
+        <div class="theme-eyebrow-badge">
+          <i class="bi bi-shield-lock-fill"></i>
+          <span>Security &amp; Diagnostics</span>
+        </div>
+        <h2 class="theme-engine-title">Authentication Suite &amp; <span class="theme-gradient-text">System Error
+            Pages</span></h2>
+        <p class="theme-engine-subtitle">
+          Complete clinical staff onboarding, secure session verification, credential recovery flows, and clean
+          infrastructure error failover templates.
+        </p>
+      </div>
+
+      <!-- 7 Cards Grid (3 cards per line) -->
+      <div class="three-cards-grid">
+        <!-- 1. Sign In -->
+        <div class="theme-screen-card" style="--theme-accent: #10b981; --theme-glow: rgba(16, 185, 129, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/19.png" alt="Sign In Screenshot" class="theme-screen-img" loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet" style="background-color: #10b981; box-shadow: 0 0 8px #10b981;"></span>
+            <span class="theme-card-title">Sign In</span>
+          </div>
+        </div>
+
+        <!-- 2. Staff Registration -->
+        <div class="theme-screen-card" style="--theme-accent: #3b82f6; --theme-glow: rgba(59, 130, 246, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/20.png" alt="Staff Registration Screenshot" class="theme-screen-img"
+                loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet" style="background-color: #3b82f6; box-shadow: 0 0 8px #3b82f6;"></span>
+            <span class="theme-card-title">Staff Registration</span>
+          </div>
+        </div>
+
+        <!-- 3. Forgot Password -->
+        <div class="theme-screen-card" style="--theme-accent: #f59e0b; --theme-glow: rgba(245, 158, 11, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/21.png" alt="Forgot Password Screenshot" class="theme-screen-img"
+                loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet" style="background-color: #f59e0b; box-shadow: 0 0 8px #f59e0b;"></span>
+            <span class="theme-card-title">Forgot Password</span>
+          </div>
+        </div>
+
+        <!-- 4. Verify Email / OTP -->
+        <div class="theme-screen-card" style="--theme-accent: #06b6d4; --theme-glow: rgba(6, 182, 212, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/22.png" alt="Verify OTP Screenshot" class="theme-screen-img" loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet" style="background-color: #06b6d4; box-shadow: 0 0 8px #06b6d4;"></span>
+            <span class="theme-card-title">Verify Email / OTP</span>
+          </div>
+        </div>
+
+        <!-- 5. Reset Password -->
+        <div class="theme-screen-card" style="--theme-accent: #7c3aed; --theme-glow: rgba(124, 58, 237, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/23.png" alt="Reset Password Screenshot" class="theme-screen-img"
+                loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet" style="background-color: #7c3aed; box-shadow: 0 0 8px #7c3aed;"></span>
+            <span class="theme-card-title">Reset Password</span>
+          </div>
+        </div>
+
+        <!-- 6. 404 Error Page -->
+        <div class="theme-screen-card" style="--theme-accent: #ec4899; --theme-glow: rgba(236, 72, 153, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/24.png" alt="404 Error Screenshot" class="theme-screen-img" loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet" style="background-color: #ec4899; box-shadow: 0 0 8px #ec4899;"></span>
+            <span class="theme-card-title">404 Error Page</span>
+          </div>
+        </div>
+
+        <!-- 7. 500 Server Incident -->
+        <div class="theme-screen-card" style="--theme-accent: #ef4444; --theme-glow: rgba(239, 68, 68, 0.25);">
+          <div class="theme-mockup-frame">
+            <div class="theme-mockup-header">
+              <div class="theme-dots">
+                <span class="mockup-dot dot-red"></span>
+                <span class="mockup-dot dot-yellow"></span>
+                <span class="mockup-dot dot-green"></span>
+              </div>
+            </div>
+            <div class="theme-mockup-body">
+              <img src="./images/screenshot/25.png" alt="500 Server Incident Screenshot" class="theme-screen-img"
+                loading="lazy">
+            </div>
+          </div>
+          <div class="theme-card-footer">
+            <span class="theme-color-bullet" style="background-color: #ef4444; box-shadow: 0 0 8px #ef4444;"></span>
+            <span class="theme-card-title">500 Server Incident</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Core Features Section -->
+    <section id="core-features" class="doc-section core-features-section">
+      <!-- Section Header -->
+      <div class="core-features-header">
+        <h2 class="core-features-title">Our Core <span class="feature-highlight-text">Features</span></h2>
+        <p class="core-features-subtitle">
+          Built with latest web technologies for fast, reliable, high-performance clinical healthcare operations.
+        </p>
+      </div>
+
+      <!-- 15 Features Grid (5x3 Matrix) -->
+      <div class="core-features-grid">
+        <!-- 1. React 19 -->
+        <div class="core-feature-card">
+          <div class="feature-card-icon-wrap">
+            <svg viewBox="0 0 115.3 100" width="46" height="40" aria-label="React 19">
+              <ellipse cx="57.65" cy="50" rx="16.7" ry="43.5" transform="rotate(30 57.65 50)" fill="none"
+                stroke="#00d8ff" stroke-width="6.5" />
+              <ellipse cx="57.65" cy="50" rx="16.7" ry="43.5" transform="rotate(90 57.65 50)" fill="none"
+                stroke="#00d8ff" stroke-width="6.5" />
+              <ellipse cx="57.65" cy="50" rx="16.7" ry="43.5" transform="rotate(150 57.65 50)" fill="none"
+                stroke="#00d8ff" stroke-width="6.5" />
+              <circle cx="57.65" cy="50" r="9.5" fill="#00d8ff" />
+            </svg>
+          </div>
+          <h3 class="feature-card-title">React 19</h3>
+          <p class="feature-card-desc">Latest React Framework</p>
+        </div>
+
+        <!-- 2. Tailwind CSS v4 -->
+        <div class="core-feature-card">
+          <div class="feature-card-icon-wrap">
+            <svg viewBox="0 0 32 32" width="44" height="40" fill="none" aria-label="Tailwind CSS">
+              <path
+                d="M9 13.5C10.5 7.5 15 6 18 10.5C16 11.5 15 12.5 15 14C17.5 15 19.5 16 23 20.5C20.5 24.5 17 25 14 22.5C15.5 21 16.5 20 16.5 18.5C14.5 17.5 12 16.5 9 13.5Z"
+                fill="#38bdf8" />
+              <path
+                d="M19 19.5C20.5 15 23.5 14 25.5 16.5C24.5 17.2 24 17.8 24 18.5C25.5 19 26.5 19.8 28.5 22C27 24.5 25 25 23 23.5C24 22.5 24.5 22 24.5 21C23.5 20.5 21.5 20 19 19.5Z"
+                fill="#38bdf8" />
+            </svg>
+          </div>
+          <h3 class="feature-card-title">Tailwind CSS v4</h3>
+          <p class="feature-card-desc">Lightning-Fast Styling</p>
+        </div>
+
+        <!-- 3. Vite 8 -->
+        <div class="core-feature-card">
+          <div class="feature-card-icon-wrap">
+            <div
+              style="width: 44px; height: 44px; background: #f7df1e; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; color: #000000; font-family: var(--font-mono);">
+              JS</div>
+          </div>
+          <h3 class="feature-card-title">Vite 8</h3>
+          <p class="feature-card-desc">Blazing Fast HMR</p>
+        </div>
+
+        <!-- 4. ApexCharts -->
+        <div class="core-feature-card">
+          <div class="feature-card-icon-wrap">
+            <svg viewBox="0 0 44 48" width="40" height="44" fill="none" aria-label="ApexCharts">
+              <path d="M22 2L40 7L36 38L22 46L8 38L4 7L22 2Z" fill="#2563eb" />
+              <path d="M22 5L37 9.5L33.5 35.5L22 42.5V5Z" fill="#3b82f6" />
+              <rect x="12" y="24" width="4" height="10" rx="1.5" fill="#ffffff" />
+              <rect x="20" y="16" width="4" height="18" rx="1.5" fill="#ffffff" />
+              <rect x="28" y="20" width="4" height="14" rx="1.5" fill="#ffffff" />
+              <path d="M14 22L22 14L30 18" stroke="#fde047" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3 class="feature-card-title">ApexCharts</h3>
+          <p class="feature-card-desc">Clinical &amp; Vital Telemetry Charts</p>
+        </div>
+
+        <!-- 5. Lenis Smooth -->
+        <div class="core-feature-card">
+          <div class="feature-card-icon-wrap">
+            <svg viewBox="0 0 48 40" width="44" height="38" fill="none" stroke="#ec4899" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-label="Lenis Smooth">
+              <rect x="3" y="4" width="28" height="22" rx="3" stroke="#f43f5e" />
+              <line x1="12" y1="26" x2="10" y2="31" stroke="#f43f5e" />
+              <line x1="22" y1="26" x2="24" y2="31" stroke="#f43f5e" />
+              <line x1="8" y1="31" x2="26" y2="31" stroke="#f43f5e" />
+              <rect x="26" y="10" width="16" height="26" rx="3" fill="#ffffff" stroke="#ec4899" stroke-width="2" />
+              <line x1="31" y1="32" x2="37" y2="32" stroke="#ec4899" />
+              <circle cx="34" cy="14" r="1" fill="#ec4899" />
+            </svg>
+          </div>
+          <h3 class="feature-card-title">Lenis Smooth</h3>
+          <p class="feature-card-desc">Silky Scrolling Engine</p>
+        </div>
+
+        <!-- 6. HTML 5 -->
+        <div class="core-feature-card">
+          <div class="feature-card-icon-wrap">
+            <svg viewBox="0 0 512 512" width="40" height="40" aria-label="HTML 5">
+              <path fill="#e34f26" d="M71 460L30 0h452l-41 460-185 52z" />
+              <path fill="#ef652a" d="M256 472l149-41 35-391H256v432z" />
+              <path fill="#ebebeb" d="M256 176H154l-8-88h220l-8 88H256zM256 272h-49l-4-48h53v-40H142l11 128h103v-40z" />
+              <path fill="#ffffff" d="M256 176h66l-6 68h-60v40h57l-6 63-51 14v42l93-26 13-149H256v-52z" />
+            </svg>
+          </div>
+          <h3 class="feature-card-title">HTML 5</h3>
+          <p class="feature-card-desc">Semantic Structure</p>
+        </div>
+
+        <!-- 7. 100% Responsive -->
+        <div class="core-feature-card">
+          <div class="feature-card-icon-wrap">
+            <svg viewBox="0 0 48 40" width="44" height="38" fill="none" stroke="#d946ef" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-label="100% Responsive">
+              <rect x="3" y="4" width="28" height="22" rx="3" stroke="#c026d3" />
+              <line x1="12" y1="26" x2="10" y2="31" stroke="#c026d3" />
+              <line x1="22" y1="26" x2="24" y2="31" stroke="#c026d3" />
+              <line x1="8" y1="31" x2="26" y2="31" stroke="#c026d3" />
+              <rect x="26" y="10" width="16" height="26" rx="3" fill="#ffffff" stroke="#d946ef" stroke-width="2" />
+              <line x1="31" y1="32" x2="37" y2="32" stroke="#d946ef" />
+              <circle cx="34" cy="14" r="1" fill="#d946ef" />
+            </svg>
+          </div>
+          <h3 class="feature-card-title">100% Responsive</h3>
+          <p class="feature-card-desc">Mobile &amp; Tablet Ready</p>
+        </div>
+
+        <!-- 8. Montserrat / Google Web Fonts -->
+        <div class="core-feature-card">
+          <div class="feature-card-icon-wrap">
+            <svg viewBox="0 0 100 100" width="40" height="40" aria-label="Google Fonts">
+              <path d="M50 0 A50 50 0 0 1 100 50 L50 50 Z" fill="#4285f4" />
+              <path d="M100 50 A50 50 0 0 1 50 100 L50 50 Z" fill="#34a853" />
+              <path d="M50 100 A50 50 0 0 1 0 50 L50 50 Z" fill="#fbbc05" />
+              <path d="M0 50 A50 50 0 0 1 50 0 L50 50 Z" fill="#ea4335" />
+              <circle cx="50" cy="50" r="22" fill="#ffffff" />
+            </svg>
+          </div>
+          <h3 class="feature-card-title">Montserrat</h3>
+          <p class="feature-card-desc">Google Web Fonts</p>
+        </div>
+
+        <!-- 9. Lucide Icons -->
+        <div class="core-feature-card">
+          <div class="feature-card-icon-wrap">
+            <svg viewBox="0 0 40 40" width="40" height="40" fill="none" stroke="#06b6d4" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" aria-label="Lucide Icons">
+              <path d="M15 25h10M16 29h8M14 17a6 6 0 1 1 12 0c0 3.2-2 4.2-2 6.5h-8c0-2.3-2-3.3-2-6.5z" />
+              <line x1="20" y1="3" x2="20" y2="7" />
+              <line x1="7" y1="9" x2="10" y2="12" />
+              <line x1="33" y1="9" x2="30" y2="12" />
+              <line x1="3" y1="18" x2="7" y2="18" />
+              <line x1="37" y1="18" x2="33" y2="18" />
+            </svg>
+          </div>
+          <h3 class="feature-card-title">Lucide Icons</h3>
+          <p class="feature-card-desc">Clean Vector Icons</p>
+        </div>
+
+        <!-- 10. Dark & Light -->
+        <div class="core-feature-card">
+          <div class="feature-card-icon-wrap">
+            <svg viewBox="0 0 44 40" width="42" height="38" fill="none" stroke="#8b5cf6" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-label="Dark and Light">
+              <rect x="4" y="5" width="36" height="30" rx="4" />
+              <line x1="4" y1="13" x2="40" y2="13" />
+              <circle cx="8" cy="9" r="1.5" fill="#8b5cf6" />
+              <circle cx="13" cy="9" r="1.5" fill="#8b5cf6" />
+              <line x1="22" y1="13" x2="22" y2="35" />
+              <path d="M22 13h18v22H22z" fill="rgba(139, 92, 246, 0.15)" stroke="none" />
+              <circle cx="14" cy="24" r="4" fill="#fbbf24" stroke="#fbbf24" stroke-width="1" />
+              <path d="M28 20a4 4 0 1 0 4 6 5 5 0 0 1-4-6z" fill="#8b5cf6" stroke="#8b5cf6" stroke-width="1" />
+            </svg>
+          </div>
+          <h3 class="feature-card-title">Dark &amp; Light</h3>
+          <p class="feature-card-desc">Dual Theme Support</p>
+        </div>
+
+        <!-- 11. LTR & RTL -->
+        <div class="core-feature-card">
+          <div class="feature-card-icon-wrap">
+            <svg viewBox="0 0 44 40" width="42" height="38" fill="none" stroke="#a855f7" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-label="LTR and RTL">
+              <rect x="4" y="4" width="36" height="26" rx="3" />
+              <line x1="16" y1="30" x2="14" y2="36" />
+              <line x1="28" y1="30" x2="30" y2="36" />
+              <line x1="10" y1="36" x2="34" y2="36" />
+              <path d="M13 14h18M18 10l-5 4 5 4" stroke-width="2" />
+              <path d="M31 20H13M26 16l5 4-5 4" stroke-width="2" />
+            </svg>
+          </div>
+          <h3 class="feature-card-title">LTR &amp; RTL</h3>
+          <p class="feature-card-desc">Bi-directional Ready</p>
+        </div>
+
+        <!-- 12. Clean Code -->
+        <div class="core-feature-card">
+          <div class="feature-card-icon-wrap">
+            <svg viewBox="0 0 44 40" width="42" height="38" fill="none" stroke="#ec4899" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-label="Clean Code">
+              <rect x="4" y="4" width="36" height="26" rx="3" />
+              <line x1="16" y1="30" x2="14" y2="36" />
+              <line x1="28" y1="30" x2="30" y2="36" />
+              <line x1="10" y1="36" x2="34" y2="36" />
+              <path d="M15 13l-4 4 4 4" stroke="#f43f5e" stroke-width="2.2" />
+              <path d="M29 13l4 4-4 4" stroke="#f43f5e" stroke-width="2.2" />
+              <line x1="24" y1="12" x2="20" y2="22" stroke="#f43f5e" stroke-width="2.2" />
+            </svg>
+          </div>
+          <h3 class="feature-card-title">Clean Code</h3>
+          <p class="feature-card-desc">Zero Warnings</p>
+        </div>
+
+        <!-- 13. Well Documented -->
+        <div class="core-feature-card">
+          <div class="feature-card-icon-wrap">
+            <svg viewBox="0 0 40 44" width="36" height="40" fill="none" stroke="#0ea5e9" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" aria-label="Well Documented">
+              <path d="M10 4h14l10 10v24a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />
+              <polyline points="24 4 24 14 34 14" />
+              <line x1="14" y1="21" x2="26" y2="21" />
+              <line x1="14" y1="27" x2="26" y2="27" />
+              <line x1="14" y1="33" x2="21" y2="33" />
+            </svg>
+          </div>
+          <h3 class="feature-card-title">Well Documented</h3>
+          <p class="feature-card-desc">Comprehensive Guides</p>
+        </div>
+
+        <!-- 14. Dedicated Support -->
+        <div class="core-feature-card">
+          <div class="feature-card-icon-wrap">
+            <svg viewBox="0 0 44 44" width="42" height="42" fill="none" aria-label="Dedicated Support">
+              <circle cx="22" cy="22" r="19" stroke="#f97316" stroke-width="2" stroke-dasharray="8 3" />
+              <text x="22" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800"
+                fill="#f97316" text-anchor="middle">24/7</text>
+              <path d="M14 26v4a2 2 0 0 0 2 2h3M25 32h3a2 2 0 0 0 2-2v-4" stroke="#f97316" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <rect x="12" y="24" width="4" height="6" rx="2" fill="#f97316" />
+              <rect x="28" y="24" width="4" height="6" rx="2" fill="#f97316" />
+              <path d="M14 25a8 8 0 0 1 16 0" stroke="#f97316" stroke-width="2" />
+            </svg>
+          </div>
+          <h3 class="feature-card-title">Dedicated Support</h3>
+          <p class="feature-card-desc">Fast Response Time</p>
+        </div>
+
+        <!-- 15. 8 Accent Colors -->
+        <div class="core-feature-card">
+          <div class="feature-card-icon-wrap">
+            <svg viewBox="0 0 44 40" width="42" height="38" fill="none" stroke="#d946ef" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-label="8 Accent Colors">
+              <rect x="4" y="4" width="36" height="32" rx="4" />
+              <line x1="4" y1="12" x2="40" y2="12" />
+              <circle cx="8" cy="8" r="1.5" fill="#d946ef" />
+              <line x1="12" y1="12" x2="12" y2="36" />
+              <rect x="17" y="17" width="5" height="5" rx="1" fill="#10b981" stroke="none" />
+              <rect x="24" y="17" width="5" height="5" rx="1" fill="#3b82f6" stroke="none" />
+              <rect x="31" y="17" width="5" height="5" rx="1" fill="#ec4899" stroke="none" />
+              <rect x="17" y="24" width="5" height="5" rx="1" fill="#8b5cf6" stroke="none" />
+              <rect x="24" y="24" width="5" height="5" rx="1" fill="#f97316" stroke="none" />
+              <rect x="31" y="24" width="5" height="5" rx="1" fill="#06b6d4" stroke="none" />
+            </svg>
+          </div>
+          <h3 class="feature-card-title">8 Accent Colors</h3>
+          <p class="feature-card-desc">Live Customizer</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Get Started CTA Banner Section -->
+    <section id="cta-get-started" class="doc-section cta-banner-section">
+      <div class="cta-banner-container">
+        <h2 class="cta-banner-title">
+          Get Started with <span class="feature-highlight-text">CarePulse</span> — The Ultimate Hospital &amp; Clinical
+          Dashboard
+        </h2>
+        <p class="cta-banner-subtitle">
+          Kickstart your hospital management, emergency triage, bedside telemetry, or clinical operations analytics in
+          minutes.
+        </p>
+        <div class="cta-banner-action">
+          <a href="#" class="btn-purchase-now">
+            <span>Purchase Now!</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="doc-section mb-0">
+      <div class="section-header-box">
+        <div class="section-title-wrap">
+          <div class="section-icon-badge"><i class="bi bi-headset"></i></div>
+          <h2 class="section-title">Support &amp; Developer Inquiries</h2>
+        </div>
+      </div>
+
+      <div class="support-card">
+        <div class="support-icon-avatar">
+          <i class="bi bi-headset"></i>
+        </div>
+        <h3 class="support-title">Need Assistance or Custom Hospital Integration?</h3>
+        <p class="support-desc">
+          Our engineering team at vrajalInnovations provides dedicated assistance for clinical template deployment,
+          HL7/FHIR backend integration, and custom hospital operations workflows.
+        </p>
+
+        <div class="support-contact-grid">
+          <a href="mailto:vrajalinnovations@gmail.com" class="contact-tile">
+            <div class="contact-tile-icon">
+              <i class="bi bi-envelope-check-fill"></i>
+            </div>
+            <div>
+              <div class="contact-tile-label">Direct Support Email</div>
+              <div class="contact-tile-val">vrajalinnovations@gmail.com</div>
+            </div>
+          </a>
+
+          <a href="https://vrajalinnovations.com" target="_blank" rel="noopener noreferrer" class="contact-tile">
+            <div class="contact-tile-icon">
+              <i class="bi bi-globe2"></i>
+            </div>
+            <div>
+              <div class="contact-tile-label">Official Website</div>
+              <div class="contact-tile-val">vrajalInnovations.com</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="support-badge-note">
+          <i class="bi bi-clock-history text-cyan"></i>
+          <span>Average Response Time: Within 24 Hours</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Clean Footer -->
+  <footer class="docs-footer">
+    <div class="footer-links">
+      <a href="#screens" class="footer-link">Dashboards</a>
+      <a href="#prebuilt-apps" class="footer-link">Apps</a>
+      <a href="#core-features" class="footer-link">Features</a>
+      <a href="./document.html" class="footer-link">Documents</a>
+    </div>
+    <p>© 2026 CarePulse Hospital Operations. Engineered by vrajalInnovations. All rights reserved.</p>
+  </footer>
+
+  <!-- Interactive JavaScript Controller -->
+  <script src="./js/main.js"></script>
+
+</body>
+
+</html>

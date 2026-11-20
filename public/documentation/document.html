@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="./images/logo-sm.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarePulse Documentation — React 19 Hospital &amp; Clinical Operations Dashboard</title>
+
+  <meta name="description"
+    content="Complete developer documentation, customization guide, architectural overview, and component API reference for CarePulse React 19 Hospital & Clinical Operations Dashboard.">
+  <meta name="theme-color" content="#10b981">
+
+  <!-- Google Fonts: Plus Jakarta Sans & IBM Plex Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="./css/bootstrap-icons.min.css" type="text/css">
+
+  <!-- Base Theme & Custom Documentation Stylesheets -->
+  <link rel="stylesheet" href="./css/app.css" type="text/css">
+  <link rel="stylesheet" href="./css/docs.css" type="text/css">
+</head>
+
+<body>
+
+  <!-- Ambient Multi-Orb Lighting System -->
+  <div class="ambient-glow-wrapper">
+    <div class="ambient-orb-top"></div>
+    <div class="ambient-orb-hero"></div>
+    <div class="ambient-orb-bottom"></div>
+    <div class="ambient-mesh"></div>
+  </div>
+
+  <!-- Mobile Sidebar Backdrop -->
+  <div class="docs-sidebar-backdrop" id="docsBackdrop"></div>
+
+  <!-- Top Navigation Header -->
+  <header class="docs-header-bar">
+    <div class="docs-header-left">
+      <button class="docs-mobile-toggle-btn" id="docsMobileToggle" aria-label="Toggle Documentation Sidebar">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <a href="./index.html" class="docs-brand-link">
+        <div class="brand-icon-wrap" style="width: 36px; height: 36px; background: transparent; border: none; box-shadow: none;">
+          <img src="./images/logo-sm.png" alt="CarePulse Logo" class="brand-icon" style="width: 32px; height: 32px; object-fit: contain;">
+        </div>
+        <span class="brand-text" style="font-size: 1.25rem;">CarePulse</span>
+        <span class="docs-brand-badge">Docs</span>
+      </a>
+
+      <!-- Quick Search Bar -->
+      <div class="docs-search-wrap">
+        <i class="bi bi-search docs-search-icon"></i>
+        <input type="text" id="docsSearchInput" class="docs-search-input" placeholder="Search documentation...">
+        <span class="docs-search-kbd">Ctrl K</span>
+      </div>
+    </div>
+
+    <div class="docs-header-right">
+      <a href="./index.html" class="docs-header-navlink">
+        <i class="bi bi-columns-gap"></i>
+        <span>Showcase</span>
+      </a>
+      <span class="version-tag">v1.0 PRO</span>
+      <a href="/" target="_blank" class="btn-live-preview">
+        <span>Live Preview</span>
+        <i class="bi bi-box-arrow-up-right" style="font-size: 12px; margin-left: 4px;"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Layout Container: Sidebar + Article Content -->
+  <div class="docs-page-layout">
+
+    <!-- ── Left Fixed Sidebar Navigation ─────────────────────────────────── -->
+    <aside class="docs-sidebar-aside" id="docsSidebar">
+      <div class="docs-sidebar-brand-title">
+        <i class="bi bi-book-half"></i>
+        <span>Documentation</span>
+      </div>
+
+      <!-- Group 1: Introduction & Setup -->
+      <div class="docs-nav-group">
+        <div class="docs-nav-group-header">
+          <i class="bi bi-rocket-takeoff"></i>
+          <span>Introduction &amp; Setup</span>
+        </div>
+        <ul class="docs-nav-list">
+          <li>
+            <a href="#product-overview" class="docs-sidebar-link active">
+              <span>Product Overview</span>
+            </a>
+          </li>
+          <li>
+            <a href="#license-usage" class="docs-sidebar-link">
+              <span>License &amp; Usage</span>
+            </a>
+          </li>
+          <li>
+            <a href="#changelog" class="docs-sidebar-link">
+              <span>Changelog</span>
+              <span class="link-badge">v1.0</span>
+            </a>
+          </li>
+          <li>
+            <a href="#file-structure" class="docs-sidebar-link">
+              <span>File Structure</span>
+            </a>
+          </li>
+          <li>
+            <a href="#installation-guide" class="docs-sidebar-link">
+              <span>Installation Guide</span>
+            </a>
+          </li>
+          <li>
+            <a href="#deployment" class="docs-sidebar-link">
+              <span>Deployment</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Group 2: Customization -->
+      <div class="docs-nav-group">
+        <div class="docs-nav-group-header">
+          <i class="bi bi-sliders"></i>
+          <span>Customization</span>
+        </div>
+        <ul class="docs-nav-list">
+          <li>
+            <a href="#theme-dark-mode" class="docs-sidebar-link">
+              <span>Theme &amp; Dark Mode</span>
+            </a>
+          </li>
+          <li>
+            <a href="#color-customization" class="docs-sidebar-link">
+              <span>Color Customization</span>
+            </a>
+          </li>
+          <li>
+            <a href="#font-customization" class="docs-sidebar-link">
+              <span>Font Customization</span>
+            </a>
+          </li>
+          <li>
+            <a href="#rtl-direction" class="docs-sidebar-link">
+              <span>RTL &amp; Direction</span>
+            </a>
+          </li>
+          <li>
+            <a href="#layout-architecture" class="docs-sidebar-link">
+              <span>Layout Architecture</span>
+            </a>
+          </li>
+          <li>
+            <a href="#routing-setup" class="docs-sidebar-link">
+              <span>Routing Setup</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Group 3: Components -->
+      <div class="docs-nav-group">
+        <div class="docs-nav-group-header">
+          <i class="bi bi-grid-1x2"></i>
+          <span>Components</span>
+        </div>
+        <ul class="docs-nav-list">
+          <li>
+            <a href="#ui-components" class="docs-sidebar-link">
+              <span>UI Components Library</span>
+            </a>
+          </li>
+          <li>
+            <a href="#charts-analytics" class="docs-sidebar-link">
+              <span>Trading &amp; Data Charts</span>
+            </a>
+          </li>
+          <li>
+            <a href="#tables-mockdata" class="docs-sidebar-link">
+              <span>Tables &amp; Mock Data</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Group 4: Support -->
+      <div class="docs-nav-group">
+        <div class="docs-nav-group-header">
+          <i class="bi bi-headset"></i>
+          <span>Support</span>
+        </div>
+        <ul class="docs-nav-list">
+          <li>
+            <a href="#faq" class="docs-sidebar-link">
+              <span>FAQ</span>
+            </a>
+          </li>
+          <li>
+            <a href="#credits-sources" class="docs-sidebar-link">
+              <span>Credits &amp; Sources</span>
+            </a>
+          </li>
+          <li>
+            <a href="#support-contact" class="docs-sidebar-link">
+              <span>Support &amp; Contact</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- ── Main Documentation Content Column ─────────────────────────────── -->
+    <main class="docs-main-content">
+
+      <!-- ══════════════════════════════════════════════════════════════════
+           GROUP 1: INTRODUCTION & SETUP
+           ══════════════════════════════════════════════════════════════════ -->
+
+      <!-- Welcome Banner -->
+      <div class="doc-section-card" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(6, 182, 212, 0.05) 100%); border-color: rgba(16, 185, 129, 0.25);">
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 14px;">
+          <img src="./images/logo-sm.png" alt="CarePulse Logo" style="width: 44px; height: 44px; object-fit: contain;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span class="badge-tag" style="background: #10b981; color: white;">Welcome</span>
+            <span style="font-size: 12px; font-weight: 700; color: #059669; text-transform: uppercase; letter-spacing: 0.06em;">Introduction &amp; Setup</span>
+          </div>
+        </div>
+        <h2 style="font-size: 1.85rem; font-weight: 800; color: var(--text-heading); margin-bottom: 14px; line-height: 1.3;">
+          Welcome to <span style="color: #10b981;">CarePulse</span> — Modern Hospital &amp; Clinical Operations React Admin Dashboard Template Documentation
+        </h2>
+        <p style="font-size: 15px; line-height: 1.7; color: var(--text-body); margin: 0;">
+          Thank you for choosing <strong>CarePulse</strong>! This documentation provides in-depth guidance on how to install, configure, customize, and extend the template for your hospital management system, emergency trauma triage unit, bedside telemetry command center, clinical operations portal, or healthcare analytics platform.
+        </p>
+      </div>
+
+      <!-- 1. Product Overview -->
+      <section id="product-overview" class="doc-section-card">
+        <div class="doc-section-badge-strip">
+          <span class="doc-category-badge">Introduction &amp; Setup</span>
+        </div>
+        <h2 class="doc-section-heading">1. Product Overview: CarePulse Hospital &amp; Clinical Admin</h2>
+        <p class="doc-section-lead">
+          CarePulse is a state-of-the-art, high-performance, and feature-complete Hospital &amp; Clinical Operations Admin Dashboard template built with React 19, Tailwind CSS v4, and Vite 8. Engineered with modular architecture, isolated reusable UI components, and cutting-edge visual aesthetics, CarePulse delivers everything needed to build production-ready clinical and administrative healthcare applications.
+        </p>
+
+        <h3 class="doc-subheading"><i class="bi bi-stars text-emerald"></i> Key Highlights</h3>
+        <ul style="padding-left: 20px; line-height: 1.8; color: var(--text-body); font-size: 14.5px; margin-bottom: 28px;">
+          <li><strong>Modern Tech Stack:</strong> Powered by React 19, Tailwind CSS v4, and Vite 8 for blazing fast Hot Module Replacement (HMR) and optimized build outputs.</li>
+          <li><strong>32+ Pre-built Pages:</strong> Comprehensive suite of specialized pages for Clinical Command Center, Emergency &amp; Trauma Triage, Bedside Telemetry, Inpatient Registry, Physician &amp; Staff Roster, Ward Occupancy &amp; Bed Management, Stat Lab Diagnostics, Hospital Pharmacy &amp; Dispensary, Authentication Suite, System Errors, and UI Elements.</li>
+          <li><strong>Dual Theme Mode:</strong> Native Dark and Light themes with animated View Transitions and frosted glassmorphism backdrops.</li>
+          <li><strong>Bi-directional (LTR &amp; RTL):</strong> Full Right-to-Left (RTL) language support with instantaneous toggle for international hospital deployments.</li>
+          <li><strong>Dynamic 8-Color Accent Switcher:</strong> Emerald, Teal, Ocean Blue, Violet, Amber, Rose, Aqua Cyan, and Indigo with real-time CSS variable shade generation.</li>
+          <li><strong>Lenis Smooth Scrolling:</strong> Silky-smooth desktop scrolling experience integrated at root.</li>
+          <li><strong>Rich Interactive Visualizations:</strong> Live vital telemetry charts, patient admissions area graphs, ward occupancy donuts, and clinical performance radars powered by ApexCharts and Recharts.</li>
+          <li><strong>Code-Splitting &amp; Lazy Loading:</strong> Dynamic page-level routing with React Router v7, clean component isolation, and zero console errors or warnings.</li>
+          <li><strong>Clean &amp; Modular Codebase:</strong> Strict component isolation, reusable UI library, and zero arbitrary Tailwind bracket classes (<code>-[...]</code>).</li>
+        </ul>
+
+        <h3 class="doc-subheading"><i class="bi bi-cpu text-emerald"></i> Technology Stack</h3>
+        <div class="doc-table-wrap">
+          <table class="doc-data-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Technology</th>
+                <th style="width: 18%;">Version</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>React</strong></td>
+                <td><span class="badge-tag">^19.2.8</span></td>
+                <td>Latest modern frontend component framework</td>
+              </tr>
+              <tr>
+                <td><strong>React DOM</strong></td>
+                <td><span class="badge-tag">^19.2.8</span></td>
+                <td>React package for DOM rendering</td>
+              </tr>
+              <tr>
+                <td><strong>Tailwind CSS</strong></td>
+                <td><span class="badge-tag">^4.3.3</span></td>
+                <td>Next-generation utility-first CSS engine</td>
+              </tr>
+              <tr>
+                <td><strong>@tailwindcss/vite</strong></td>
+                <td><span class="badge-tag">^4.3.3</span></td>
+                <td>Official Tailwind CSS v4 Vite integration plugin</td>
+              </tr>
+              <tr>
+                <td><strong>Vite</strong></td>
+                <td><span class="badge-tag">^8.2.0</span></td>
+                <td>Lightning-fast development server &amp; production bundler</td>
+              </tr>
+              <tr>
+                <td><strong>React Router DOM</strong></td>
+                <td><span class="badge-tag">^7.18.2</span></td>
+                <td>Declarative client-side routing and layout rendering</td>
+              </tr>
+              <tr>
+                <td><strong>ApexCharts &amp; Recharts</strong></td>
+                <td><span class="badge-tag">Latest</span></td>
+                <td>Interactive charting engines for vital telemetry &amp; clinical data</td>
+              </tr>
+              <tr>
+                <td><strong>Framer Motion</strong></td>
+                <td><span class="badge-tag">^12.43.0</span></td>
+                <td>Production-ready motion library for fluid UI animations</td>
+              </tr>
+              <tr>
+                <td><strong>Lenis</strong></td>
+                <td><span class="badge-tag">^1.3.27</span></td>
+                <td>Modern smooth scrolling library</td>
+              </tr>
+              <tr>
+                <td><strong>Lucide React</strong></td>
+                <td><span class="badge-tag">^1.28.0</span></td>
+                <td>Crisp, clean, consistent medical &amp; telemetry SVG iconography</td>
+              </tr>
+              <tr>
+                <td><strong>React Icons</strong></td>
+                <td><span class="badge-tag">^5.7.0</span></td>
+                <td>Comprehensive icon collection</td>
+              </tr>
+              <tr>
+                <td><strong>@headlessui/react</strong></td>
+                <td><span class="badge-tag">^2.2.10</span></td>
+                <td>Completely unstyled, accessible UI components (dialogs, menus)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 2. License & Usage Terms -->
+      <section id="license-usage" class="doc-section-card">
+        <div class="doc-section-badge-strip">
+          <span class="doc-category-badge">Introduction &amp; Setup</span>
+        </div>
+        <h2 class="doc-section-heading">2. License &amp; Usage Terms</h2>
+        <p class="doc-section-lead">
+          ThemeForest / Envato Market license types and their usage guidelines:
+        </p>
+
+        <h3 class="doc-subheading">Regular License</h3>
+        <p class="doc-paragraph">
+          Use this for a single end product that end-users are not charged for. Perfect for personal projects, client websites, internal hospital dashboards, or facility management tools where no subscription fee is required from users.
+        </p>
+
+        <h3 class="doc-subheading">Extended License</h3>
+        <p class="doc-paragraph">
+          Use this for a single end product where end-users can be charged for access (e.g., a commercial SaaS clinical platform, paid telemedicine portal, subscription healthcare analytics service, or commercial product for sale).
+        </p>
+
+        <div class="doc-callout doc-callout-warning">
+          <i class="bi bi-shield-exclamation doc-callout-icon"></i>
+          <div>
+            <strong>Important Notice:</strong> Each license grants rights for a single end product. You may not re-distribute, sub-license, resell, or share the source code publicly. For official terms, please review the <a href="https://themeforest.net/licenses/standard" target="_blank" rel="noopener noreferrer" style="color: #b45309; text-decoration: underline; font-weight: 600;">Envato License Terms</a>.
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Changelog -->
+      <section id="changelog" class="doc-section-card">
+        <div class="doc-section-badge-strip">
+          <span class="doc-category-badge">Introduction &amp; Setup</span>
+        </div>
+        <h2 class="doc-section-heading">3. Changelog</h2>
+        <p class="doc-section-lead">
+          Track the continuous evolution, features, and releases of CarePulse.
+        </p>
+
+        <div style="border-left: 3px solid #10b981; padding-left: 24px; margin: 24px 0;">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+            <span class="badge-tag" style="background: #10b981; color: white; font-size: 13px; padding: 4px 10px;">v1.0.0 — Initial Release</span>
+            <span class="badge-tag" style="background: rgba(16, 185, 129, 0.15); color: #059669;">Current Release</span>
+          </div>
+          <div style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px;">
+            <i class="bi bi-calendar3 me-1"></i> Date: 2026
+          </div>
+
+          <p class="doc-paragraph">
+            <strong>Core Framework:</strong> Built from the ground up with <strong>React 19</strong>, <strong>Tailwind CSS v4</strong>, and <strong>Vite 8</strong>.
+          </p>
+
+          <h4 style="font-size: 15px; font-weight: 700; color: var(--text-heading); margin: 16px 0 8px 0;">32+ Pre-built Pages:</h4>
+          <ul style="padding-left: 20px; line-height: 1.8; color: var(--text-body); font-size: 14px; margin-bottom: 18px;">
+            <li><strong>Dashboards:</strong> Clinical Command Center, Emergency &amp; Trauma Triage, Bedside Telemetry Monitor, Surgery Operations.</li>
+            <li><strong>App Modules:</strong> Patient Directory &amp; Inpatient Records, On-Duty Physician &amp; Staff Directory, Ward Occupancy &amp; Bed Census, Stat Lab Diagnostics &amp; Pathology Alerts, Hospital Pharmacy &amp; Dispensary Inventory, Facility &amp; Profile Settings.</li>
+            <li><strong>Authentication Suite:</strong> Clean, split-view modern layouts for Sign In, Provider Registration, Forgot Password, Reset Password, and Email / OTP Verification.</li>
+            <li><strong>System &amp; Error Pages:</strong> Custom interactive 404 Not Found &amp; 500 Internal Server Error pages with automatic recovery routes.</li>
+            <li><strong>UI Elements Library:</strong> Comprehensive showcase for Accordion, Alerts, Avatars, Badges, Breadcrumbs, Buttons, Cards, Charts, Dropdowns, Input &amp; Forms, Modals, Progress Bars, Pagination, Spinners, and Data Tables.</li>
+          </ul>
+
+          <h4 style="font-size: 15px; font-weight: 700; color: var(--text-heading); margin: 16px 0 8px 0;">Theme &amp; Direction Engine:</h4>
+          <ul style="padding-left: 20px; line-height: 1.8; color: var(--text-body); font-size: 14px; margin-bottom: 18px;">
+            <li>Native dual-theme engine (Dark &amp; Light Mode) with smooth transitions.</li>
+            <li>Full RTL (Right-to-Left) &amp; LTR bi-directional layout support for international healthcare deployments.</li>
+            <li>Dynamic 8-color primary palette switcher with real-time CSS variable shade generation.</li>
+          </ul>
+
+          <h4 style="font-size: 15px; font-weight: 700; color: var(--text-heading); margin: 16px 0 8px 0;">Visualizations &amp; Motion:</h4>
+          <ul style="padding-left: 20px; line-height: 1.8; color: var(--text-body); font-size: 14px; margin-bottom: 18px;">
+            <li>Interactive vital telemetry charts and spline area graphs using ApexCharts, plus ward occupancy donut charts and clinical performance area trends using Recharts.</li>
+            <li>Silky-smooth scrolling experience powered by Lenis and fluid micro-animations powered by Framer Motion.</li>
+          </ul>
+
+          <h4 style="font-size: 15px; font-weight: 700; color: var(--text-heading); margin: 16px 0 8px 0;">Developer Experience:</h4>
+          <ul style="padding-left: 20px; line-height: 1.8; color: var(--text-body); font-size: 14px;">
+            <li>Zero console errors, zero warnings, clean ESLint configuration, zero arbitrary Tailwind bracket classes, and sub-2 second Vite production builds.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 4. File Structure -->
+      <section id="file-structure" class="doc-section-card">
+        <div class="doc-section-badge-strip">
+          <span class="doc-category-badge">Introduction &amp; Setup</span>
+        </div>
+        <h2 class="doc-section-heading">4. File Structure</h2>
+        <p class="doc-section-lead">
+          CarePulse follows a clean, modular folder organization adhering to React 19 and Vite best practices:
+        </p>
+
+        <div class="doc-code-block">
+          <div class="doc-code-header">
+            <span class="doc-code-file-tag">carepulse/ directory tree</span>
+            <button class="doc-copy-button" data-target="code-tree"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="doc-code-pre" id="code-tree">carepulse/
+├── public/                       # Static assets accessible directly
+│   ├── documentation/            # Standalone technical documentation
+│   │   ├── css/                  # Documentation stylesheets (app.css, docs.css)
+│   │   ├── fonts/                # Web fonts and icon font files
+│   │   ├── images/               # Documentation visual assets &amp; screenshots
+│   │   ├── js/                   # Documentation scripts (main.js, docs.js)
+│   │   ├── document.html         # Main technical documentation page
+│   │   └── index.html            # Documentation showcase landing page
+│   ├── favicon.svg               # Browser tab favicon
+│   └── icons.svg                 # UI sprite symbols
+├── src/
+│   ├── assets/                   # Static media, physician avatars, brand assets
+│   │   └── user/                 # Demo avatars (avatar-1 to 8)
+│   ├── components/
+│   │   ├── common/               # Shared layout &amp; navigation utilities
+│   │   ├── context/              # Global state providers
+│   │   │   ├── theme-context.jsx # Dark/Light mode, RTL/LTR, dynamic primary color
+│   │   │   └── toast-context.jsx # Global clinical toast notification manager
+│   │   ├── layout/               # Shell and layout architecture
+│   │   │   ├── mainlayout.jsx    # Master layout wrapper with header &amp; sidebar
+│   │   │   ├── Navbar.jsx        # Top sticky header with search, notifications, profile
+│   │   │   ├── sidebar.jsx       # Collapsible navigation sidebar
+│   │   │   ├── Menuconfig.jsx    # Structured menu routes, labels, and icons
+│   │   │   └── footer.jsx        # Footer bar with copyright
+│   │   ├── mokdata/              # Curated JSON clinical datasets
+│   │   │   ├── overview.json     # Live census &amp; admissions metrics
+│   │   │   ├── patients.json     # Inpatient registry records
+│   │   │   ├── vitals.json       # Bedside telemetry &amp; ECG data
+│   │   │   ├── wards.json        # Ward occupancy &amp; bed census
+│   │   │   └── staff.json        # On-duty medical staff directory
+│   │   ├── ui/                   # Reusable atomic UI components (Card, Charts, Modals, Input)
+│   │   └── ui-elements/          # Interactive showcase pages for UI components
+│   ├── pages/                    # Application pages
+│   │   ├── auth/                 # Login, Register, Forgot Password, Reset, Verify
+│   │   ├── clinical/             # Overview, Patients, Appointments, Vitals, Staff, Wards...
+│   │   └── errors/               # 404 Not Found, 500 Server Error
+│   ├── App.jsx                   # Centralized route mapping &amp; layout isolation
+│   ├── index.css                 # Tailwind CSS v4 setup, font imports &amp; animations
+│   └── main.jsx                  # React 19 root entry with BrowserRouter &amp; ThemeProvider
+├── package.json                  # Project dependencies, scripts, and metadata
+├── vite.config.js                # Vite build setup with React compiler plugin
+└── README.md                     # Project summary &amp; quick reference</pre>
+        </div>
+      </section>
+
+      <!-- 5. Installation Guide -->
+      <section id="installation-guide" class="doc-section-card">
+        <div class="doc-section-badge-strip">
+          <span class="doc-category-badge">Introduction &amp; Setup</span>
+        </div>
+        <h2 class="doc-section-heading">5. Installation Guide</h2>
+        <p class="doc-section-lead">
+          Follow these quick steps to get CarePulse up and running on your local machine.
+        </p>
+
+        <h3 class="doc-subheading"><i class="bi bi-gear-wide-connected text-emerald"></i> System Prerequisites:</h3>
+        <ul style="padding-left: 20px; line-height: 1.8; color: var(--text-body); font-size: 14.5px; margin-bottom: 24px;">
+          <li><strong>Node.js:</strong> v18.0.0 or higher (v20+ LTS recommended). Check with <code>node -v</code>.</li>
+          <li><strong>Package Manager:</strong> npm (v9+), yarn, or pnpm. Check with <code>npm -v</code>.</li>
+          <li><strong>Browser:</strong> Modern Chromium (Chrome, Edge, Brave), Firefox, or Safari with modern CSS support.</li>
+        </ul>
+
+        <h3 class="doc-subheading">Step 1: Extract the Archive</h3>
+        <p class="doc-paragraph">
+          Download the ZIP archive from ThemeForest and extract it to your preferred working directory.
+        </p>
+
+        <h3 class="doc-subheading">Step 2: Open Terminal in Project Folder</h3>
+        <div class="doc-code-block">
+          <div class="doc-code-header">
+            <span class="doc-code-file-tag">Terminal</span>
+            <button class="doc-copy-button" data-target="code-cd"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="doc-code-pre" id="code-cd">cd carepulse</pre>
+        </div>
+
+        <h3 class="doc-subheading">Step 3: Install Node Dependencies</h3>
+        <p class="doc-paragraph">Execute your preferred package manager to install all required libraries:</p>
+        <div class="doc-code-block">
+          <div class="doc-code-header">
+            <span class="doc-code-file-tag">Terminal</span>
+            <button class="doc-copy-button" data-target="code-install-pkg"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="doc-code-pre" id="code-install-pkg"># Using npm (recommended)
+npm install
+
+# Or using yarn
+yarn install
+
+# Or using pnpm
+pnpm install</pre>
+        </div>
+
+        <h3 class="doc-subheading">Step 4: Launch the Development Server</h3>
+        <p class="doc-paragraph">Start the Vite development server with Hot Module Replacement (HMR):</p>
+        <div class="doc-code-block">
+          <div class="doc-code-header">
+            <span class="doc-code-file-tag">Terminal</span>
+            <button class="doc-copy-button" data-target="code-dev-server"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="doc-code-pre" id="code-dev-server">npm run dev</pre>
+        </div>
+        <p class="doc-paragraph">
+          Your terminal will display the local development URL, typically:
+          <br>
+          <code style="background: rgba(16, 185, 129, 0.1); color: #059669; padding: 4px 8px; border-radius: 6px; font-weight: 600;">Server active: Open http://localhost:5173 in your web browser.</code>
+        </p>
+      </section>
+
+      <!-- 6. Deployment & Production Build -->
+      <section id="deployment" class="doc-section-card">
+        <div class="doc-section-badge-strip">
+          <span class="doc-category-badge">Introduction &amp; Setup</span>
+        </div>
+        <h2 class="doc-section-heading">6. Deployment &amp; Production Build</h2>
+        <p class="doc-section-lead">
+          To compile and optimize CarePulse for a production environment:
+        </p>
+
+        <div class="doc-code-block">
+          <div class="doc-code-header">
+            <span class="doc-code-file-tag">Terminal</span>
+            <button class="doc-copy-button" data-target="code-build-prod"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="doc-code-pre" id="code-build-prod">npm run build</pre>
+        </div>
+
+        <p class="doc-paragraph">
+          This command compiles all JSX, minifies stylesheets, tree-shakes unused dependencies, and generates an optimized production bundle inside the <code>dist/</code> directory.
+        </p>
+
+        <h3 class="doc-subheading">Preview the Production Build Locally</h3>
+        <div class="doc-code-block">
+          <div class="doc-code-header">
+            <span class="doc-code-file-tag">Terminal</span>
+            <button class="doc-copy-button" data-target="code-preview"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="doc-code-pre" id="code-preview">npm run preview</pre>
+        </div>
+
+        <h3 class="doc-subheading"><i class="bi bi-cloud-arrow-up text-emerald"></i> Deployment Targets:</h3>
+        <ul style="padding-left: 20px; line-height: 1.8; color: var(--text-body); font-size: 14.5px;">
+          <li><strong>Vercel:</strong> Import the repository and set the framework preset to Vite. The build command is <code>npm run build</code> and the output directory is <code>dist</code>. Ensure client-side routing redirect is configured in <code>vercel.json</code>.</li>
+          <li><strong>Netlify:</strong> Connect your Git repository, set the build command to <code>npm run build</code>, and publish directory to <code>dist</code>. Ensure client-side routing redirect is configured (<code>/* /index.html 200</code>).</li>
+          <li><strong>Apache / Nginx / Traditional Hosting:</strong> Upload all files inside <code>dist/</code> directly to your web server root (<code>public_html</code> or <code>/var/www/html</code>). Ensure fallback routing to <code>index.html</code> is enabled for React Router.</li>
+        </ul>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════════════════
+           GROUP 2: CUSTOMIZATION
+           ══════════════════════════════════════════════════════════════════ -->
+
+      <!-- 7. Theme & Dark Mode Management -->
+      <section id="theme-dark-mode" class="doc-section-card">
+        <div class="doc-section-badge-strip">
+          <span class="doc-category-badge">Customization</span>
+        </div>
+        <h2 class="doc-section-heading">7. Theme &amp; Dark Mode Management</h2>
+        <p class="doc-section-lead">
+          CarePulse features a comprehensive, state-of-the-art theme system managed via <code>ThemeProvider</code> in <code>src/context/theme-context.jsx</code>. It provides persistent theme state in <code>localStorage</code> and animated View Transitions API support with circular reveals.
+        </p>
+
+        <h3 class="doc-subheading">How to Change the Default Theme Mode:</h3>
+        <p class="doc-paragraph">
+          By default, CarePulse opens in dark mode (ideal for telemetry monitors and clinical command centers). If you prefer light mode by default, open <code>src/context/theme-context.jsx</code> and edit line 49:
+        </p>
+        <div class="doc-code-block">
+          <div class="doc-code-header">
+            <span class="doc-code-file-tag">src/context/theme-context.jsx</span>
+            <button class="doc-copy-button" data-target="code-theme-default"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="doc-code-pre" id="code-theme-default">// src/context/theme-context.jsx
+// Change "dark" to "light" for clinical light mode default:
+const [theme, setTheme] = useState("light");</pre>
+        </div>
+
+        <h3 class="doc-subheading">Accessing Theme State via Hook:</h3>
+        <p class="doc-paragraph">
+          You can read or toggle the theme anywhere in your application using the custom <code>useTheme()</code> hook:
+        </p>
+        <div class="doc-code-block">
+          <div class="doc-code-header">
+            <span class="doc-code-file-tag">Theme Toggle Hook Example</span>
+            <button class="doc-copy-button" data-target="code-use-theme"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="doc-code-pre" id="code-use-theme">import { useTheme } from '../context/theme-context';
+
+const ClinicalThemeToggle = () => {
+  const { theme, toggleTheme } = useTheme();
+
+  return (
+    <button
+      onClick={() => toggleTheme('circle-blur', 'top-right')}
+      className="px-4 py-2 rounded-xl border border-slate-200 dark:border-white/10"
+    >
+      Current Mode: {theme === 'dark' ? 'Dark' : 'Light'}
+    </button>
+  );
+};</pre>
+        </div>
+      </section>
+
+      <!-- 8. Color Customization & Accent Switcher -->
+      <section id="color-customization" class="doc-section-card">
+        <div class="doc-section-badge-strip">
+          <span class="doc-category-badge">Customization</span>
+        </div>
+        <h2 class="doc-section-heading">8. Color Customization &amp; Accent Switcher</h2>
+        <p class="doc-section-lead">
+          CarePulse features a dynamic primary color system. When an accent color is selected in the Settings Drawer or programmatically, the application automatically computes CSS variables for <code>--primary-color</code>, <code>--primary-rgb</code>, and all 11 tint/shade stops (<code>--primary-50</code> to <code>--primary-950</code>).
+        </p>
+
+        <h3 class="doc-subheading">Changing the Default Primary Accent:</h3>
+        <p class="doc-paragraph">
+          Open <code>src/context/theme-context.jsx</code> and modify the <code>DEFAULT_PRIMARY</code> constant (default is Clinical Emerald Green <code>#22c55e</code>):
+        </p>
+        <div class="doc-code-block">
+          <div class="doc-code-header">
+            <span class="doc-code-file-tag">src/context/theme-context.jsx</span>
+            <button class="doc-copy-button" data-target="code-color-default"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="doc-code-pre" id="code-color-default">// src/context/theme-context.jsx
+// Change to any hex color of your clinical institution's brand:
+const DEFAULT_PRIMARY = "#22c55e"; // Clinical Emerald default</pre>
+        </div>
+
+        <h3 class="doc-subheading"><i class="bi bi-palette text-emerald"></i> Curated 8-Color Palette in Theme Customizer:</h3>
+        <p class="doc-paragraph">
+          The slide-out settings drawer (<code>src/components/layout/Settingsdrawer.jsx</code>) provides 8 pre-configured palette presets tailored for clinical and administrative environments:
+        </p>
+
+        <div class="doc-table-wrap">
+          <table class="doc-data-table">
+            <thead>
+              <tr>
+                <th>Accent Name</th>
+                <th>Hex Code</th>
+                <th>Clinical Use Case</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Emerald</strong></td>
+                <td><code>#22c55e</code></td>
+                <td>Default clinical wellness, outpatient health &amp; clinical operations</td>
+              </tr>
+              <tr>
+                <td><strong>Teal</strong></td>
+                <td><code>#14b8a6</code></td>
+                <td>Intensive Care Unit (ICU) &amp; bedside telemetry monitoring</td>
+              </tr>
+              <tr>
+                <td><strong>Blue</strong></td>
+                <td><code>#3b82f6</code></td>
+                <td>Hospital administration, inpatient admissions &amp; EHR registry</td>
+              </tr>
+              <tr>
+                <td><strong>Purple</strong></td>
+                <td><code>#7c3aed</code></td>
+                <td>Oncology, neurology &amp; specialty clinical diagnostics</td>
+              </tr>
+              <tr>
+                <td><strong>Indigo</strong></td>
+                <td><code>#6366f1</code></td>
+                <td>Healthcare analytics, clinical BI &amp; population health registries</td>
+              </tr>
+              <tr>
+                <td><strong>Cyan</strong></td>
+                <td><code>#06b6d4</code></td>
+                <td>Surgical theaters, anesthesiology &amp; recovery rooms</td>
+              </tr>
+              <tr>
+                <td><strong>Rose</strong></td>
+                <td><code>#f43f5e</code></td>
+                <td>Emergency department, trauma triage &amp; STAT alerts</td>
+              </tr>
+              <tr>
+                <td><strong>Amber</strong></td>
+                <td><code>#f59e0b</code></td>
+                <td>Hospital pharmacy, dispensary &amp; medication inventory</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 9. Font Customization -->
+      <section id="font-customization" class="doc-section-card">
+        <div class="doc-section-badge-strip">
+          <span class="doc-category-badge">Customization</span>
+        </div>
+        <h2 class="doc-section-heading">9. Font Customization</h2>
+        <p class="doc-section-lead">
+          CarePulse uses Google Web Fonts: <strong>Plus Jakarta Sans</strong> for prominent UI headings and <strong>IBM Plex Sans</strong> for clear, accessible medical telemetry values, charts, and table figures.
+        </p>
+
+        <h3 class="doc-subheading">How Typography is Configured:</h3>
+        <p class="doc-paragraph">
+          In <code>src/index.css</code> under the <code>@theme</code> definition:
+        </p>
+        <div class="doc-code-block">
+          <div class="doc-code-header">
+            <span class="doc-code-file-tag">src/index.css</span>
+            <button class="doc-copy-button" data-target="code-font-config"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="doc-code-pre" id="code-font-config">/* src/index.css */
+@theme {
+  --font-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: var(--font-sans);
+  --font-body: var(--font-sans);
+  --font-mono: var(--font-sans);
+}</pre>
+        </div>
+
+        <h3 class="doc-subheading">To Change the Font Family:</h3>
+        <ol style="padding-left: 20px; line-height: 1.8; color: var(--text-body); font-size: 14.5px;">
+          <li>Visit <a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer" style="color: #10b981; font-weight: 600;">Google Fonts</a> and select your preferred font (e.g. Inter, Outfit, Montserrat, Roboto).</li>
+          <li>Copy the provided <code>&lt;link&gt;</code> or <code>@import</code> tag into <code>index.html</code> or <code>src/index.css</code>.</li>
+          <li>Update <code>--font-sans</code> under <code>@theme</code> in <code>src/index.css</code>.</li>
+        </ol>
+      </section>
+
+      <!-- 10. RTL (Right-to-Left) & Bi-directional Support -->
+      <section id="rtl-direction" class="doc-section-card">
+        <div class="doc-section-badge-strip">
+          <span class="doc-category-badge">Customization</span>
+        </div>
+        <h2 class="doc-section-heading">10. RTL (Right-to-Left) &amp; Bi-directional Support</h2>
+        <p class="doc-section-lead">
+          CarePulse provides full, out-of-the-box support for Right-to-Left (RTL) languages such as Arabic, Hebrew, Persian, and Urdu for international hospital deployments.
+        </p>
+
+        <h3 class="doc-subheading">How Direction Works:</h3>
+        <ul style="padding-left: 20px; line-height: 1.8; color: var(--text-body); font-size: 14.5px; margin-bottom: 20px;">
+          <li>Managed via <code>toggleDirection()</code> in <code>ThemeContext</code> (<code>src/context/theme-context.jsx</code>).</li>
+          <li>Dynamically toggles the <code>dir="rtl"</code> or <code>dir="ltr"</code> attribute on the root <code>&lt;html&gt;</code> element.</li>
+          <li>Tailwind CSS v4 logical properties (e.g., <code>ps-</code>, <code>pe-</code>, <code>ms-</code>, <code>me-</code>, <code>border-s</code>, <code>border-e</code>, <code>start-</code>, <code>end-</code>) automatically flip all alignments, paddings, and margins seamlessly.</li>
+          <li>Telemetry curves and charts are wrapped with <code>dir="ltr"</code> to preserve exact Cartesian telemetry coordinates.</li>
+        </ul>
+
+        <h3 class="doc-subheading">Set RTL as the Default Direction:</h3>
+        <p class="doc-paragraph">
+          Open <code>src/context/theme-context.jsx</code> and update line 50:
+        </p>
+        <div class="doc-code-block">
+          <div class="doc-code-header">
+            <span class="doc-code-file-tag">src/context/theme-context.jsx</span>
+            <button class="doc-copy-button" data-target="code-rtl-default"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="doc-code-pre" id="code-rtl-default">// src/context/theme-context.jsx
+// Change "ltr" to "rtl" for right-to-left default startup:
+const [direction, setDirection] = useState("rtl");</pre>
+        </div>
+      </section>
+
+      <!-- 11. Layout Architecture -->
+      <section id="layout-architecture" class="doc-section-card">
+        <div class="doc-section-badge-strip">
+          <span class="doc-category-badge">Customization</span>
+        </div>
+        <h2 class="doc-section-heading">11. Layout Architecture</h2>
+        <p class="doc-section-lead">
+          All core layout containers and shell components are located in <code>src/components/layout/</code>:
+        </p>
+
+        <div class="doc-table-wrap">
+          <table class="doc-data-table">
+            <thead>
+              <tr>
+                <th style="width: 22%;">Component</th>
+                <th style="width: 32%;">File Path</th>
+                <th>Role &amp; Functionality</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>MainLayout</strong></td>
+                <td><code>src/components/layout/mainlayout.jsx</code></td>
+                <td>Master layout wrapper providing ambient lighting, collapsible sidebar, top navbar, page outlet, footer, and settings drawer.</td>
+              </tr>
+              <tr>
+                <td><strong>Navbar</strong></td>
+                <td><code>src/components/layout/Navbar.jsx</code></td>
+                <td>Top sticky clinical header with patient search, emergency notifications, department selector, and physician profile.</td>
+              </tr>
+              <tr>
+                <td><strong>Sidebar</strong></td>
+                <td><code>src/components/layout/Sidebar.jsx</code></td>
+                <td>Collapsible frosted glass navigation sidebar rendering grouped clinical routes with status badges and active indicators.</td>
+              </tr>
+              <tr>
+                <td><strong>Menu Config</strong></td>
+                <td><code>src/components/layout/Menuconfig.jsx</code></td>
+                <td>Centralized route configuration array defining all navigation paths, Lucide icons, labels, and status badges.</td>
+              </tr>
+              <tr>
+                <td><strong>Settings Drawer</strong></td>
+                <td><code>src/components/layout/Settingsdrawer.jsx</code></td>
+                <td>Slide-out customization drawer allowing live adjustments to Theme Mode, Layout Direction, Navbar Behavior (Sticky / Scroll), and Primary Accent Colors.</td>
+              </tr>
+              <tr>
+                <td><strong>Footer</strong></td>
+                <td><code>src/components/layout/Footer.jsx</code></td>
+                <td>Bottom footer bar displaying clinical copyright, facility accreditation status, and documentation links.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 12. Routing Setup & Adding Pages -->
+      <section id="routing-setup" class="doc-section-card">
+        <div class="doc-section-badge-strip">
+          <span class="doc-category-badge">Customization</span>
+        </div>
+        <h2 class="doc-section-heading">12. Routing Setup &amp; Adding Pages</h2>
+        <p class="doc-section-lead">
+          CarePulse uses <strong>React Router DOM v7</strong> with clean layout isolation between main clinical modules and standalone authentication/error routes in <code>src/App.jsx</code>.
+        </p>
+
+        <h3 class="doc-subheading">Step 1: Create Your New Clinical Page Component</h3>
+        <p class="doc-paragraph">Create a new component file inside <code>src/pages/</code>:</p>
+        <div class="doc-code-block">
+          <div class="doc-code-header">
+            <span class="doc-code-file-tag">src/pages/Surgeries.jsx</span>
+            <button class="doc-copy-button" data-target="code-create-page"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="doc-code-pre" id="code-create-page">import React from 'react';
+import Card from '../components/ui/Card';
+
+export const SurgeriesPage = () => {
+  return (
+    <div className="space-y-6">
+      <h1 className="text-2xl font-bold text-slate-900 dark:text-white">
+        Surgical Theater Operations
+      </h1>
+      <Card className="p-6">
+        <p className="text-slate-600 dark:text-slate-400">
+          Live operating room schedule, anesthesia pre-ops, and surgeon rosters.
+        </p>
+      </Card>
+    </div>
+  );
+};
+
+export default SurgeriesPage;</pre>
+        </div>
+
+        <h3 class="doc-subheading">Step 2: Register Route in <code>src/App.jsx</code></h3>
+        <div class="doc-code-block">
+          <div class="doc-code-header">
+            <span class="doc-code-file-tag">src/App.jsx</span>
+            <button class="doc-copy-button" data-target="code-register-route"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="doc-code-pre" id="code-register-route">// 1. Add import near top of src/App.jsx
+import SurgeriesPage from './pages/Surgeries';
+
+// 2. Add route inside &lt;Route element={&lt;MainLayout /&gt;}&gt;
+&lt;Route element={&lt;MainLayout /&gt;}&gt;
+  &lt;Route path="/surgeries" element={&lt;SurgeriesPage /&gt;} /&gt;
+&lt;/Route&gt;</pre>
+        </div>
+
+        <h3 class="doc-subheading">Step 3: Add to Navigation Menu in <code>src/components/layout/Menuconfig.jsx</code></h3>
+        <div class="doc-code-block">
+          <div class="doc-code-header">
+            <span class="doc-code-file-tag">src/components/layout/Menuconfig.jsx</span>
+            <button class="doc-copy-button" data-target="code-menu-config"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="doc-code-pre" id="code-menu-config">import { Scissors } from 'lucide-react';
+
+export const menuItems = [
+  // Add under Hospital Operations:
+  { title: 'Surgical Theaters', icon: &lt;Scissors size={18} /&gt;, path: '/surgeries' },
+];</pre>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════════════════
+           GROUP 3: COMPONENTS
+           ══════════════════════════════════════════════════════════════════ -->
+
+      <!-- 13. UI Components Library -->
+      <section id="ui-components" class="doc-section-card">
+        <div class="doc-section-badge-strip">
+          <span class="doc-category-badge">Components</span>
+        </div>
+        <h2 class="doc-section-heading">UI Components Library</h2>
+        <p class="doc-section-lead">
+          CarePulse includes 14 fully-featured UI atom components in <code>src/components/ui-elements/</code>:
+        </p>
+
+        <div class="doc-table-wrap">
+          <table class="doc-data-table">
+            <thead>
+              <tr>
+                <th>Component</th>
+                <th>File Path</th>
+                <th>Key Features</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Accordion</strong></td>
+                <td><code>src/components/ui-elements/accordionUi.jsx</code></td>
+                <td>Animated collapsible panels, smooth heights</td>
+              </tr>
+              <tr>
+                <td><strong>Alerts</strong></td>
+                <td><code>src/components/ui-elements/alertsUi.jsx</code></td>
+                <td>Clinical danger, warning, success, info alerts</td>
+              </tr>
+              <tr>
+                <td><strong>Avatars</strong></td>
+                <td><code>src/components/ui-elements/avatarsUi.jsx</code></td>
+                <td>Physician avatar clusters, status indicators</td>
+              </tr>
+              <tr>
+                <td><strong>Badges</strong></td>
+                <td><code>src/components/ui-elements/badgesUi.jsx</code></td>
+                <td>Triage tags, patient status chips, counters</td>
+              </tr>
+              <tr>
+                <td><strong>Buttons</strong></td>
+                <td><code>src/components/ui-elements/buttons-ui.jsx</code></td>
+                <td>Solid, ghost, frosted, icon action triggers</td>
+              </tr>
+              <tr>
+                <td><strong>Modals</strong></td>
+                <td><code>src/components/ui-elements/modals-ui.jsx</code></td>
+                <td>Accessible dialogs, emergency triage confirmations</td>
+              </tr>
+              <tr>
+                <td><strong>Toasts</strong></td>
+                <td><code>src/components/ui-elements/toastsUi.jsx</code></td>
+                <td>Stat alerts with auto-dismiss timers</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 14. Trading & Data Charts -->
+      <section id="charts-analytics" class="doc-section-card">
+        <div class="doc-section-badge-strip">
+          <span class="doc-category-badge">Components</span>
+        </div>
+        <h2 class="doc-section-heading">Trading &amp; Data Charts</h2>
+        <p class="doc-section-lead">
+          Built with lightweight, responsive charting libraries for patient vital signs, admission volumes, and ward capacity metrics.
+        </p>
+
+        <p class="doc-paragraph">
+          Telemetry charts render smooth spline curves and candlestick distributions wrapped inside Cartesian-isolated containers (<code>dir="ltr"</code>) to ensure consistent coordinate fidelity across all direction modes:
+        </p>
+
+        <div class="doc-code-block">
+          <div class="doc-code-header">
+            <span class="doc-code-file-tag">Telemetry Area Chart Example</span>
+            <button class="doc-copy-button" data-target="code-chart"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="doc-code-pre" id="code-chart">import { AreaChartCard } from '../components/ui/charts';
+
+&lt;AreaChartCard
+  title="Trauma Triage Admissions"
+  data={admissionsData}
+  color="#10b981"
+  height={240}
+/&gt;</pre>
+        </div>
+      </section>
+
+      <!-- 15. Tables & Mock Data -->
+      <section id="tables-mockdata" class="doc-section-card">
+        <div class="doc-section-badge-strip">
+          <span class="doc-category-badge">Components</span>
+        </div>
+        <h2 class="doc-section-heading">Tables &amp; Mock Data</h2>
+        <p class="doc-section-lead">
+          Decoupled mock JSON datasets live in <code>src/mokdata/</code>, making backend API integration as simple as swapping the data import.
+        </p>
+
+        <div class="doc-code-block">
+          <div class="doc-code-header">
+            <span class="doc-code-file-tag">Connecting Real Backend API</span>
+            <button class="doc-copy-button" data-target="code-api"><i class="bi bi-clipboard"></i> Copy</button>
+          </div>
+          <pre class="doc-code-pre" id="code-api">// Option 1: Static Mock Data
+import patientsData from '../mokdata/patients.json';
+
+// Option 2: Live Clinical API / Supabase / FHIR
+const { data: patients, isLoading } = useQuery({
+  queryKey: ['patients'],
+  queryFn: () => fetch('/api/clinical/patients').then(res => res.json())
+});</pre>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════════════════
+           GROUP 4: SUPPORT
+           ══════════════════════════════════════════════════════════════════ -->
+
+      <!-- 16. FAQ -->
+      <section id="faq" class="doc-section-card">
+        <div class="doc-section-badge-strip">
+          <span class="doc-category-badge">Support</span>
+        </div>
+        <h2 class="doc-section-heading">Frequently Asked Questions (FAQ)</h2>
+        <p class="doc-section-lead">
+          Answers to common developer and configuration questions:
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: 18px; margin-top: 20px;">
+          <div style="border: 1px solid var(--border-subtle); border-radius: 12px; padding: 18px 22px;">
+            <h4 style="font-size: 15px; font-weight: 700; color: var(--text-heading); margin-bottom: 8px;">
+              How do I replace hospital branding with my own clinic name?
+            </h4>
+            <p style="font-size: 13.5px; color: var(--text-body); margin: 0; line-height: 1.6;">
+              Open <code>src/components/layout/Navbar.jsx</code> and <code>Sidebar.jsx</code> to replace the title. Replace <code>public/favicon.svg</code> with your custom logo file.
+            </p>
+          </div>
+
+          <div style="border: 1px solid var(--border-subtle); border-radius: 12px; padding: 18px 22px;">
+            <h4 style="font-size: 15px; font-weight: 700; color: var(--text-heading); margin-bottom: 8px;">
+              Can I use this template with TypeScript?
+            </h4>
+            <p style="font-size: 13.5px; color: var(--text-body); margin: 0; line-height: 1.6;">
+              Yes! TypeScript types are already declared in <code>package.json</code> (<code>@types/react</code>, <code>@types/react-dom</code>). You can rename files to <code>.tsx</code> as needed.
+            </p>
+          </div>
+
+          <div style="border: 1px solid var(--border-subtle); border-radius: 12px; padding: 18px 22px;">
+            <h4 style="font-size: 15px; font-weight: 700; color: var(--text-heading); margin-bottom: 8px;">
+              Why does CarePulse avoid arbitrary Tailwind bracket classes?
+            </h4>
+            <p style="font-size: 13.5px; color: var(--text-body); margin: 0; line-height: 1.6;">
+              Strictly avoiding arbitrary bracket classes (<code>-[...]</code>) guarantees cleaner code, zero CSS bloat, and complete adherence to design tokens and hardware-accelerated styles.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 17. Credits & Sources -->
+      <section id="credits-sources" class="doc-section-card">
+        <div class="doc-section-badge-strip">
+          <span class="doc-category-badge">Support</span>
+        </div>
+        <h2 class="doc-section-heading">17. Credits &amp; Sources</h2>
+        <p class="doc-section-lead">
+          Libraries, frameworks, and assets integrated in CarePulse:
+        </p>
+
+        <div class="doc-table-wrap">
+          <table class="doc-data-table">
+            <thead>
+              <tr>
+                <th style="width: 26%;">Resource</th>
+                <th style="width: 44%;">Description</th>
+                <th>Official Website</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>React.js</strong></td>
+                <td>Frontend JavaScript Framework</td>
+                <td><a href="https://react.dev/" target="_blank" rel="noopener noreferrer" style="color: #10b981; font-weight: 600; text-decoration: none;">react.dev <i class="bi bi-box-arrow-up-right" style="font-size: 11px;"></i></a></td>
+              </tr>
+              <tr>
+                <td><strong>Tailwind CSS v4</strong></td>
+                <td>Utility-First CSS Framework</td>
+                <td><a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" style="color: #10b981; font-weight: 600; text-decoration: none;">tailwindcss.com <i class="bi bi-box-arrow-up-right" style="font-size: 11px;"></i></a></td>
+              </tr>
+              <tr>
+                <td><strong>Vite</strong></td>
+                <td>Next Generation Frontend Tooling</td>
+                <td><a href="https://vite.dev/" target="_blank" rel="noopener noreferrer" style="color: #10b981; font-weight: 600; text-decoration: none;">vite.dev <i class="bi bi-box-arrow-up-right" style="font-size: 11px;"></i></a></td>
+              </tr>
+              <tr>
+                <td><strong>ApexCharts</strong></td>
+                <td>Clinical &amp; Vital Telemetry Charts</td>
+                <td><a href="https://apexcharts.com/" target="_blank" rel="noopener noreferrer" style="color: #10b981; font-weight: 600; text-decoration: none;">apexcharts.com <i class="bi bi-box-arrow-up-right" style="font-size: 11px;"></i></a></td>
+              </tr>
+              <tr>
+                <td><strong>Recharts</strong></td>
+                <td>Composable React SVG Charts</td>
+                <td><a href="https://recharts.org/" target="_blank" rel="noopener noreferrer" style="color: #10b981; font-weight: 600; text-decoration: none;">recharts.org <i class="bi bi-box-arrow-up-right" style="font-size: 11px;"></i></a></td>
+              </tr>
+              <tr>
+                <td><strong>Lucide React</strong></td>
+                <td>Clean &amp; Lightweight SVG Icons</td>
+                <td><a href="https://lucide.dev/" target="_blank" rel="noopener noreferrer" style="color: #10b981; font-weight: 600; text-decoration: none;">lucide.dev <i class="bi bi-box-arrow-up-right" style="font-size: 11px;"></i></a></td>
+              </tr>
+              <tr>
+                <td><strong>Framer Motion</strong></td>
+                <td>React Motion &amp; Animation Library</td>
+                <td><a href="https://motion.dev/" target="_blank" rel="noopener noreferrer" style="color: #10b981; font-weight: 600; text-decoration: none;">motion.dev <i class="bi bi-box-arrow-up-right" style="font-size: 11px;"></i></a></td>
+              </tr>
+              <tr>
+                <td><strong>Lenis</strong></td>
+                <td>Smooth Scroll Engine</td>
+                <td><a href="https://lenis.darkroom.engineering/" target="_blank" rel="noopener noreferrer" style="color: #10b981; font-weight: 600; text-decoration: none;">darkroom.engineering <i class="bi bi-box-arrow-up-right" style="font-size: 11px;"></i></a></td>
+              </tr>
+              <tr>
+                <td><strong>Headless UI</strong></td>
+                <td>Completely Unstyled, Accessible UI Components</td>
+                <td><a href="https://headlessui.com/" target="_blank" rel="noopener noreferrer" style="color: #10b981; font-weight: 600; text-decoration: none;">headlessui.com <i class="bi bi-box-arrow-up-right" style="font-size: 11px;"></i></a></td>
+              </tr>
+              <tr>
+                <td><strong>Bootstrap Icons</strong></td>
+                <td>Comprehensive Complementary UI Icons</td>
+                <td><a href="https://icons.getbootstrap.com/" target="_blank" rel="noopener noreferrer" style="color: #10b981; font-weight: 600; text-decoration: none;">icons.getbootstrap.com <i class="bi bi-box-arrow-up-right" style="font-size: 11px;"></i></a></td>
+              </tr>
+              <tr>
+                <td><strong>Google Fonts</strong></td>
+                <td>Plus Jakarta Sans &amp; IBM Plex Sans Typography</td>
+                <td><a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer" style="color: #10b981; font-weight: 600; text-decoration: none;">fonts.google.com <i class="bi bi-box-arrow-up-right" style="font-size: 11px;"></i></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="doc-callout doc-callout-warning" style="margin-top: 24px;">
+          <i class="bi bi-info-circle-fill doc-callout-icon"></i>
+          <div>
+            <strong>Note:</strong> All hospital branding, facility names, physician avatars, and demo clinical records are for demonstration purposes only. Please replace them with your own hospital logo, staff credentials, and live electronic health record (EHR) data in production.
+          </div>
+        </div>
+      </section>
+
+      <!-- 18. Support & Contact -->
+      <section id="support-contact" class="doc-section-card">
+        <div class="doc-section-badge-strip">
+          <span class="doc-category-badge">Support</span>
+        </div>
+        <h2 class="doc-section-heading">Support &amp; Contact</h2>
+        <p class="doc-section-lead">
+          Need technical assistance, bug reports, or custom clinical hospital integrations? We are here to help.
+        </p>
+
+        <div class="support-contact-grid" style="margin-top: 24px;">
+          <a href="mailto:vrajalinnovations@gmail.com" class="contact-tile">
+            <div class="contact-tile-icon">
+              <i class="bi bi-envelope-check-fill"></i>
+            </div>
+            <div>
+              <div class="contact-tile-label">Direct Support Email</div>
+              <div class="contact-tile-val">vrajalinnovations@gmail.com</div>
+            </div>
+          </a>
+
+          <a href="https://vrajalinnovations.com" target="_blank" rel="noopener noreferrer" class="contact-tile">
+            <div class="contact-tile-icon">
+              <i class="bi bi-globe2"></i>
+            </div>
+            <div>
+              <div class="contact-tile-label">Official Website</div>
+              <div class="contact-tile-val">vrajalInnovations.com</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="support-badge-note" style="margin-top: 20px;">
+          <i class="bi bi-clock-history text-cyan"></i>
+          <span>Average Response Time: Guaranteed within 24 Hours</span>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Interactive JavaScript Documentation Controller -->
+  <script src="./js/docs.js"></script>
+
+</body>
+
+</html>

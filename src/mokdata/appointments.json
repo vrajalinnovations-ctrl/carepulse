@@ -1,0 +1,82 @@
+{
+  "appointments": [
+    {
+      "id": "APT-801",
+      "time": "09:00 AM",
+      "patient": "Arthur Pendelton",
+      "patientId": "P-1072",
+      "doctor": "Dr. Sarah Mitchell",
+      "department": "Cardiology",
+      "type": "Post-Op Follow-up",
+      "mode": "In-Person",
+      "room": "Consult Suite 2A",
+      "status": "In Consultation",
+      "statusColor": "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/30"
+    },
+    {
+      "id": "APT-802",
+      "time": "09:45 AM",
+      "patient": "Claire Beauchamp",
+      "patientId": "P-1088",
+      "doctor": "Dr. Julian Thorne",
+      "department": "Neurology",
+      "type": "EEG Evaluation",
+      "mode": "Diagnostic Lab",
+      "room": "Neuro Lab B",
+      "status": "Checked In",
+      "statusColor": "bg-teal-500/15 text-teal-600 dark:text-teal-400 border-teal-500/30"
+    },
+    {
+      "id": "APT-803",
+      "time": "10:30 AM",
+      "patient": "Gabriel Vance",
+      "patientId": "P-1102",
+      "doctor": "Dr. Emily Watson",
+      "department": "Orthopedics",
+      "type": "Joint Rehabilitation Assessment",
+      "mode": "In-Person",
+      "room": "Ortho Exam 4",
+      "status": "Confirmed",
+      "statusColor": "bg-blue-500/15 text-blue-600 dark:text-blue-400 border-blue-500/30"
+    },
+    {
+      "id": "APT-804",
+      "time": "11:15 AM",
+      "patient": "Maria Hernandez",
+      "patientId": "P-1140",
+      "doctor": "Dr. Sarah Mitchell",
+      "department": "Cardiology",
+      "type": "Holter Monitor Review",
+      "mode": "Telehealth",
+      "room": "Virtual Clinic Room 1",
+      "status": "Upcoming",
+      "statusColor": "bg-slate-500/15 text-slate-600 dark:text-slate-400 border-slate-500/30"
+    },
+    {
+      "id": "APT-805",
+      "time": "01:30 PM",
+      "patient": "Liam O’Connor",
+      "patientId": "P-1165",
+      "doctor": "Dr. Rachel Adams",
+      "department": "Pediatrics",
+      "type": "Annual Well-Child Checkup",
+      "mode": "In-Person",
+      "room": "Pediatric Wing 101",
+      "status": "Upcoming",
+      "statusColor": "bg-slate-500/15 text-slate-600 dark:text-slate-400 border-slate-500/30"
+    },
+    {
+      "id": "APT-806",
+      "time": "02:15 PM",
+      "patient": "Hannah Green",
+      "patientId": "P-1189",
+      "doctor": "Dr. Julian Thorne",
+      "department": "Neurology",
+      "type": "Migraine Protocol Consultation",
+      "mode": "Telehealth",
+      "room": "Virtual Clinic Room 2",
+      "status": "Upcoming",
+      "statusColor": "bg-slate-500/15 text-slate-600 dark:text-slate-400 border-slate-500/30"
+    }
+  ]
+}

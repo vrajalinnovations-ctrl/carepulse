@@ -1,0 +1,97 @@
+{
+  "unitFilters": [
+    "All Units",
+    "Critical Care",
+    "Cardiovascular",
+    "Inpatient Medicine",
+    "Pediatrics"
+  ],
+  "wardsData": [
+    {
+      "id": "WARD-ICU-A",
+      "name": "Intensive Care Unit (ICU - Wing A)",
+      "type": "Critical Care",
+      "floor": "Level 3 · North Wing",
+      "chargeNurse": "Nurse Sarah Connor, RN",
+      "capacity": 12,
+      "occupied": 11,
+      "beds": [
+        { "code": "ICU-01", "patient": "Marcus Sterling", "id": "P-10492", "status": "Occupied", "acuity": "Critical", "color": "danger" },
+        { "code": "ICU-02", "patient": "Eleanor Vance", "id": "P-10381", "status": "Occupied", "acuity": "Critical", "color": "danger" },
+        { "code": "ICU-03", "patient": "Elena Rostova", "id": "P-10518", "status": "Occupied", "acuity": "High", "color": "warning" },
+        { "code": "ICU-04", "patient": "David Chen", "id": "P-10603", "status": "Occupied", "acuity": "Moderate", "color": "warning" },
+        { "code": "ICU-05", "patient": "Sophia Patel", "id": "P-10684", "status": "Occupied", "acuity": "High", "color": "danger" },
+        { "code": "ICU-06", "patient": "Arthur Pendelton", "id": "P-10711", "status": "Occupied", "acuity": "Critical", "color": "danger" },
+        { "code": "ICU-07", "patient": "Liam O’Connor", "id": "P-10722", "status": "Occupied", "acuity": "Moderate", "color": "warning" },
+        { "code": "ICU-08", "patient": "Amina Al-Mansoor", "id": "P-10789", "status": "Occupied", "acuity": "Moderate", "color": "warning" },
+        { "code": "ICU-09", "patient": "Lucas Campbell", "id": "P-10795", "status": "Occupied", "acuity": "High", "color": "warning" },
+        { "code": "ICU-10", "patient": "Robert Kowalski", "id": "P-10815", "status": "Occupied", "acuity": "Moderate", "color": "warning" },
+        { "code": "ICU-11", "patient": "Maria Hernandez", "id": "P-10822", "status": "Occupied", "acuity": "Critical", "color": "danger" },
+        { "code": "ICU-12", "patient": null, "id": null, "status": "Available", "acuity": "Ready", "color": "success" }
+      ]
+    },
+    {
+      "id": "WARD-CCU-B",
+      "name": "Cardiac Care Unit (CCU)",
+      "type": "Cardiovascular",
+      "floor": "Level 3 · South Wing",
+      "chargeNurse": "Nurse James Brody, RN",
+      "capacity": 10,
+      "occupied": 8,
+      "beds": [
+        { "code": "CCU-01", "patient": "Gabriel Vance", "id": "P-10840", "status": "Occupied", "acuity": "High", "color": "danger" },
+        { "code": "CCU-02", "patient": "Claire Beauchamp", "id": "P-10855", "status": "Occupied", "acuity": "Moderate", "color": "warning" },
+        { "code": "CCU-03", "patient": "Nathan Drake", "id": "P-10860", "status": "Occupied", "acuity": "Moderate", "color": "warning" },
+        { "code": "CCU-04", "patient": "Victor Sullivan", "id": "P-10872", "status": "Occupied", "acuity": "Stable", "color": "info" },
+        { "code": "CCU-05", "patient": null, "id": null, "status": "Sanitizing", "acuity": "Cleaning", "color": "warning" },
+        { "code": "CCU-06", "patient": "Hannah Abbott", "id": "P-10884", "status": "Occupied", "acuity": "Stable", "color": "info" },
+        { "code": "CCU-07", "patient": "Oliver Queen", "id": "P-10891", "status": "Occupied", "acuity": "High", "color": "danger" },
+        { "code": "CCU-08", "patient": "Felicity Smoak", "id": "P-10902", "status": "Occupied", "acuity": "Moderate", "color": "warning" },
+        { "code": "CCU-09", "patient": "Barry Allen", "id": "P-10915", "status": "Occupied", "acuity": "Stable", "color": "info" },
+        { "code": "CCU-10", "patient": null, "id": null, "status": "Available", "acuity": "Ready", "color": "success" }
+      ]
+    },
+    {
+      "id": "WARD-GEN-2A",
+      "name": "General Medicine & Post-Op (Ward 2A)",
+      "type": "Inpatient Medicine",
+      "floor": "Level 2 · East Wing",
+      "chargeNurse": "Nurse Emily Vance, BSN",
+      "capacity": 12,
+      "occupied": 9,
+      "beds": [
+        { "code": "GEN-01", "patient": "Iris West", "id": "P-10920", "status": "Occupied", "acuity": "Stable", "color": "info" },
+        { "code": "GEN-02", "patient": "Cisco Ramon", "id": "P-10931", "status": "Occupied", "acuity": "Stable", "color": "info" },
+        { "code": "GEN-03", "patient": null, "id": null, "status": "Available", "acuity": "Ready", "color": "success" },
+        { "code": "GEN-04", "patient": "Caitlin Snow", "id": "P-10944", "status": "Occupied", "acuity": "Stable", "color": "info" },
+        { "code": "GEN-05", "patient": "Harrison Wells", "id": "P-10952", "status": "Occupied", "acuity": "Moderate", "color": "warning" },
+        { "code": "GEN-06", "patient": "Joe West", "id": "P-10960", "status": "Occupied", "acuity": "Stable", "color": "info" },
+        { "code": "GEN-07", "patient": null, "id": null, "status": "Sanitizing", "acuity": "Cleaning", "color": "warning" },
+        { "code": "GEN-08", "patient": "Wally West", "id": "P-10972", "status": "Occupied", "acuity": "Stable", "color": "info" },
+        { "code": "GEN-09", "patient": "Jesse Quick", "id": "P-10980", "status": "Occupied", "acuity": "Stable", "color": "info" },
+        { "code": "GEN-10", "patient": "Julian Albert", "id": "P-10991", "status": "Occupied", "acuity": "Moderate", "color": "warning" },
+        { "code": "GEN-11", "patient": null, "id": null, "status": "Available", "acuity": "Ready", "color": "success" },
+        { "code": "GEN-12", "patient": "Cecile Horton", "id": "P-11002", "status": "Occupied", "acuity": "Stable", "color": "info" }
+      ]
+    },
+    {
+      "id": "WARD-PED-1",
+      "name": "Pediatric Pavilion & Neonatal Ward",
+      "type": "Pediatrics",
+      "floor": "Level 1 · South Wing",
+      "chargeNurse": "Nurse Rachel Green, RN",
+      "capacity": 8,
+      "occupied": 6,
+      "beds": [
+        { "code": "PED-01", "patient": "Noah Miller", "id": "P-11012", "status": "Occupied", "acuity": "Stable", "color": "info" },
+        { "code": "PED-02", "patient": "Emma Watson", "id": "P-11024", "status": "Occupied", "acuity": "Moderate", "color": "warning" },
+        { "code": "PED-03", "patient": "Liam Smith", "id": "P-11030", "status": "Occupied", "acuity": "Stable", "color": "info" },
+        { "code": "PED-04", "patient": null, "id": null, "status": "Available", "acuity": "Ready", "color": "success" },
+        { "code": "PED-05", "patient": "Olivia Davis", "id": "P-11041", "status": "Occupied", "acuity": "Stable", "color": "info" },
+        { "code": "PED-06", "patient": "James Wilson Jr", "id": "P-11052", "status": "Occupied", "acuity": "Moderate", "color": "warning" },
+        { "code": "PED-07", "patient": null, "id": null, "status": "Available", "acuity": "Ready", "color": "success" },
+        { "code": "PED-08", "patient": "Sophia Brown", "id": "P-11065", "status": "Occupied", "acuity": "Stable", "color": "info" }
+      ]
+    }
+  ]
+}

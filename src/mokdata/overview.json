@@ -1,0 +1,334 @@
+{
+  "admissionTrends": [
+    { "label": "Jan", "value": 840 },
+    { "label": "Feb", "value": 920 },
+    { "label": "Mar", "value": 1040 },
+    { "label": "Apr", "value": 980 },
+    { "label": "May", "value": 1150 },
+    { "label": "Jun", "value": 1240 },
+    { "label": "Jul", "value": 1180 },
+    { "label": "Aug", "value": 1320 },
+    { "label": "Sep", "value": 1290 },
+    { "label": "Oct", "value": 1410 },
+    { "label": "Nov", "value": 1380 },
+    { "label": "Dec", "value": 1482 }
+  ],
+  "bedDistribution": [
+    { "name": "Cardiology", "value": 340, "color": "#22c55e" },
+    { "name": "Neurology", "value": 280, "color": "#06b6d4" },
+    { "name": "Emergency & Trauma", "value": 240, "color": "#f59e0b" },
+    { "name": "Pediatrics", "value": 190, "color": "#8b5cf6" },
+    { "name": "Oncology", "value": 150, "color": "#ec4899" },
+    { "name": "General Medicine", "value": 220, "color": "#3b82f6" }
+  ],
+  "telemetryPatients": [
+    {
+      "id": "P-10492",
+      "name": "Marcus Vance",
+      "age": 58,
+      "gender": "Male",
+      "bed": "ICU-Bed 04",
+      "diagnosis": "Acute Myocardial Infarction",
+      "status": "High Monitoring",
+      "hr": 74,
+      "bp": "118/76",
+      "spo2": 98,
+      "temp": "98.6",
+      "rr": 16,
+      "ecgCondition": "Normal Sinus Rhythm",
+      "rhythmStatus": "Stable"
+    },
+    {
+      "id": "P-10518",
+      "name": "Elena Rostova",
+      "age": 42,
+      "gender": "Female",
+      "bed": "CCU-Bed 02",
+      "diagnosis": "Post-CABG Recovery",
+      "status": "Observation",
+      "hr": 82,
+      "bp": "124/80",
+      "spo2": 97,
+      "temp": "99.1",
+      "rr": 18,
+      "ecgCondition": "Sinus Tachycardia (Mild)",
+      "rhythmStatus": "Monitoring"
+    },
+    {
+      "id": "P-10603",
+      "name": "David Chen",
+      "age": 67,
+      "gender": "Male",
+      "bed": "StepDown-09",
+      "diagnosis": "Congestive Heart Failure",
+      "status": "Improving",
+      "hr": 68,
+      "bp": "128/82",
+      "spo2": 99,
+      "temp": "98.4",
+      "rr": 15,
+      "ecgCondition": "Normal Sinus Rhythm",
+      "rhythmStatus": "Stable"
+    },
+    {
+      "id": "P-10684",
+      "name": "Sophia Patel",
+      "age": 29,
+      "gender": "Female",
+      "bed": "ER-Trauma 01",
+      "diagnosis": "Hypotension & Dehydration",
+      "status": "Critical Alert",
+      "hr": 104,
+      "bp": "92/58",
+      "spo2": 94,
+      "temp": "101.3",
+      "rr": 22,
+      "ecgCondition": "Sinus Tachycardia w/ Fever",
+      "rhythmStatus": "Needs Attention"
+    }
+  ],
+  "wardsData": [
+    { "name": "Emergency Care (ER)", "total": 60, "occupied": 55, "rate": 92 },
+    { "name": "Intensive Care (ICU)", "total": 32, "occupied": 28, "rate": 88 },
+    { "name": "Cardiology Ward", "total": 48, "occupied": 36, "rate": 75 },
+    { "name": "Surgical Recovery", "total": 54, "occupied": 44, "rate": 81 },
+    { "name": "Pediatrics Department", "total": 40, "occupied": 26, "rate": 65 },
+    { "name": "General Medicine", "total": 120, "occupied": 94, "rate": 78 }
+  ],
+  "statLabAlerts": [
+    {
+      "test": "Troponin-I Level (High-Sensitivity)",
+      "value": "142 ng/L",
+      "threshold": "> 14 ng/L",
+      "flag": "Critical Alert",
+      "flagColor": "bg-rose-500/15 text-rose-600 dark:text-rose-400 border-rose-500/30",
+      "patient": "Marcus Vance (P-10492)",
+      "ward": "ICU-Bed 04",
+      "physician": "Dr. Sarah Mitchell",
+      "time": "4 mins ago"
+    },
+    {
+      "test": "Arterial Blood Gas (ABG)",
+      "value": "pH 7.24 · pCO2 58 mmHg",
+      "threshold": "pH 7.35 - 7.45",
+      "flag": "Severe Acidosis",
+      "flagColor": "bg-rose-500/15 text-rose-600 dark:text-rose-400 border-rose-500/30",
+      "patient": "Sophia Patel (P-10684)",
+      "ward": "ER-Trauma 01",
+      "physician": "Dr. Emily Watson",
+      "time": "18 mins ago"
+    },
+    {
+      "test": "Comprehensive Chemistry (K+)",
+      "value": "Serum K+ 5.9 mEq/L",
+      "threshold": "3.5 - 5.0 mEq/L",
+      "flag": "Hyperkalemia",
+      "flagColor": "bg-amber-500/15 text-amber-600 dark:text-amber-400 border-amber-500/30",
+      "patient": "David Chen (P-10603)",
+      "ward": "StepDown-09",
+      "physician": "Dr. Julian Thorne",
+      "time": "34 mins ago"
+    },
+    {
+      "test": "Stat Blood Cultures x2",
+      "value": "Gram-positive cocci in clusters",
+      "threshold": "No growth",
+      "flag": "Actionable Bacteremia",
+      "flagColor": "bg-rose-500/15 text-rose-600 dark:text-rose-400 border-rose-500/30",
+      "patient": "Elena Rostova (P-10518)",
+      "ward": "CCU-Bed 02",
+      "physician": "Dr. Sarah Mitchell",
+      "time": "46 mins ago"
+    }
+  ],
+  "emergencyTriageQueue": [
+    {
+      "acuity": "Level 1 - Resuscitation",
+      "color": "bg-red-500 text-white",
+      "border": "border-red-500/40 bg-red-500/5",
+      "patient": "Carlos Mendez (45M)",
+      "complaint": "Severe Chest Pain & Radiating Arm Numbness",
+      "wait": "0 min (Immediate)",
+      "bay": "Resus-01",
+      "physician": "Dr. Thorne"
+    },
+    {
+      "acuity": "Level 2 - Emergent",
+      "color": "bg-amber-500 text-white",
+      "border": "border-amber-500/40 bg-amber-500/5",
+      "patient": "Aaliyah Khan (31F)",
+      "complaint": "Acute Anaphylactic Reaction, Dyspnea",
+      "wait": "4 min",
+      "bay": "Trauma-03",
+      "physician": "Dr. Henderson"
+    },
+    {
+      "acuity": "Level 3 - Urgent",
+      "color": "bg-blue-500 text-white",
+      "border": "border-blue-500/40 bg-blue-500/5",
+      "patient": "Jonathan Reed (22M)",
+      "complaint": "Compound Tibial Fracture, Controlled Bleed",
+      "wait": "12 min",
+      "bay": "Bay-06",
+      "physician": "Dr. Watson"
+    }
+  ],
+  "todayAppointments": [
+    {
+      "time": "09:30 AM",
+      "patient": "Alexander Wright",
+      "id": "P-1072",
+      "doctor": "Dr. Sarah Mitchell",
+      "dept": "Cardiology",
+      "type": "Post-Op Follow-up",
+      "status": "In Consultation",
+      "statusColor": "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/30"
+    },
+    {
+      "time": "10:15 AM",
+      "patient": "Claire Beauchamp",
+      "id": "P-1088",
+      "doctor": "Dr. Julian Thorne",
+      "dept": "Neurology",
+      "type": "EEG Evaluation",
+      "status": "Checked In",
+      "statusColor": "bg-teal-500/15 text-teal-600 dark:text-teal-400 border-teal-500/30"
+    },
+    {
+      "time": "11:00 AM",
+      "patient": "Gabriel Vance",
+      "id": "P-1102",
+      "doctor": "Dr. Emily Watson",
+      "dept": "Orthopedics",
+      "type": "MRI Review",
+      "status": "Confirmed",
+      "statusColor": "bg-blue-500/15 text-blue-600 dark:text-blue-400 border-blue-500/30"
+    },
+    {
+      "time": "11:45 AM",
+      "patient": "Maria Hernandez",
+      "id": "P-1140",
+      "doctor": "Dr. Sarah Mitchell",
+      "dept": "Cardiology",
+      "type": "Echocardiogram",
+      "status": "Upcoming",
+      "statusColor": "bg-slate-500/15 text-slate-600 dark:text-slate-400 border-slate-500/30"
+    }
+  ],
+  "onDutyStaff": [
+    {
+      "name": "Dr. Sarah Jenkins, MD",
+      "role": "Chief of Cardiovascular Surgery",
+      "department": "Cardiology",
+      "station": "OR Suite 2A",
+      "patients": 14,
+      "status": "On Duty",
+      "statusColor": "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/30",
+      "avatarId": "avatar-1"
+    },
+    {
+      "name": "Dr. Arthur Pendelton, MD",
+      "role": "Senior Trauma Surgeon",
+      "department": "Emergency & Trauma",
+      "station": "Trauma Bay 01",
+      "patients": 8,
+      "status": "In Surgery",
+      "statusColor": "bg-rose-500/15 text-rose-600 dark:text-rose-400 border-rose-500/30",
+      "avatarId": "avatar-2"
+    },
+    {
+      "name": "Dr. Julian Thorne, MD",
+      "role": "Consultant Neurologist",
+      "department": "Neurology",
+      "station": "Neuro ICU Desk",
+      "patients": 11,
+      "status": "On Duty",
+      "statusColor": "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/30",
+      "avatarId": "avatar-3"
+    },
+    {
+      "name": "Nurse Sarah Connor, RN",
+      "role": "Critical Care Charge Nurse",
+      "department": "Intensive Care (ICU)",
+      "station": "ICU Central Station",
+      "patients": 28,
+      "status": "On Duty",
+      "statusColor": "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/30",
+      "avatarId": "avatar-4"
+    }
+  ],
+  "recentAdmissions": [
+    {
+      "id": "ENC-8091",
+      "patient": "Eleanor Vance",
+      "patientId": "P-10381",
+      "department": "Cardiology",
+      "doctor": "Dr. Sarah Jenkins",
+      "wardBed": "ICU · Bed 02",
+      "diagnosis": "Post-CABG Recovery",
+      "acuity": "Critical",
+      "acuityColor": "bg-rose-500/15 text-rose-600 dark:text-rose-400 border-rose-500/30",
+      "status": "In Treatment",
+      "statusColor": "bg-amber-500/15 text-amber-600 dark:text-amber-400 border-amber-500/30"
+    },
+    {
+      "id": "ENC-8092",
+      "patient": "Marcus Sterling",
+      "patientId": "P-10492",
+      "department": "Emergency & Trauma",
+      "doctor": "Dr. Arthur Pendelton",
+      "wardBed": "ER Resus · Bay 01",
+      "diagnosis": "Acute Anterior STEMI",
+      "acuity": "Critical",
+      "acuityColor": "bg-rose-500/15 text-rose-600 dark:text-rose-400 border-rose-500/30",
+      "status": "Admitted",
+      "statusColor": "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/30"
+    },
+    {
+      "id": "ENC-8093",
+      "patient": "Sophia Patel",
+      "patientId": "P-10684",
+      "department": "Neurology",
+      "doctor": "Dr. Julian Evans",
+      "wardBed": "Neuro ICU · Bed 05",
+      "diagnosis": "Acute Ischemic Stroke",
+      "acuity": "Urgent",
+      "acuityColor": "bg-amber-500/15 text-amber-600 dark:text-amber-400 border-amber-500/30",
+      "status": "In Treatment",
+      "statusColor": "bg-amber-500/15 text-amber-600 dark:text-amber-400 border-amber-500/30"
+    },
+    {
+      "id": "ENC-8094",
+      "patient": "Liam O’Connor",
+      "patientId": "P-10722",
+      "department": "Surgery",
+      "doctor": "Dr. James Wilson",
+      "wardBed": "Ward 4C · Bed 22",
+      "diagnosis": "Laparoscopic Repair",
+      "acuity": "Moderate",
+      "acuityColor": "bg-blue-500/15 text-blue-600 dark:text-blue-400 border-blue-500/30",
+      "status": "Pre-Op",
+      "statusColor": "bg-cyan-500/15 text-cyan-600 dark:text-cyan-400 border-cyan-500/30"
+    },
+    {
+      "id": "ENC-8095",
+      "patient": "Elena Rostova",
+      "patientId": "P-10518",
+      "department": "General Medicine",
+      "doctor": "Dr. Rebecca Moore",
+      "wardBed": "Ward 3B · Bed 14",
+      "diagnosis": "Exacerbation of COPD",
+      "acuity": "Stable",
+      "acuityColor": "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/30",
+      "status": "Observation",
+      "statusColor": "bg-slate-500/15 text-slate-600 dark:text-slate-400 border-slate-500/30"
+    }
+  ],
+  "qualityMetrics": [
+    { "label": "Patient Safety", "value": 96 },
+    { "label": "Infection Control", "value": 92 },
+    { "label": "Bed Turnover", "value": 78 },
+    { "label": "Medication Safety", "value": 98 },
+    { "label": "Nurse Ratio", "value": 86 }
+  ]
+}
