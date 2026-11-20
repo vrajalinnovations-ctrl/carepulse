@@ -1,25 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import Card from '../components/ui/Card';
-import Badges from '../components/ui/badges';
 import Breadcrumb from '../components/ui/breadcrumbs';
 import Modal from '../components/ui/modals';
 import { toast } from '../context/toast-context';
 import patientsData from '../mokdata/patients.json';
-import {
-  FiHome,
-  FiSearch,
-  FiPlus,
-  FiActivity,
-  FiClock,
-  FiHeart,
-  FiShield,
-  FiAlertTriangle,
-  FiCheckCircle,
-  FiDownload,
-  FiFileText,
-  FiUser,
-  FiMapPin,
-} from 'react-icons/fi';
+import { FiHome, FiSearch, FiPlus, FiActivity, FiClock, FiHeart, FiAlertTriangle, FiCheckCircle, FiDownload, FiUser, } from 'react-icons/fi';
 
 const { patients: initialPatients, wards } = patientsData;
 
@@ -239,11 +224,10 @@ export const Patients = () => {
                 key={ward}
                 type="button"
                 onClick={() => setSelectedWard(ward)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap shrink-0 transition-all cursor-pointer ${
-                  selectedWard === ward
-                    ? 'bg-primary text-white shadow-xs'
-                    : 'bg-gray-100 dark:bg-gray-800/80 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700/80'
-                }`}
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap shrink-0 transition-all cursor-pointer ${selectedWard === ward
+                  ? 'bg-primary text-white shadow-xs'
+                  : 'bg-gray-100 dark:bg-gray-800/80 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700/80'
+                  }`}
               >
                 {ward}
               </button>
@@ -259,11 +243,10 @@ export const Patients = () => {
               key={status}
               type="button"
               onClick={() => setSelectedStatus(status)}
-              className={`px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap shrink-0 transition-all cursor-pointer ${
-                selectedStatus === status
-                  ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-xs'
-                  : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800/60'
-              }`}
+              className={`px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap shrink-0 transition-all cursor-pointer ${selectedStatus === status
+                ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-xs'
+                : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800/60'
+                }`}
             >
               {status}
             </button>
@@ -589,11 +572,10 @@ export const Patients = () => {
                   key={st}
                   type="button"
                   onClick={() => setNewPatient((prev) => ({ ...prev, status: st }))}
-                  className={`px-2.5 py-1.5 rounded-xl border text-xs font-semibold cursor-pointer text-center transition-all ${
-                    newPatient.status === st
-                      ? 'bg-primary text-white border-primary shadow-xs'
-                      : 'bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
-                  }`}
+                  className={`px-2.5 py-1.5 rounded-xl border text-xs font-semibold cursor-pointer text-center transition-all ${newPatient.status === st
+                    ? 'bg-primary text-white border-primary shadow-xs'
+                    : 'bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                    }`}
                 >
                   {st}
                 </button>

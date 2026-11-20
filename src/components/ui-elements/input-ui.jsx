@@ -8,11 +8,9 @@ import {
   FiPhone,
   FiCalendar,
   FiLock,
-  FiSearch,
   FiHome,
   FiCheckCircle,
   FiAlertCircle,
-  FiSliders,
 } from 'react-icons/fi';
 
 const InputUi = () => {

@@ -5,35 +5,17 @@ import Breadcrumb from '../components/ui/breadcrumbs';
 import Modal from '../components/ui/modals';
 import { toast } from '../context/toast-context';
 import emergencyConfig from '../mokdata/emergency.json';
-import {
-  FiHome,
-  FiSearch,
-  FiPlus,
-  FiActivity,
-  FiAlertTriangle,
-  FiClock,
-  FiCheckCircle,
-  FiMapPin,
-  FiPhone,
-  FiRadio,
-  FiHeart,
-  FiShield,
-  FiTrendingUp,
-} from 'react-icons/fi';
+import { FiHome, FiSearch, FiPlus, FiActivity, FiAlertTriangle, FiClock, FiCheckCircle, FiMapPin,FiPhone, FiRadio, FiHeart, FiShield, FiTrendingUp,} from 'react-icons/fi';
 
 const { traumaBays: initialTraumaBays, inboundAmbulances, triageFilters } = emergencyConfig;
 
 const EmergencyPage = () => {
   const [baysList, setBaysList] = useState(initialTraumaBays);
-  const [ambulancesList, setAmbulancesList] = useState(inboundAmbulances);
+  const [ambulancesList] = useState(inboundAmbulances);
   const [search, setSearch] = useState('');
   const [selectedFilter, setSelectedFilter] = useState('All Acuity');
-
-  // Modal States
   const [showIntakeModal, setShowIntakeModal] = useState(false);
   const [selectedChartBay, setSelectedChartBay] = useState(null);
-
-  // Form state for Triage Intake
   const [intakeData, setIntakeData] = useState({
     patient: '',
     ageGender: '48y / Male',

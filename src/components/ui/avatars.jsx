@@ -1,6 +1,5 @@
 import React from 'react';
 import { FiUser } from 'react-icons/fi';
-import { useTheme } from '../../context/theme-context';
 
 const SIZE_MAP = {
     xs: 'w-6 h-6 text-xs',
@@ -136,8 +135,6 @@ const Avatar = ({
     ring = 'none',
     elevated = false,
 }) => {
-    const { theme } = useTheme();
-
     const sizeCls = SIZE_MAP[size] || SIZE_MAP.md;
     const radCls = RADIUS_MAP[rounded] || RADIUS_MAP.full;
     const c = COLOR_MAP[color] || COLOR_MAP.slate;

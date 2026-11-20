@@ -1,23 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import Card from '../components/ui/Card';
-import Badges from '../components/ui/badges';
 import Breadcrumb from '../components/ui/breadcrumbs';
 import Modal from '../components/ui/modals';
 import { toast } from '../context/toast-context';
 import appointmentsData from '../mokdata/appointments.json';
-import {
-  FiHome,
-  FiClock,
-  FiPlus,
-  FiSearch,
-  FiVideo,
-  FiMapPin,
-  FiCalendar,
-  FiCheckCircle,
-  FiUser,
-  FiSliders,
-  FiDownload,
-} from 'react-icons/fi';
+import {FiHome,FiClock,FiPlus,FiSearch,FiVideo,FiMapPin,FiCalendar,FiCheckCircle,FiDownload,} from 'react-icons/fi';
 
 const { appointments: initialAppointments } = appointmentsData;
 
@@ -25,12 +12,8 @@ export const Appointments = () => {
   const [appointmentsList, setAppointmentsList] = useState(initialAppointments);
   const [selectedFilter, setSelectedFilter] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-
-  // Modal States
   const [showBookModal, setShowBookModal] = useState(false);
   const [selectedManageApt, setSelectedManageApt] = useState(null);
-
-  // Form State for Booking
   const [bookData, setBookData] = useState({
     patient: '',
     doctor: 'Dr. Sarah Mitchell',
@@ -40,7 +23,6 @@ export const Appointments = () => {
     mode: 'In-Person',
     room: 'Consult Suite 2A',
   });
-
   const handleExportSchedule = () => {
     toast.success('Clinical appointments schedule exported to PDF / iCal calendar archive.', {
       title: 'Schedule Exported',
@@ -148,19 +130,13 @@ export const Appointments = () => {
         </div>
 
         <div className="flex flex-wrap sm:flex-nowrap items-center gap-2 sm:gap-3 w-full sm:w-auto shrink-0">
-          <button
-            type="button"
-            onClick={handleExportSchedule}
+          <button type="button" onClick={handleExportSchedule}
             className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 text-xs font-semibold transition-all shadow-xs cursor-pointer whitespace-nowrap"
           >
             <FiDownload className="w-3.5 h-3.5 shrink-0" />
             <span>Export Agenda</span>
           </button>
-          <button
-            type="button"
-            onClick={() => setShowBookModal(true)}
-            className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-xl bg-primary text-white text-xs font-semibold hover:bg-primary/90 transition-all shadow-sm shadow-primary/25 cursor-pointer whitespace-nowrap"
-          >
+          <button type="button"  onClick={() => setShowBookModal(true)} className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-xl bg-primary text-white text-xs font-semibold hover:bg-primary/90 transition-all shadow-sm shadow-primary/25 cursor-pointer whitespace-nowrap">
             <FiPlus className="w-3.5 h-3.5 shrink-0" />
             <span>Book Consultation</span>
           </button>

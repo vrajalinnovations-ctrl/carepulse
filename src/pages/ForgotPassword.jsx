@@ -1,10 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-import {
-  Mail,
-  ArrowLeft,
-  CheckCircle2,
-} from 'lucide-react'
+import { Mail,ArrowLeft,CheckCircle2,} from 'lucide-react'
 import Card from '../components/ui/Card'
 import logoSm from '../assets/logo/logo-sm.png'
 import { toast } from '../context/toast-context'
@@ -32,19 +28,15 @@ export const ForgotPassword = () => {
 
   return (
     <div className="relative min-h-screen w-full bg-slate-50 dark:bg-zinc-950 flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 overflow-hidden">
-      {/* ─── Ambient Background Glows (Lush depth, not flat black) ─── */}
+     
       <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-        {/* Central Primary Ambient Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-primary/20 dark:bg-primary/25 blur-3xl" />
-        {/* Top-Start Teal Orb */}
         <div className="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-teal-500/15 dark:bg-teal-500/20 blur-3xl" />
-        {/* Bottom-End Emerald Orb */}
         <div className="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-emerald-500/15 dark:bg-emerald-500/20 blur-3xl" />
-        {/* Atmospheric Gradient Wash */}
         <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-teal-500/5 dark:from-primary/10 dark:via-transparent dark:to-teal-500/10" />
       </div>
 
-      {/* ─── Foreground Content ─── */}
+   
       <div className="relative z-10 w-full max-w-md flex flex-col items-center">
         {/* ─── Back to Login Link ─── */}
         <div className="w-full mb-4 flex items-center justify-start">

@@ -9,9 +9,6 @@ import {
   FiCheckCircle,
   FiUserCheck,
   FiSidebar,
-  FiMaximize2,
-  FiSliders,
-  FiLayers,
 } from 'react-icons/fi';
 
 const COLORS = ['primary', 'secondary', 'success', 'danger', 'warning', 'purple', 'pink', 'teal', 'indigo'];

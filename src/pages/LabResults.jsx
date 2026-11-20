@@ -5,21 +5,7 @@ import Breadcrumb from '../components/ui/breadcrumbs';
 import Modal from '../components/ui/modals';
 import { toast } from '../context/toast-context';
 import labResultsConfig from '../mokdata/labResults.json';
-import {
-  FiHome,
-  FiSearch,
-  FiDownload,
-  FiPlus,
-  FiActivity,
-  FiAlertTriangle,
-  FiCheckCircle,
-  FiClock,
-  FiFileText,
-  FiChevronRight,
-  FiPrinter,
-  FiArrowLeft,
-  FiSend,
-} from 'react-icons/fi';
+import { FiHome, FiSearch, FiDownload, FiPlus, FiActivity, FiAlertTriangle, FiCheckCircle, FiClock, FiFileText, FiChevronRight, FiPrinter, FiArrowLeft,} from 'react-icons/fi';
 
 const { categoryFilters, labOrdersData: initialLabOrders } = labResultsConfig;
 
@@ -30,8 +16,6 @@ const LabResultsPage = () => {
   const [selectedStatus, setSelectedStatus] = useState('All');
   const [selectedOrderId, setSelectedOrderId] = useState('LAB-9041');
   const [mobileTab, setMobileTab] = useState('roster'); // 'roster' | 'inspector'
-
-  // Modal State for Ordering Lab Panel
   const [showOrderModal, setShowOrderModal] = useState(false);
   const [newOrder, setNewOrder] = useState({
     patient: '',

@@ -1,12 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-import {
-  Lock,
-  Eye,
-  EyeOff,
-  ArrowLeft,
-  CheckCircle2,
-} from 'lucide-react'
+import { Lock, Eye, EyeOff, ArrowLeft, CheckCircle2,} from 'lucide-react'
 import Card from '../components/ui/Card'
 import logoSm from '../assets/logo/logo-sm.png'
 import { toast } from '../context/toast-context'

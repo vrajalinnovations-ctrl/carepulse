@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import { Menu, Transition } from '@headlessui/react';
-import { FiChevronDown, FiMoreHorizontal } from 'react-icons/fi';
+import { FiChevronDown } from 'react-icons/fi';
 import Button from './buttons';
 
 // Design-system aligned color map
@@ -109,7 +109,7 @@ const DropDown = ({
   placement = 'bottom-start',
   transition = 'scale',
   round = 'default',
-  hoverSwap = false,
+  _hoverSwap = false,
   justify = false,
   block = false,
   // New controlled-select API

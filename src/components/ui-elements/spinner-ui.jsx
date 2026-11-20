@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import Card from '../ui/Card';
 import Spinner from '../ui/spinner';
 import Breadcrumb from '../ui/breadcrumbs';
-import Button from '../ui/buttons';
-import { FiHome, FiRefreshCw, FiServer, FiActivity } from 'react-icons/fi';
+import { FiHome } from 'react-icons/fi';
 
 const COLORS = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'purple', 'pink', 'teal', 'indigo'];
 
@@ -196,7 +195,7 @@ const SpinnerUi = () => {
             5 standardized dimensions from inline text badges to large modal overlays
           </p>
           <div className="flex flex-wrap items-end gap-6 mt-5 p-4 rounded-2xl bg-slate-50/50 dark:bg-gray-900/30 border border-slate-200 dark:border-white/10">
-            {SIZES.map(({ size, px, label }) => (
+            {SIZES.map(({ size, px }) => (
               <div key={size} className="flex flex-col items-center gap-2">
                 <Spinner type="ring" size={size} color="info" />
                 <span className="text-xs font-semibold text-gray-800 dark:text-gray-200 uppercase">

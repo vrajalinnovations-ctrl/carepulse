@@ -1,9 +1,8 @@
-import React, { useState, useCallback, useMemo } from "react";
+import React, { useState, useCallback } from "react";
 import Alerts from "../ui/alerts";
 import Card from "../ui/Card";
 import Breadcrumb from "../ui/breadcrumbs";
 import { FiHome } from "react-icons/fi";
-import { useTheme } from "../../context/theme-context";
 
 
 const COLORS = [
@@ -73,7 +72,6 @@ AlertSection.displayName = "AlertSection";
 
 
 const AlertsUi = () => {
-  const { theme } = useTheme();
   const [dismissedAlerts, setDismissedAlerts] = useState(new Set());
 
   // Stable reference — won't cause AlertSection re-renders

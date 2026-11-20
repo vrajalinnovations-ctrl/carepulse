@@ -118,7 +118,6 @@ const Accordion = ({
   }
 
   const col = colorMap[color] || colorMap.Indigo
-  const isPrimary = color === 'primary'
 
   // Simplified wrapper classes
   const getWrapperClasses = () => {

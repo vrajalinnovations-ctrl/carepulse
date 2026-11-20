@@ -1,22 +1,8 @@
 import React, { useState } from 'react';
 import Breadcrumb from '../components/ui/breadcrumbs';
 import chartsConfig from '../mokdata/charts.json';
-import {
-  SparklineMetricCard,
-  AreaChartCard,
-  BarChartCard,
-  DonutChartCard,
-  RadarChartCard,
-} from '../components/ui/charts';
-import {
-  FiHome,
-  FiCalendar,
-  FiDownload,
-  FiActivity,
-  FiUsers,
-  FiClock,
-  FiHeart,
-} from 'react-icons/fi';
+import { SparklineMetricCard, AreaChartCard, BarChartCard, DonutChartCard, RadarChartCard,} from '../components/ui/charts';
+import { FiHome, FiDownload, FiActivity, FiUsers, FiClock, FiHeart,} from 'react-icons/fi';
 
 const { admissionTrends, departmentCapacity, bedDistribution, qualityMetrics } = chartsConfig;
 

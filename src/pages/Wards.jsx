@@ -5,20 +5,7 @@ import Badges from '../components/ui/badges';
 import Breadcrumb from '../components/ui/breadcrumbs';
 import Modal from '../components/ui/modals';
 import { toast } from '../context/toast-context';
-import {
-  FiHome,
-  FiSearch,
-  FiPlus,
-  FiActivity,
-  FiCheckCircle,
-  FiClock,
-  FiAlertTriangle,
-  FiRefreshCw,
-  FiUser,
-  FiHeart,
-  FiTrendingUp,
-  FiLogOut,
-} from 'react-icons/fi';
+import { FiHome, FiSearch, FiPlus, FiActivity, FiCheckCircle, FiClock, FiAlertTriangle, FiRefreshCw, FiUser, FiHeart, FiTrendingUp, } from 'react-icons/fi';
 import wardsConfig from '../mokdata/wards.json';
 
 const { wardsData: initialWardsData, unitFilters } = wardsConfig;
@@ -293,11 +280,10 @@ const WardsPage = () => {
                 key={st}
                 type="button"
                 onClick={() => setSelectedStatus(st)}
-                className={`px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap shrink-0 transition-all cursor-pointer ${
-                  selectedStatus === st
-                    ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900 shadow-xs'
-                    : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800/60'
-                }`}
+                className={`px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap shrink-0 transition-all cursor-pointer ${selectedStatus === st
+                  ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900 shadow-xs'
+                  : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800/60'
+                  }`}
               >
                 {st}
               </button>
@@ -312,11 +298,10 @@ const WardsPage = () => {
               key={unit}
               type="button"
               onClick={() => setSelectedUnit(unit)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap shrink-0 transition-all cursor-pointer ${
-                selectedUnit === unit
-                  ? 'bg-primary text-white shadow-xs'
-                  : 'bg-gray-100 dark:bg-gray-800/80 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700/80'
-              }`}
+              className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap shrink-0 transition-all cursor-pointer ${selectedUnit === unit
+                ? 'bg-primary text-white shadow-xs'
+                : 'bg-gray-100 dark:bg-gray-800/80 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700/80'
+                }`}
             >
               {unit}
             </button>
@@ -373,13 +358,12 @@ const WardsPage = () => {
                   return (
                     <div
                       key={bed.code}
-                      className={`p-2.5 sm:p-3 rounded-xl border transition-all text-xs flex flex-col justify-between ${
-                        isAvailable
-                          ? 'bg-emerald-50/50 dark:bg-emerald-950/20 border-emerald-200 dark:border-emerald-900/40 text-emerald-900 dark:text-emerald-300'
-                          : isSanitizing
+                      className={`p-2.5 sm:p-3 rounded-xl border transition-all text-xs flex flex-col justify-between ${isAvailable
+                        ? 'bg-emerald-50/50 dark:bg-emerald-950/20 border-emerald-200 dark:border-emerald-900/40 text-emerald-900 dark:text-emerald-300'
+                        : isSanitizing
                           ? 'bg-amber-50/50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-900/40 text-amber-900 dark:text-amber-300'
                           : 'bg-gray-50/80 dark:bg-gray-900/60 border-gray-200 dark:border-gray-800 text-gray-900 dark:text-white'
-                      }`}
+                        }`}
                     >
                       <div className="flex items-center justify-between mb-1.5 sm:mb-2 gap-1">
                         <span className="font-bold font-mono text-xs shrink-0">{bed.code}</span>
@@ -555,11 +539,10 @@ const WardsPage = () => {
                   key={lvl}
                   type="button"
                   onClick={() => setAdmitData((prev) => ({ ...prev, acuity: lvl }))}
-                  className={`px-3 py-2 rounded-xl border text-xs font-semibold transition-all cursor-pointer text-center ${
-                    admitData.acuity === lvl
-                      ? 'bg-primary text-white border-primary shadow-xs'
-                      : 'bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
-                  }`}
+                  className={`px-3 py-2 rounded-xl border text-xs font-semibold transition-all cursor-pointer text-center ${admitData.acuity === lvl
+                    ? 'bg-primary text-white border-primary shadow-xs'
+                    : 'bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                    }`}
                 >
                   {lvl}
                 </button>

@@ -4,25 +4,14 @@ import Table from '../components/ui/table';
 import Badges from '../components/ui/badges';
 import Breadcrumb from '../components/ui/breadcrumbs';
 import tablesConfig from '../mokdata/tables.json';
-import {
-  FiHome,
-  FiSearch,
-  FiDownload,
-  FiPlus,
-  FiChevronLeft,
-  FiChevronRight,
-  FiCheckCircle,
-  FiClock,
-  FiAlertCircle,
-  FiActivity,
-} from 'react-icons/fi';
+import { FiHome, FiSearch, FiDownload, FiPlus, FiChevronLeft, FiChevronRight, FiCheckCircle, FiClock, FiAlertCircle, FiActivity, } from 'react-icons/fi';
 
 const { encountersData, departmentFilters } = tablesConfig;
 
 const TablesPage = () => {
   const [search, setSearch] = useState('');
   const [selectedDept, setSelectedDept] = useState('All');
-  const [selectedStatus, setSelectedStatus] = useState('All');
+  const selectedStatus = 'All';
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 5;
 
@@ -273,11 +262,10 @@ const TablesPage = () => {
                   setSelectedDept(dept);
                   setCurrentPage(1);
                 }}
-                className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all ${
-                  selectedDept === dept
-                    ? 'bg-primary text-white shadow-xs'
-                    : 'bg-gray-100 dark:bg-gray-800/80 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
-                }`}
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all ${selectedDept === dept
+                  ? 'bg-primary text-white shadow-xs'
+                  : 'bg-gray-100 dark:bg-gray-800/80 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+                  }`}
               >
                 {dept}
               </button>

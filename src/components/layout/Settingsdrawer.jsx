@@ -1,11 +1,8 @@
 import React from 'react';
-import {
-    X, Check, Moon, Sun, AlignLeft, AlignRight, Sliders, Palette,
-    Pin, ArrowDownUp, PanelTop, ArrowUp, ArrowDown, MoveVertical,
-} from 'lucide-react';
+import { X, Check, Moon, Sun, AlignLeft, AlignRight, Sliders, Palette, Pin, ArrowDownUp, PanelTop, ArrowUp, ArrowDown, MoveVertical, } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from '../../context/theme-context';
-import { cx, EASE, SIDEBAR_TRANSITION, FONT_MONO, FONT_DISPLAY } from './Uihelpers';
+import { cx, SIDEBAR_TRANSITION, FONT_MONO, FONT_DISPLAY } from './Uihelpers';
 
 const PRIMARY_COLOR_PRESETS = [
     { name: 'Emerald', color: '#22c55e' },
@@ -18,18 +15,13 @@ const PRIMARY_COLOR_PRESETS = [
     { name: 'Teal', color: '#14b8a6' },
 ];
 
-/**
- * Settings Drawer Component
- * Allows live customization of Theme Mode (Dark/Light), Layout Direction (LTR/RTL), Navbar Behavior (Sticky/Scroll), and Primary Colors.
- * Features visual interactive preview cards for theme, layout, and navbar position selection.
- */
+
 const SettingsDrawer = ({
     theme: propTheme,
     isDark: propIsDark,
     direction: propDirection,
     navbarPosition: propNavbarPosition,
     setNavbarPosition: propSetNavbarPosition,
-    toggleNavbarPosition: propToggleNavbarPosition,
     settingsOpen = false,
     setSettingsOpen,
     toggleTheme: propToggleTheme,
@@ -43,7 +35,6 @@ const SettingsDrawer = ({
     const direction = propDirection || themeCtx?.direction || 'ltr';
     const navbarPosition = propNavbarPosition || themeCtx?.navbarPosition || 'sticky';
     const setNavbarPosition = propSetNavbarPosition || themeCtx?.setNavbarPosition;
-    const toggleNavbarPosition = propToggleNavbarPosition || themeCtx?.toggleNavbarPosition;
     const toggleTheme = propToggleTheme || themeCtx?.toggleTheme;
     const toggleDirection = propToggleDirection || themeCtx?.toggleDirection;
     const primaryColor = propPrimaryColor || themeCtx?.primaryColor || '#22c55e';
@@ -109,30 +100,18 @@ const SettingsDrawer = ({
                         {/* Specular glass reflections on right sidebar */}
                         <div className="absolute inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
                             {/* Inner border glass reflection highlight line */}
-                            <div
-                                className={cx(
-                                    'absolute top-0 bottom-0 w-px bg-gradient-to-b',
-                                    direction === 'ltr' ? 'left-0' : 'right-0',
-                                    isDark
-                                        ? 'from-white/30 via-white/10 to-transparent'
-                                        : 'from-white/80 via-slate-200/50 to-transparent'
-                                )}
+                            <div className={cx('absolute top-0 bottom-0 w-px bg-gradient-to-b',
+                                direction === 'ltr' ? 'left-0' : 'right-0',
+                                isDark
+                                    ? 'from-white/30 via-white/10 to-transparent'
+                                    : 'from-white/80 via-slate-200/50 to-transparent'
+                            )}
                             />
                             {/* Top edge light rim */}
-                            <div
-                                className={cx(
-                                    'absolute top-0 left-0 right-0 h-px',
-                                    isDark ? 'bg-white/20' : 'bg-white'
-                                )}
+                            <div className={cx('absolute top-0 left-0 right-0 h-px', isDark ? 'bg-white/20' : 'bg-white')}
                             />
                             {/* Vertical subtle glass sheen */}
-                            <div
-                                className={cx(
-                                    'absolute inset-0 bg-gradient-to-b opacity-40',
-                                    isDark
-                                        ? 'from-white/10 via-transparent to-black/20'
-                                        : 'from-white/60 via-white/10 to-transparent'
-                                )}
+                            <div className={cx('absolute inset-0 bg-gradient-to-b opacity-40', isDark ? 'from-white/10 via-transparent to-black/20' : 'from-white/60 via-white/10 to-transparent')}
                             />
                         </div>
 
@@ -152,7 +131,7 @@ const SettingsDrawer = ({
                                 </div>
                             </div>
                             <button
-                                type="button"
+                             type="button"
                                 aria-label="Close settings panel"
                                 onClick={() => setSettingsOpen && setSettingsOpen(false)}
                                 className={cx(
@@ -166,10 +145,8 @@ const SettingsDrawer = ({
                             </button>
                         </div>
 
-                        {/* Smooth Scrollable Body with Scrollbars Hidden */}
                         <div data-lenis-prevent className="relative z-10 flex-1 overflow-y-auto overscroll-contain px-6 py-5 space-y-6 pb-12 drawer-scroll scrollbar-none">
 
-                            {/* Theme Mode Card Selector Section */}
                             <div className="mb-6">
                                 <div className="flex items-center justify-between mb-3">
                                     <h3 className={cx(FONT_MONO, 'text-xs font-semibold uppercase tracking-wider', isDark ? 'text-gray-400' : 'text-slate-600')}>
@@ -181,18 +158,8 @@ const SettingsDrawer = ({
                                 </div>
 
                                 <div className="grid grid-cols-2 gap-3">
-                                    {/* Dark Mode Visual Tile */}
-                                    <button
-                                        type="button"
-                                        aria-pressed={isDark}
-                                        onClick={() => isDark || (toggleTheme && toggleTheme())}
-                                        className={cx(
-                                            'p-3 rounded-2xl border text-left transition-all duration-200 cursor-pointer flex flex-col gap-2 group',
-                                            isDark
-                                                ? 'border-primary bg-primary/10 ring-2 ring-primary shadow-sm shadow-primary/20'
-                                                : 'border-slate-200 dark:border-white/10 bg-slate-50/70 dark:bg-white/5 hover:border-slate-300 dark:hover:border-white/20'
-                                        )}
-                                    >
+                  
+                                    <button type="button" aria-pressed={isDark} onClick={() => isDark || (toggleTheme && toggleTheme())} className={cx( 'p-3 rounded-2xl border text-left transition-all duration-200 cursor-pointer flex flex-col gap-2 group', isDark ? 'border-primary bg-primary/10 ring-2 ring-primary shadow-sm shadow-primary/20' : 'border-slate-200 dark:border-white/10 bg-slate-50/70 dark:bg-white/5 hover:border-slate-300 dark:hover:border-white/20' )}>
                                         {/* Mini Dark UI Window Mockup */}
                                         <div className="w-full h-14 rounded-xl bg-gray-950 border border-white/10 p-1.5 flex flex-col gap-1 overflow-hidden shadow-inner">
                                             <div className="flex items-center gap-1 pb-1 border-b border-white/10">
@@ -229,17 +196,7 @@ const SettingsDrawer = ({
                                     </button>
 
                                     {/* Light Mode Visual Tile */}
-                                    <button
-                                        type="button"
-                                        aria-pressed={!isDark}
-                                        onClick={() => !isDark || (toggleTheme && toggleTheme())}
-                                        className={cx(
-                                            'p-3 rounded-2xl border text-left transition-all duration-200 cursor-pointer flex flex-col gap-2 group',
-                                            !isDark
-                                                ? 'border-primary bg-primary/10 ring-2 ring-primary shadow-sm shadow-primary/20'
-                                                : 'border-slate-200 dark:border-white/10 bg-slate-50/70 dark:bg-white/5 hover:border-slate-300 dark:hover:border-white/20'
-                                        )}
-                                    >
+                                    <button type="button" aria-pressed={!isDark} onClick={() => !isDark || (toggleTheme && toggleTheme())} className={cx('p-3 rounded-2xl border text-left transition-all duration-200 cursor-pointer flex flex-col gap-2 group', !isDark ? 'border-primary bg-primary/10 ring-2 ring-primary shadow-sm shadow-primary/20' : 'border-slate-200 dark:border-white/10 bg-slate-50/70 dark:bg-white/5 hover:border-slate-300 dark:hover:border-white/20')}>
                                         {/* Mini Light UI Window Mockup */}
                                         <div className="w-full h-14 rounded-xl bg-slate-100 border border-slate-300/80 p-1.5 flex flex-col gap-1 overflow-hidden shadow-inner">
                                             <div className="flex items-center gap-1 pb-1 border-b border-slate-200">
@@ -290,17 +247,7 @@ const SettingsDrawer = ({
 
                                 <div className="grid grid-cols-2 gap-3">
                                     {/* LTR Visual Tile */}
-                                    <button
-                                        type="button"
-                                        aria-pressed={direction === 'ltr'}
-                                        onClick={() => direction === 'ltr' || (toggleDirection && toggleDirection())}
-                                        className={cx(
-                                            'p-3 rounded-2xl border text-left transition-all duration-200 cursor-pointer flex flex-col gap-2 group',
-                                            direction === 'ltr'
-                                                ? 'border-primary bg-primary/10 ring-2 ring-primary shadow-sm shadow-primary/20'
-                                                : 'border-slate-200 dark:border-white/10 bg-slate-50/70 dark:bg-white/5 hover:border-slate-300 dark:hover:border-white/20'
-                                        )}
-                                    >
+                                    <button type="button" aria-pressed={direction === 'ltr'} onClick={() => direction === 'ltr' || (toggleDirection && toggleDirection())} className={cx('p-3 rounded-2xl border text-left transition-all duration-200 cursor-pointer flex flex-col gap-2 group', direction === 'ltr' ? 'border-primary bg-primary/10 ring-2 ring-primary shadow-sm shadow-primary/20' : 'border-slate-200 dark:border-white/10 bg-slate-50/70 dark:bg-white/5 hover:border-slate-300 dark:hover:border-white/20')}>
                                         {/* Mini LTR Layout Mockup */}
                                         <div className="w-full h-12 rounded-xl bg-slate-100 dark:bg-gray-950 border border-slate-200 dark:border-white/10 p-1.5 flex gap-1.5 items-stretch overflow-hidden shadow-inner">
                                             <div className="w-5 rounded-md bg-primary flex items-center justify-center text-white text-2xs font-bold shadow-xs">
@@ -332,17 +279,7 @@ const SettingsDrawer = ({
                                     </button>
 
                                     {/* RTL Visual Tile */}
-                                    <button
-                                        type="button"
-                                        aria-pressed={direction === 'rtl'}
-                                        onClick={() => direction === 'rtl' || (toggleDirection && toggleDirection())}
-                                        className={cx(
-                                            'p-3 rounded-2xl border text-left transition-all duration-200 cursor-pointer flex flex-col gap-2 group',
-                                            direction === 'rtl'
-                                                ? 'border-primary bg-primary/10 ring-2 ring-primary shadow-sm shadow-primary/20'
-                                                : 'border-slate-200 dark:border-white/10 bg-slate-50/70 dark:bg-white/5 hover:border-slate-300 dark:hover:border-white/20'
-                                        )}
-                                    >
+                                    <button type="button" aria-pressed={direction === 'rtl'} onClick={() => direction === 'rtl' || (toggleDirection && toggleDirection())} className={cx('p-3 rounded-2xl border text-left transition-all duration-200 cursor-pointer flex flex-col gap-2 group', direction === 'rtl' ? 'border-primary bg-primary/10 ring-2 ring-primary shadow-sm shadow-primary/20' : 'border-slate-200 dark:border-white/10 bg-slate-50/70 dark:bg-white/5 hover:border-slate-300 dark:hover:border-white/20')}>
                                         {/* Mini RTL Layout Mockup */}
                                         <div className="w-full h-12 rounded-xl bg-slate-100 dark:bg-gray-950 border border-slate-200 dark:border-white/10 p-1.5 flex gap-1.5 items-stretch overflow-hidden shadow-inner">
                                             <div className="flex-1 flex flex-col gap-1 justify-center items-end">

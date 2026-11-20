@@ -1,13 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import {
-  ServerCrash,
-  AlertOctagon,
-  RefreshCw,
-  Home,
-  Ambulance,
-  PhoneCall,
-} from 'lucide-react'
+import { ServerCrash, AlertOctagon, RefreshCw, Home, Ambulance, PhoneCall } from 'lucide-react'
 import Card from '../components/ui/Card'
 import logoSm from '../assets/logo/logo-sm.png'
 import { toast } from '../context/toast-context'

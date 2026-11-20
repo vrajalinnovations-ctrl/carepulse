@@ -1,10 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-import {
-  MailCheck,
-  ArrowLeft,
-  RotateCcw,
-} from 'lucide-react'
+import { MailCheck, ArrowLeft, RotateCcw, } from 'lucide-react'
 import Card from '../components/ui/Card'
 import logoSm from '../assets/logo/logo-sm.png'
 import { toast } from '../context/toast-context'

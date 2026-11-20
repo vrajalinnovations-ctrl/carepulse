@@ -28,7 +28,9 @@ cyber/
 │   │   ├── ThemeContext.jsx   # Theme (dark/light) + direction (RTL/LTR) provider
 │   │   ├── useColors.jsx      # Custom hook for color palette access
 │   │   └── useTheme.jsx       # Custom hook for theme/direction access
-│   ├── App.jsx          # Main application component
+│   ├── routes/
+│   │   └── AppRoutes.jsx      # Centralized route mapping & layout isolation
+│   ├── App.jsx          # Main application component mounting AppRoutes
 │   ├── App.css          # Component-level styles
 │   ├── index.css        # Global styles + Tailwind config + theme tokens
 │   └── main.jsx         # React entry point

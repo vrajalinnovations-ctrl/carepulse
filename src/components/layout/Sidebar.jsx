@@ -1,19 +1,14 @@
 import { NavLink, useLocation } from 'react-router-dom';
-import { ChevronDown, ShieldCheck, Zap, AlignJustify, Sparkles } from 'lucide-react';
+import { ChevronDown, AlignJustify } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import logoSm from '../../assets/logo/logo-sm.png';
 import { cx, SIDEBAR_TRANSITION, FONT_DISPLAY, FONT_MONO, FONT_BODY } from './Uihelpers';
 import { menuItems } from './Menuconfig';
 
-/**
- * Sidebar Navigation Component
- * Sleek frosted glassmorphism sidebar with smooth synchronized text fade/glide transitions.
- */
 const Sidebar = ({
     isDark = true,
     direction = 'ltr',
     sidebarOpen = true,
-    setSidebarOpen,
     mobileSidebar = false,
     isHovered = false,
     isLgUp = true,
@@ -62,37 +57,12 @@ const Sidebar = ({
                     : 'bg-transparent border-slate-200/60 text-slate-800'
             )}
         >
-            {/* Specular glass reflections on sidebar */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
-                {/* Outer border glass reflection highlight line */}
-                <div
-                    className={cx(
-                        "absolute top-0 bottom-0 w-px bg-gradient-to-b",
-                        direction === 'ltr' ? 'right-0' : 'left-0',
-                        isDark
-                            ? 'from-white/30 via-white/10 to-transparent'
-                            : 'from-white/90 via-white/40 to-transparent'
-                    )}
-                />
-                {/* Top edge light rim */}
-                <div
-                    className={cx(
-                        "absolute top-0 left-0 right-0 h-px",
-                        isDark ? "bg-white/20" : "bg-white/80"
-                    )}
-                />
-                {/* Vertical subtle glass sheen */}
-                <div
-                    className={cx(
-                        "absolute inset-0 bg-gradient-to-b opacity-30",
-                        isDark
-                            ? "from-white/10 via-transparent to-transparent"
-                            : "from-white/50 via-transparent to-transparent"
-                    )}
-                />
+                <div className={cx("absolute top-0 bottom-0 w-px bg-gradient-to-b", direction === 'ltr' ? 'right-0' : 'left-0', isDark ? 'from-white/30 via-white/10 to-transparent' : 'from-white/90 via-white/40 to-transparent')} />
+                <div className={cx("absolute top-0 left-0 right-0 h-px", isDark ? "bg-white/20" : "bg-white/80")} />
+                <div className={cx("absolute inset-0 bg-gradient-to-b opacity-30", isDark ? "from-white/10 via-transparent to-transparent" : "from-white/50 via-transparent to-transparent")} />
             </div>
 
-            {/* Ambient atmospheric primary frosted glow in dark mode */}
             {isDark && (
                 <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
                     <div className="absolute -top-16 -left-10 w-48 h-48 rounded-full bg-primary/10 blur-3xl transition-colors duration-500" />
@@ -100,11 +70,7 @@ const Sidebar = ({
                 </div>
             )}
 
-            {/* Brand Logo Header */}
-            <div className={cx(
-                'relative h-16 flex items-center px-3.5 shrink-0 border-b overflow-hidden',
-                isDark ? 'border-white/10' : 'border-slate-200/60'
-            )}>
+            <div className={cx('relative h-16 flex items-center px-3.5 shrink-0 border-b overflow-hidden', isDark ? 'border-white/10' : 'border-slate-200/60')}>
                 <div className="flex items-center flex-1 min-w-0">
                     <div className="relative shrink-0 group cursor-pointer" onClick={() => goTo && goTo('/')}>
                         <img
@@ -136,10 +102,8 @@ const Sidebar = ({
                 </div>
             </div>
 
-            {/* Menu Navigation List */}
             <nav aria-label="Sidebar Menu" data-lenis-prevent className="flex-1 min-h-0 overflow-y-auto overscroll-contain px-3 py-3 flex flex-col gap-1 drawer-scroll scrollbar-none">
                 {menuItems.map((item, index) => {
-                    // Section header divider
                     if (item.section) {
                         const sectionTitle = typeof item.section === 'string' ? item.section : (item.title || '');
                         return (
@@ -164,11 +128,9 @@ const Sidebar = ({
                         ? Boolean(expandedMenus[item.title])
                         : hasActiveChild;
 
-                    // External or standalone link
                     if (item.external) {
                         return (
-                            <a
-                                key={item.path || `nav-${index}`}
+                            <a key={item.path || `nav-${index}`}
                                 href={item.path}
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -179,19 +141,15 @@ const Sidebar = ({
                                     isDark
                                         ? 'text-white/60 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/5'
                                         : 'text-slate-500 hover:text-slate-900 hover:bg-black/5 border border-transparent hover:border-black/10'
-                                    )}>
+                                )}>
                                     <span className={cx(
                                         'w-5 h-5 shrink-0 flex items-center justify-center transition-colors duration-200',
                                         isDark ? 'text-white/50 group-hover:text-white' : 'text-slate-400 group-hover:text-slate-700'
                                     )}>
                                         {item.icon}
                                     </span>
-
-                                    <motion.div
-                                        initial={false}
-                                        {...labelMotion}
-                                        className="overflow-hidden whitespace-nowrap ms-3 flex-1 flex items-center justify-between"
-                                    >
+                                    <motion.div initial={false} {...labelMotion}
+                                        className="overflow-hidden whitespace-nowrap ms-3 flex-1 flex items-center justify-between">
                                         <span className={cx(FONT_BODY, 'text-sm truncate font-normal')}>
                                             {item.title}
                                         </span>
@@ -205,12 +163,9 @@ const Sidebar = ({
                             </a>
                         );
                     }
-
-                    // Single navigation link
                     if (!item.submenu) {
                         return (
-                            <NavLink
-                                key={item.path || `nav-${index}`}
+                            <NavLink key={item.path || `nav-${index}`}
                                 to={item.path}
                                 onClick={() => goTo && goTo(item.path)}
                                 className="block rounded-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500"

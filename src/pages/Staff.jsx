@@ -5,22 +5,7 @@ import Breadcrumb from '../components/ui/breadcrumbs';
 import Avatar from '../components/ui/avatars';
 import Modal from '../components/ui/modals';
 import { toast } from '../context/toast-context';
-import {
-  FiHome,
-  FiSearch,
-  FiPlus,
-  FiPhone,
-  FiMail,
-  FiCalendar,
-  FiUsers,
-  FiActivity,
-  FiClock,
-  FiCheckCircle,
-  FiMapPin,
-  FiShield,
-  FiX,
-} from 'react-icons/fi';
-
+import { FiHome, FiSearch, FiPlus, FiPhone, FiMail, FiCalendar, FiUsers, FiActivity, FiClock, FiCheckCircle, FiShield, } from 'react-icons/fi';
 import avatar1 from '../assets/user/1.png';
 import avatar2 from '../assets/user/2.png';
 import avatar3 from '../assets/user/3.png';
@@ -257,11 +242,10 @@ const StaffPage = () => {
                 key={st}
                 type="button"
                 onClick={() => setSelectedStatus(st)}
-                className={`px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap shrink-0 transition-all cursor-pointer ${
-                  selectedStatus === st
-                    ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900 shadow-xs'
-                    : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800/60'
-                }`}
+                className={`px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap shrink-0 transition-all cursor-pointer ${selectedStatus === st
+                  ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900 shadow-xs'
+                  : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800/60'
+                  }`}
               >
                 {st}
               </button>
@@ -276,11 +260,10 @@ const StaffPage = () => {
               key={dept}
               type="button"
               onClick={() => setSelectedDept(dept)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap shrink-0 transition-all cursor-pointer ${
-                selectedDept === dept
-                  ? 'bg-primary text-white shadow-xs'
-                  : 'bg-gray-100 dark:bg-gray-800/80 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700/80'
-              }`}
+              className={`px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap shrink-0 transition-all cursor-pointer ${selectedDept === dept
+                ? 'bg-primary text-white shadow-xs'
+                : 'bg-gray-100 dark:bg-gray-800/80 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700/80'
+                }`}
             >
               {dept}
             </button>
@@ -382,11 +365,10 @@ const StaffPage = () => {
               <button
                 type="button"
                 onClick={() => handlePageDoctor(doc)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer shrink-0 ${
-                  pagedDoctors[doc.id]
-                    ? 'bg-emerald-500/20 text-emerald-500 font-bold'
-                    : 'bg-primary/10 hover:bg-primary/20 text-primary'
-                }`}
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer shrink-0 ${pagedDoctors[doc.id]
+                  ? 'bg-emerald-500/20 text-emerald-500 font-bold'
+                  : 'bg-primary/10 hover:bg-primary/20 text-primary'
+                  }`}
               >
                 {pagedDoctors[doc.id] ? 'Paged' : 'Page Doctor'}
               </button>

@@ -1,9 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import {
-    Search, Bell, Mail, Sun, Moon, Settings, Command,
-    X, User, Shield, Sliders, CreditCard, LogOut,
-    ShieldAlert, Activity, Maximize2, Minimize2,
-} from 'lucide-react';
+import { Search, Bell, Mail, Settings, Command, X, User, Shield, Sliders, CreditCard, LogOut, ShieldAlert, Activity, Maximize2, Minimize2, } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import logoSm from '../../assets/logo/logo-sm.png';
 import { useTheme } from '../../context/theme-context';
@@ -35,7 +31,7 @@ const Navbar = ({
     const notificationsRef = useRef(null);
     const messagesRef = useRef(null);
 
-    // Track native fullscreen state
+
     useEffect(() => {
         const handleFullscreenChange = () => {
             setIsFullscreen(!!document.fullscreenElement);
@@ -47,16 +43,16 @@ const Navbar = ({
     const toggleFullscreen = () => {
         if (!document.fullscreenElement) {
             if (document.documentElement.requestFullscreen) {
-                document.documentElement.requestFullscreen().catch(() => {});
+                document.documentElement.requestFullscreen().catch(() => { });
             }
         } else {
             if (document.exitFullscreen) {
-                document.exitFullscreen().catch(() => {});
+                document.exitFullscreen().catch(() => { });
             }
         }
     };
 
-    // Close dropdowns on outside click or Escape key
+
     useEffect(() => {
         const handleClickOutside = (e) => {
             if (profileRef.current && !profileRef.current.contains(e.target)) {
@@ -85,60 +81,25 @@ const Navbar = ({
     }, []);
 
     return (
-        <header
-            role="banner"
-            className={cx(
-                navbarPosition === 'sticky' ? 'sticky top-0 z-40' : 'relative z-20',
-                'h-16 flex items-center justify-between border-b transition-colors backdrop-blur-2xl relative',
-                isDark
-                    ? 'bg-transparent border-white/10'
-                    : 'bg-transparent border-slate-200/60'
-            )}
-        >
-            {/* Specular glass reflection & top light highlight */}
+        <header role="banner" className={cx(navbarPosition === 'sticky' ? 'sticky top-0 z-40' : 'relative z-20', 'h-16 flex items-center justify-between border-b transition-colors backdrop-blur-2xl relative', isDark ? 'bg-transparent border-white/10' : 'bg-transparent border-slate-200/60')}>
+
             <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-                {/* Top specular light reflection rim */}
-                <div
-                    className={cx(
-                        "absolute top-0 left-0 right-0 h-px bg-gradient-to-r",
-                        isDark
-                            ? "from-transparent via-white/40 to-transparent"
-                            : "from-transparent via-white to-transparent"
-                    )}
-                />
-                {/* Subtle glass light sheen reflection */}
-                <div
-                    className={cx(
-                        "absolute inset-0 bg-gradient-to-b opacity-30",
-                        isDark
-                            ? "from-white/10 via-transparent to-transparent"
-                            : "from-white/60 via-transparent to-transparent"
-                    )}
-                />
-                {/* Bottom glass reflection edge */}
-                <div
-                    className={cx(
-                        "absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r",
-                        isDark
-                            ? "from-white/5 via-white/15 to-white/5"
-                            : "from-black/5 via-black/10 to-black/5"
-                    )}
-                />
+
+                <div className={cx("absolute top-0 left-0 right-0 h-px bg-gradient-to-r", isDark ? "from-transparent via-white/40 to-transparent" : "from-transparent via-white to-transparent")} />
+
+                <div className={cx("absolute inset-0 bg-gradient-to-b opacity-30", isDark ? "from-white/10 via-transparent to-transparent" : "from-white/60 via-transparent to-transparent")} />
+
+                <div className={cx("absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r", isDark ? "from-white/5 via-white/15 to-white/5" : "from-black/5 via-black/10 to-black/5")} />
             </div>
 
-            {/* ─── LEFT: Animated 2-Line Menu Toggle Button & Mobile Logo ─── */}
             <div className="flex items-center gap-2.5 ps-2 lg:ps-4 shrink-0">
-                <button
-                    type="button"
-                    aria-label={sidebarOpen ? 'Collapse navigation sidebar' : 'Expand navigation sidebar'}
-                    aria-expanded={isSidebarExpanded}
-                    onClick={() => {
-                        if (window.innerWidth < 1024) {
-                            setMobileSidebar && setMobileSidebar((prev) => !prev);
-                        } else {
-                            setSidebarOpen && setSidebarOpen(!sidebarOpen);
-                        }
-                    }}
+                <button type="button" aria-label={sidebarOpen ? 'Collapse navigation sidebar' : 'Expand navigation sidebar'} aria-expanded={isSidebarExpanded} onClick={() => {
+                    if (window.innerWidth < 1024) {
+                        setMobileSidebar && setMobileSidebar((prev) => !prev);
+                    } else {
+                        setSidebarOpen && setSidebarOpen(!sidebarOpen);
+                    }
+                }}
                     className={cx(
                         'group w-9 h-9 rounded-xl flex flex-col items-center justify-center gap-1.5 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 cursor-pointer',
                         isDark
@@ -147,25 +108,9 @@ const Navbar = ({
                     )}
                 >
                     {/* Animated Top Line */}
-                    <span
-                        className={cx(
-                            'h-0.5 rounded-full bg-current transition-all duration-300 ease-out',
-                            isSidebarExpanded
-                                ? 'w-4 translate-x-0'
-                                : 'w-3 -translate-x-0.5 group-hover:w-4 group-hover:translate-x-0'
-                        )}
-                        aria-hidden="true"
-                    />
+                    <span className={cx('h-0.5 rounded-full bg-current transition-all duration-300 ease-out', isSidebarExpanded ? 'w-4 translate-x-0' : 'w-3 -translate-x-0.5 group-hover:w-4 group-hover:translate-x-0')} aria-hidden="true" />
                     {/* Animated Bottom Line */}
-                    <span
-                        className={cx(
-                            'h-0.5 rounded-full bg-current transition-all duration-300 ease-out',
-                            isSidebarExpanded
-                                ? 'w-3 translate-x-0.5 group-hover:w-4 group-hover:translate-x-0'
-                                : 'w-4 translate-x-0'
-                        )}
-                        aria-hidden="true"
-                    />
+                    <span className={cx('h-0.5 rounded-full bg-current transition-all duration-300 ease-out', isSidebarExpanded ? 'w-3 translate-x-0.5 group-hover:w-4 group-hover:translate-x-0' : 'w-4 translate-x-0')} aria-hidden="true" />
                 </button>
 
                 {/* Mobile Brand Logo */}
@@ -176,68 +121,20 @@ const Navbar = ({
 
             {/* ─── CENTER: Command Palette Search ─── */}
             <div className="flex-1 flex justify-center px-2 sm:px-4 max-w-xl mx-auto min-w-0">
-                <form
-                    role="search"
-                    aria-label="Console search"
-                    onSubmit={(e) => e.preventDefault()}
-                    className={cx(
-                        'group relative w-full flex items-center gap-2.5 rounded-2xl px-3.5 py-2 transition-all duration-300',
-                        searchFocused
-                            ? isDark
-                                ? 'bg-white/10 border border-purple-500/50 shadow-lg shadow-purple-500/10 ring-2 ring-purple-500/20 backdrop-blur-md'
-                                : 'bg-white border border-purple-400/60 shadow-lg shadow-purple-400/10 ring-2 ring-purple-400/20'
-                            : isDark
-                                ? 'bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 backdrop-blur-md'
-                                : 'bg-white/80 border border-slate-200 hover:bg-white hover:border-slate-300 shadow-sm'
-                    )}
-                >
-                    <Search
-                        size={15}
-                        className={cx('shrink-0 transition-colors duration-200',
-                            searchFocused
-                                ? isDark ? 'text-purple-400' : 'text-purple-600'
-                                : isDark ? 'text-white/30' : 'text-slate-400'
-                        )}
-                        aria-hidden="true"
-                    />
-
-                    <input
-                        type="search"
-                        placeholder="Search patients, doctors, records, wards…"
-                        aria-label="Search patients, doctors, and medical records"
-                        value={searchValue}
-                        onChange={(e) => setSearchValue(e.target.value)}
-                        onFocus={() => setSearchFocused(true)}
-                        onBlur={() => setSearchFocused(false)}
-                        className={cx(
-                            'bg-transparent outline-none w-full text-sm font-medium placeholder:transition-colors placeholder:truncate text-start',
-                            isDark
-                                ? 'text-white'
-                                : 'text-slate-800'
-                        )}
-                    />
+                <form role="search" aria-label="Console search" onSubmit={(e) => e.preventDefault()} className={cx('group relative w-full flex items-center gap-2.5 rounded-2xl px-3.5 py-2 transition-all duration-300', searchFocused ? isDark ? 'bg-white/10 border border-purple-500/50 shadow-lg shadow-purple-500/10 ring-2 ring-purple-500/20 backdrop-blur-md' : 'bg-white border border-purple-400/60 shadow-lg shadow-purple-400/10 ring-2 ring-purple-400/20' : isDark ? 'bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 backdrop-blur-md' : 'bg-white/80 border border-slate-200 hover:bg-white hover:border-slate-300 shadow-sm')}>
+                    <Search size={15} className={cx('shrink-0 transition-colors duration-200', searchFocused ? isDark ? 'text-purple-400' : 'text-purple-600' : isDark ? 'text-white/30' : 'text-slate-400')} aria-hidden="true" />
+                    <input type="search" placeholder="Search patients, doctors, records, wards…" aria-label="Search patients, doctors, and medical records" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} onFocus={() => setSearchFocused(true)} onBlur={() => setSearchFocused(false)} className={cx('bg-transparent outline-none w-full text-sm font-medium placeholder:transition-colors placeholder:truncate text-start', isDark ? 'text-white' : 'text-slate-800')} />
 
                     {/* Clear button */}
                     {searchValue && (
-                        <button
-                            type="button"
-                            aria-label="Clear search input"
-                            onClick={() => setSearchValue('')}
-                            className={cx('shrink-0 transition-colors p-0.5 rounded cursor-pointer', isDark ? 'text-white/40 hover:text-white' : 'text-slate-400 hover:text-slate-700')}
-                        >
+                        <button type="button" aria-label="Clear search input" onClick={() => setSearchValue('')} className={cx('shrink-0 transition-colors p-0.5 rounded cursor-pointer', isDark ? 'text-white/40 hover:text-white' : 'text-slate-400 hover:text-slate-700')}>
                             <X size={13} />
                         </button>
                     )}
 
                     {/* Keyboard shortcut badge */}
                     {!searchFocused && !searchValue && (
-                        <div
-                            className={cx(
-                                'hidden sm:flex items-center gap-1 shrink-0 px-1.5 py-0.5 rounded-md border',
-                                isDark ? 'bg-white/5 border-white/10' : 'bg-slate-100 border-slate-200'
-                            )}
-                            aria-hidden="true"
-                        >
+                        <div className={cx('hidden sm:flex items-center gap-1 shrink-0 px-1.5 py-0.5 rounded-md border', isDark ? 'bg-white/5 border-white/10' : 'bg-slate-100 border-slate-200')} aria-hidden="true">
                             <Command size={10} className={isDark ? 'text-white/30' : 'text-slate-400'} />
                             <span className={cx(FONT_MONO, 'text-xs', isDark ? 'text-white/30' : 'text-slate-400')}>K</span>
                         </div>
@@ -248,10 +145,7 @@ const Navbar = ({
             {/* ─── RIGHT: Actions ─── */}
             <div className="flex items-center gap-1.5 pe-4 shrink-0">
                 {/* System status badge */}
-                <div className={cx(
-                    'hidden lg:flex items-center gap-1.5 px-2.5 py-1.5 rounded-full border me-1',
-                    isDark ? 'bg-emerald-500/10 border-emerald-500/20 backdrop-blur-md' : 'bg-emerald-50 border-emerald-200 shadow-sm'
-                )}>
+                <div className={cx('hidden lg:flex items-center gap-1.5 px-2.5 py-1.5 rounded-full border me-1', isDark ? 'bg-emerald-500/10 border-emerald-500/20 backdrop-blur-md' : 'bg-emerald-50 border-emerald-200 shadow-sm')}>
                     <span className="relative flex h-1.5 w-1.5" aria-hidden="true">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                         <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
@@ -262,21 +156,7 @@ const Navbar = ({
                 </div>
 
                 {/* Fullscreen mode toggle */}
-                <button
-                    type="button"
-                    aria-label={isFullscreen ? 'Exit fullscreen mode' : 'Enter fullscreen mode'}
-                    onClick={toggleFullscreen}
-                    className={cx(
-                        'hidden md:flex w-9 h-9 rounded-xl items-center justify-center transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 cursor-pointer',
-                        isFullscreen
-                            ? isDark
-                                ? 'bg-purple-500/20 border border-purple-500/40 text-purple-300 backdrop-blur-md'
-                                : 'bg-purple-50 border border-purple-300 text-purple-700 shadow-sm'
-                            : isDark
-                                ? 'text-white/60 hover:text-white hover:bg-white/10 border border-white/10 hover:border-white/20 backdrop-blur-md'
-                                : 'text-slate-600 hover:text-slate-900 bg-white/80 hover:bg-white border border-slate-200 shadow-sm'
-                    )}
-                >
+                <button type="button" aria-label={isFullscreen ? 'Exit fullscreen mode' : 'Enter fullscreen mode'} onClick={toggleFullscreen} className={cx('hidden md:flex w-9 h-9 rounded-xl items-center justify-center transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 cursor-pointer', isFullscreen ? isDark ? 'bg-purple-500/20 border border-purple-500/40 text-purple-300 backdrop-blur-md' : 'bg-purple-50 border border-purple-300 text-purple-700 shadow-sm' : isDark ? 'text-white/60 hover:text-white hover:bg-white/10 border border-white/10 hover:border-white/20 backdrop-blur-md' : 'text-slate-600 hover:text-slate-900 bg-white/80 hover:bg-white border border-slate-200 shadow-sm')}>
                     {isFullscreen ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
                 </button>
 
@@ -579,14 +459,7 @@ const Navbar = ({
 
                                 {/* Menu Items */}
                                 <div className="space-y-0.5">
-                                    <button
-                                        type="button"
-                                        onClick={() => setProfileOpen(false)}
-                                        className={cx(
-                                            'w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-medium transition-colors cursor-pointer',
-                                            isDark ? 'hover:bg-white/10 text-white/80 hover:text-white' : 'hover:bg-slate-100 text-slate-700 hover:text-slate-900'
-                                        )}
-                                    >
+                                    <button type="button" onClick={() => setProfileOpen(false)} className={cx('w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-medium transition-colors cursor-pointer', isDark ? 'hover:bg-white/10 text-white/80 hover:text-white' : 'hover:bg-slate-100 text-slate-700 hover:text-slate-900')}>
                                         <div className="flex items-center gap-2.5">
                                             <User size={15} className="text-purple-400" />
                                             <span>My Profile</span>
@@ -612,7 +485,7 @@ const Navbar = ({
                                     </button>
 
                                     <button
-                                        type="button"
+                                     type="button"
                                         onClick={() => {
                                             setProfileOpen(false);
                                             setSettingsOpen && setSettingsOpen(true);
@@ -630,7 +503,7 @@ const Navbar = ({
 
                                     <button
                                         type="button"
-                                        onClick={() => setProfileOpen(false)}
+                                     onClick={() => setProfileOpen(false)}
                                         className={cx(
                                             'w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-medium transition-colors cursor-pointer',
                                             isDark ? 'hover:bg-white/10 text-white/80 hover:text-white' : 'hover:bg-slate-100 text-slate-700 hover:text-slate-900'

@@ -1,7 +1,9 @@
 {
   "name": "carepulse",
-  "private": true,
   "version": "1.0.0",
+  "description": "CarePulse - Hospital & Clinical Operations Dashboard Template built with React 19, Vite, and Tailwind CSS v4",
+  "author": "CarePulse Team",
+  "homepage": "https://carepulse-gamma-murex.vercel.app/",
   "type": "module",
   "scripts": {
     "dev": "vite",

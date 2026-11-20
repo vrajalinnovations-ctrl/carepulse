@@ -13,17 +13,7 @@ import { cx, SIDEBAR_TRANSITION, FONT_BODY } from './Uihelpers';
 const MainLayout = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const {
-        theme,
-        direction,
-        toggleTheme,
-        toggleDirection,
-        primaryColor,
-        changePrimaryColor,
-        navbarPosition,
-        setNavbarPosition,
-        toggleNavbarPosition,
-    } = useTheme();
+    const {  theme, direction, toggleTheme, toggleDirection, primaryColor, changePrimaryColor, navbarPosition, setNavbarPosition,  toggleNavbarPosition, } = useTheme();
     const [settingsOpen, setSettingsOpen] = useState(false);
     const [sidebarOpen, setSidebarOpen] = useState(window.innerWidth >= 1024);
     const [mobileSidebar, setMobileSidebar] = useState(false);
@@ -36,7 +26,7 @@ const MainLayout = () => {
     const isSidebarExpanded = sidebarOpen || isHovered || mobileSidebar;
     const isDark = theme === 'dark';
 
-    // Sticky docked sidebar: 260px expanded / 72px collapsed
+    
     const contentPush = isLgUp ? (sidebarOpen ? 260 : 72) : 0;
     const contentMargin = {
         marginLeft: direction === 'ltr' ? contentPush : 0,
@@ -54,7 +44,6 @@ const MainLayout = () => {
         setTimeout(() => navigate(path), 250);
     };
 
-    // Close mobile drawer on route navigation
     useEffect(() => {
         setMobileSidebar(false);
     }, [location.pathname]);
@@ -88,34 +77,19 @@ const MainLayout = () => {
     return (
         <div dir={direction} className={cx(FONT_BODY, 'min-h-screen flex relative w-full', isDark ? 'bg-zinc-950 text-white' : 'bg-slate-50 text-slate-900')}>
 
-            {/* ─── Ambient Background Glows (Lush depth, not flat black) ─── */}
+    
             <div className="fixed inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
-                {/* Central Primary Ambient Glow */}
                 <div className="absolute top-1/3 start-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-primary/10 dark:bg-primary/25 blur-3xl transition-all duration-700" />
-                {/* Top-Start Teal Orb */}
                 <div className="absolute -top-20 -start-20 w-80 h-80 sm:w-96 sm:h-96 rounded-full bg-teal-500/15 dark:bg-teal-500/10 blur-3xl transition-all duration-700" />
-                {/* Bottom-End Emerald Orb */}
-                <div className="absolute -bottom-20 -end-20 w-80 h-80 sm:w-96 sm:h-96 rounded-full bg-emerald-500/15 dark:bg-emerald-500/10 blur-3xl transition-all duration-700" />
-                {/* Mid-Start Ambient Accent Orb */}
-                <div className="absolute top-2/3 -start-20 w-80 h-80 rounded-full bg-primary/15 dark:bg-primary/10 blur-3xl transition-all duration-700" />
-                {/* Atmospheric Gradient Wash */}
+                <div className="absolute -bottom-20 -end-20 w-80 h-80 sm:w-96 sm:h-96 rounded-full bg-emerald-500/15 dark:bg-emerald-500/10 blur-3xl transition-all duration-700" />       
+                <div className="absolute top-2/3 -start-20 w-80 h-80 rounded-full bg-primary/15 dark:bg-primary/10 blur-3xl transition-all duration-700" />           
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-teal-500/5 dark:from-primary/10 dark:via-transparent dark:to-teal-500/10 pointer-events-none" />
-                {/* Subtle top horizon glass sheen */}
                 <div className="absolute top-0 inset-x-0 h-48 bg-gradient-to-b from-white/10 dark:from-white/5 to-transparent blur-2xl pointer-events-none" />
             </div>
 
-            {/* Mobile backdrop drawer overlay */}
             <AnimatePresence>
                 {mobileSidebar && (
-                    <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.25 }}
-                        onClick={() => setMobileSidebar(false)}
-                        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
-                        aria-hidden="true"
-                    />
+                    <motion.div  initial={{ opacity: 0 }}   animate={{ opacity: 1 }}  exit={{ opacity: 0 }}  transition={{ duration: 0.25 }}  onClick={() => setMobileSidebar(false)}  className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"aria-hidden="true"/>
                 )}
             </AnimatePresence>
 

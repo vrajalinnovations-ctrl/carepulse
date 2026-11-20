@@ -1,23 +1,10 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import Card from '../components/ui/Card';
-import Badges from '../components/ui/badges';
 import Breadcrumb from '../components/ui/breadcrumbs';
 import Modal from '../components/ui/modals';
 import { toast } from '../context/toast-context';
 import vitalsData from '../mokdata/vitals.json';
-import {
-  FiHome,
-  FiActivity,
-  FiClock,
-  FiHeart,
-  FiShield,
-  FiAlertTriangle,
-  FiVolume2,
-  FiVolumeX,
-  FiSliders,
-  FiCheckCircle,
-  FiTrendingUp,
-} from 'react-icons/fi';
+import { FiHome, FiAlertTriangle, FiVolume2, FiVolumeX, FiSliders, } from 'react-icons/fi';
 
 const { bedsTelemetry: initialBedsTelemetry } = vitalsData;
 
@@ -27,7 +14,6 @@ const VitalsPage = () => {
   const [selectedUnit, setSelectedUnit] = useState('ICU');
   const [acknowledgedAlert, setAcknowledgedAlert] = useState(false);
   const [showThresholdsModal, setShowThresholdsModal] = useState(false);
-  const [ecgTick, setEcgTick] = useState(0);
 
   // Thresholds state
   const [thresholds, setThresholds] = useState({
@@ -38,14 +24,6 @@ const VitalsPage = () => {
     spo2Floor: 92,
     rrHigh: 28,
   });
-
-  // Animated ECG wave simulation
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setEcgTick((prev) => (prev + 1) % 100);
-    }, 120);
-    return () => clearInterval(timer);
-  }, []);
 
   const handleToggleAlarmAudio = () => {
     const nextState = !alarmSilenced;
@@ -114,11 +92,10 @@ const VitalsPage = () => {
           <button
             type="button"
             onClick={handleToggleAlarmAudio}
-            className={`flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer whitespace-nowrap ${
-              alarmSilenced
-                ? 'bg-amber-500/20 text-amber-600 dark:text-amber-400 border-amber-500/30'
-                : 'bg-white dark:bg-gray-900 text-slate-700 dark:text-white border-slate-200 dark:border-gray-800 hover:bg-slate-50 dark:hover:bg-gray-800'
-            }`}
+            className={`flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold border transition-all cursor-pointer whitespace-nowrap ${alarmSilenced
+              ? 'bg-amber-500/20 text-amber-600 dark:text-amber-400 border-amber-500/30'
+              : 'bg-white dark:bg-gray-900 text-slate-700 dark:text-white border-slate-200 dark:border-gray-800 hover:bg-slate-50 dark:hover:bg-gray-800'
+              }`}
           >
             {alarmSilenced ? <FiVolumeX className="w-3.5 h-3.5 shrink-0" /> : <FiVolume2 className="w-3.5 h-3.5 shrink-0" />}
             <span>{alarmSilenced ? 'Alarms Muted (3m)' : 'Audio Alarms On'}</span>
@@ -181,11 +158,10 @@ const VitalsPage = () => {
               key={idx}
               type="button"
               onClick={() => setSelectedUnit(unit)}
-              className={`px-3.5 py-1.5 rounded-xl text-xs font-medium transition-all whitespace-nowrap shrink-0 cursor-pointer ${
-                selectedUnit.startsWith(unit.slice(0, 3))
-                  ? 'bg-primary text-white shadow-xs font-semibold'
-                  : 'bg-white dark:bg-gray-900 text-slate-600 dark:text-white/70 border border-slate-200 dark:border-gray-800 hover:bg-slate-100 dark:hover:bg-gray-800'
-              }`}
+              className={`px-3.5 py-1.5 rounded-xl text-xs font-medium transition-all whitespace-nowrap shrink-0 cursor-pointer ${selectedUnit.startsWith(unit.slice(0, 3))
+                ? 'bg-primary text-white shadow-xs font-semibold'
+                : 'bg-white dark:bg-gray-900 text-slate-600 dark:text-white/70 border border-slate-200 dark:border-gray-800 hover:bg-slate-100 dark:hover:bg-gray-800'
+                }`}
             >
               {unit}
             </button>
@@ -198,11 +174,10 @@ const VitalsPage = () => {
         {filteredBeds.map((bed, idx) => (
           <Card
             key={idx}
-            className={`p-3.5 sm:p-5 transition-all flex flex-col justify-between ${
-              bed.alarm
-                ? 'border-red-500/60 shadow-lg shadow-red-500/10 ring-2 ring-red-500/20'
-                : 'hover:border-primary/40'
-            }`}
+            className={`p-3.5 sm:p-5 transition-all flex flex-col justify-between ${bed.alarm
+              ? 'border-red-500/60 shadow-lg shadow-red-500/10 ring-2 ring-red-500/20'
+              : 'hover:border-primary/40'
+              }`}
           >
             <div>
               {/* Monitor Header */}
@@ -216,11 +191,10 @@ const VitalsPage = () => {
                   </span>
                 </div>
                 <span
-                  className={`px-2 py-0.5 rounded-md text-xs font-bold uppercase tracking-wider shrink-0 ${
-                    bed.alarm
-                      ? 'bg-red-500 text-white animate-pulse'
-                      : 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20'
-                  }`}
+                  className={`px-2 py-0.5 rounded-md text-xs font-bold uppercase tracking-wider shrink-0 ${bed.alarm
+                    ? 'bg-red-500 text-white animate-pulse'
+                    : 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20'
+                    }`}
                 >
                   {bed.status}
                 </span>
@@ -243,9 +217,8 @@ const VitalsPage = () => {
                 <div className="p-2 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5 min-w-0">
                   <span className="text-xs text-slate-400 font-semibold block truncate">HEART</span>
                   <span
-                    className={`text-base sm:text-lg font-bold truncate block ${
-                      bed.hrStatus === 'high' ? 'text-red-500' : 'text-slate-900 dark:text-white'
-                    }`}
+                    className={`text-base sm:text-lg font-bold truncate block ${bed.hrStatus === 'high' ? 'text-red-500' : 'text-slate-900 dark:text-white'
+                      }`}
                   >
                     {bed.hr}
                   </span>
@@ -255,9 +228,8 @@ const VitalsPage = () => {
                 <div className="p-2 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5 min-w-0">
                   <span className="text-xs text-slate-400 font-semibold block truncate">BP</span>
                   <span
-                    className={`text-base sm:text-lg font-bold truncate block ${
-                      bed.bpStatus === 'high' ? 'text-amber-500' : 'text-slate-900 dark:text-white'
-                    }`}
+                    className={`text-base sm:text-lg font-bold truncate block ${bed.bpStatus === 'high' ? 'text-amber-500' : 'text-slate-900 dark:text-white'
+                      }`}
                   >
                     {bed.bp}
                   </span>
@@ -267,9 +239,8 @@ const VitalsPage = () => {
                 <div className="p-2 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200/60 dark:border-white/5 min-w-0">
                   <span className="text-xs text-slate-400 font-semibold block truncate">SpO2</span>
                   <span
-                    className={`text-base sm:text-lg font-bold truncate block ${
-                      bed.spo2Status === 'warning' ? 'text-red-500' : 'text-cyan-500'
-                    }`}
+                    className={`text-base sm:text-lg font-bold truncate block ${bed.spo2Status === 'warning' ? 'text-red-500' : 'text-cyan-500'
+                      }`}
                   >
                     {bed.spo2}%
                   </span>

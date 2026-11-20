@@ -1,7 +1,3 @@
-/**
- * Footer Component
- * Responsive and theme-aware footer.
- */
 const Footer = () => {
   return (
     <footer

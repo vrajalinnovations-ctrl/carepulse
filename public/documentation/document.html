@@ -472,7 +472,9 @@
 │   │   ├── auth/                 # Login, Register, Forgot Password, Reset, Verify
 │   │   ├── clinical/             # Overview, Patients, Appointments, Vitals, Staff, Wards...
 │   │   └── errors/               # 404 Not Found, 500 Server Error
-│   ├── App.jsx                   # Centralized route mapping &amp; layout isolation
+│   ├── routes/                   # Dedicated application routing directory
+│   │   └── AppRoutes.jsx         # Centralized route mapping &amp; layout isolation
+│   ├── App.jsx                   # Root application component mounting AppRoutes
 │   ├── index.css                 # Tailwind CSS v4 setup, font imports &amp; animations
 │   └── main.jsx                  # React 19 root entry with BrowserRouter &amp; ThemeProvider
 ├── package.json                  # Project dependencies, scripts, and metadata
@@ -855,7 +857,7 @@ const [direction, setDirection] = useState("rtl");</pre>
         </div>
         <h2 class="doc-section-heading">12. Routing Setup &amp; Adding Pages</h2>
         <p class="doc-section-lead">
-          CarePulse uses <strong>React Router DOM v7</strong> with clean layout isolation between main clinical modules and standalone authentication/error routes in <code>src/App.jsx</code>.
+          CarePulse uses <strong>React Router DOM v7</strong> with clean layout isolation between main clinical modules and standalone authentication/error routes in <code>src/routes/AppRoutes.jsx</code>.
         </p>
 
         <h3 class="doc-subheading">Step 1: Create Your New Clinical Page Component</h3>
@@ -886,14 +888,14 @@ export const SurgeriesPage = () => {
 export default SurgeriesPage;</pre>
         </div>
 
-        <h3 class="doc-subheading">Step 2: Register Route in <code>src/App.jsx</code></h3>
+        <h3 class="doc-subheading">Step 2: Register Route in <code>src/routes/AppRoutes.jsx</code></h3>
         <div class="doc-code-block">
           <div class="doc-code-header">
-            <span class="doc-code-file-tag">src/App.jsx</span>
+            <span class="doc-code-file-tag">src/routes/AppRoutes.jsx</span>
             <button class="doc-copy-button" data-target="code-register-route"><i class="bi bi-clipboard"></i> Copy</button>
           </div>
-          <pre class="doc-code-pre" id="code-register-route">// 1. Add import near top of src/App.jsx
-import SurgeriesPage from './pages/Surgeries';
+          <pre class="doc-code-pre" id="code-register-route">// 1. Add import near top of src/routes/AppRoutes.jsx
+import SurgeriesPage from '../pages/Surgeries';
 
 // 2. Add route inside &lt;Route element={&lt;MainLayout /&gt;}&gt;
 &lt;Route element={&lt;MainLayout /&gt;}&gt;

@@ -100,7 +100,7 @@ const Input = ({
   inputClassName = '',
   className = '',
   iconInside = true,
-  floating = false,
+  _floating = false,
   noBorder = false,
   fullWidth,
   children,

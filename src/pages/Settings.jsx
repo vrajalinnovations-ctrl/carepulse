@@ -4,20 +4,7 @@ import Badges from '../components/ui/badges';
 import Breadcrumb from '../components/ui/breadcrumbs';
 import Modal from '../components/ui/modals';
 import { toast } from '../context/toast-context';
-import {
-  FiHome,
-  FiSave,
-  FiCheckCircle,
-  FiSliders,
-  FiShield,
-  FiActivity,
-  FiServer,
-  FiClock,
-  FiLock,
-  FiRadio,
-  FiDownload,
-  FiFileText,
-} from 'react-icons/fi';
+import { FiHome, FiSave, FiShield, FiActivity, FiServer, FiClock, FiLock, } from 'react-icons/fi';
 
 const mockAuditLogs = [
   { id: 'LOG-8941', user: 'Dr. Sarah Mitchell', event: 'Emergency Resus Bay 01 EHR Record Access', time: '4 mins ago', status: 'Authorized', color: 'success' },
@@ -33,7 +20,6 @@ const SettingsPage = () => {
 
   // Settings toggles state
   const [autoCodeBlue, setAutoCodeBlue] = useState(true);
-  const [fhirLiveSync, setFhirLiveSync] = useState(true);
   const [biometricVault, setBiometricVault] = useState(true);
   const [auditLogging, setAuditLogging] = useState(true);
   const [overtimeAlerts, setOvertimeAlerts] = useState(true);

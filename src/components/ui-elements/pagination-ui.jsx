@@ -22,7 +22,6 @@ const PaginationUi = () => {
   // Table Toolbar State
   const [toolPage, setToolPage] = useState(1);
   const [toolSize, setToolSize] = useState(10);
-  const totalPages = Math.ceil(total / toolSize);
   const startIdx = (toolPage - 1) * toolSize + 1;
   const endIdx = Math.min(total, toolPage * toolSize);
 

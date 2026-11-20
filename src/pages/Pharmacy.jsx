@@ -7,20 +7,7 @@ import Modal from '../components/ui/modals';
 import Input from '../components/ui/input';
 import pharmacyConfig from '../mokdata/pharmacy.json';
 import { toast } from '../context/toast-context';
-import {
-  FiHome,
-  FiSearch,
-  FiPlus,
-  FiActivity,
-  FiAlertTriangle,
-  FiCheckCircle,
-  FiClock,
-  FiPackage,
-  FiShield,
-  FiPrinter,
-  FiCheck,
-  FiX,
-} from 'react-icons/fi';
+import { FiHome, FiPlus, FiActivity, FiAlertTriangle, FiClock, FiPackage, FiShield, FiPrinter, FiCheck, } from 'react-icons/fi';
 
 const { prescriptionsData, inventoryData, categories } = pharmacyConfig;
 

@@ -1,21 +1,4 @@
-import {
-    HeartPulse,
-    Users,
-    Calendar,
-    Activity,
-    Stethoscope,
-    Bed,
-    FlaskConical,
-    Pill,
-    Ambulance,
-    Sliders,
-    KeyRound,
-    AlertCircle,
-    Layers,
-    BarChart3,
-    Table2,
-    BookOpen,
-} from 'lucide-react';
+import { HeartPulse, Users, Calendar, Activity, Stethoscope, Bed, FlaskConical, Pill, Ambulance, Sliders, KeyRound, AlertCircle, Layers, BarChart3, Table2, BookOpen, } from 'lucide-react';
 
 export const menuItems = [
     { section: 'Dashboards & Clinical', title: 'Dashboards & Clinical' },

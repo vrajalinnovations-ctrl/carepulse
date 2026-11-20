@@ -26,10 +26,7 @@ export default defineConfig([
           ignoreRestSiblings: true,
         },
       ],
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
+      'react-refresh/only-export-components': 'off',
       'react-hooks/set-state-in-effect': 'off',
     },
   },
